@@ -24,7 +24,7 @@ FastAPI backend ── JWT auth, per-user isolation, REST + server-sent progress
    |── LLM: Groq gpt-oss-120b → automatic OpenRouter fallback (Gemini path kept)
    |── Local models: BAAI/bge-base-en-v1.5 embeddings, ms-marco MiniLM cross-encoder
    '── Storage: MongoDB (data + checkpoints + caches), S3 (files), Chroma (vectors)
-MCP server (FastMCP, streamable HTTP): 9 tools
+MCP server (FastMCP, streamable HTTP): 10 tools
    '── RemoteOK, Remotive, Arbeitnow, Jobicy, Himalayas; optional Adzuna and Jooble; GitHub; application tracker
 LangSmith: traces, datasets, experiments, live feedback scores
 ```
