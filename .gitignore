@@ -37,3 +37,8 @@ scripts/pdf_to_seed.py
 scripts/smoke_llm.py
 scripts/sync_langsmith_datasets.py
 evals/results/
+docs/FEATURES.md
+docs/VALIDATION.md
+docs/OBSERVABILITY.md
+docs/MCP.md
+docs/CareerPilot_Project_Spec.pdf

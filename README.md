@@ -79,7 +79,7 @@ One EC2 instance with Docker Compose, images from ECR, MongoDB Atlas, real S3 th
 
 ## Evaluation
 
-Every number can be reproduced with the commands in [docs/VALIDATION.md](docs/VALIDATION.md). The evaluation sets are small (8 to 60 queries) and written by the author, so treat differences of a few points as noise.
+Every number can be reproduced with the commands under "Reproduce" below. The evaluation sets are small (8 to 60 queries) and written by the author, so treat differences of a few points as noise.
 
 | Check | Result |
 |---|---|
@@ -98,7 +98,14 @@ Every number can be reproduced with the commands in [docs/VALIDATION.md](docs/VA
 
 **How the retrieval problem was found.** LangSmith experiments labelled each failing query by stage (retrieval, prompt, generation). Four were retrieval misses and none was a prompt drop, because only the short question had been embedded. The fix changed the embedding input only. The development queries cannot prove their own fix, so the held-out set is the fair number.
 
-**Not measured, on purpose:** a hallucination rate for the grounding judge (a test is built, and ran on 5 of 30 examples before the free-tier limit), the live agent evaluation at full size, and behaviour under production traffic. See [docs/OBSERVABILITY.md](docs/OBSERVABILITY.md) for the LangSmith work and its limits.
+**Not measured, on purpose:** a hallucination rate for the grounding judge (a test is built, and ran on 5 of 30 examples before the free-tier limit), the live agent evaluation at full size, and behaviour under production traffic.
+
+**Reproduce** (inside the backend container, `docker compose exec backend ...`):
+- `python -m pytest -q`: automated tests
+- `python -m scripts.validate_stack`: PASS/FAIL stack check with numbers
+- `python -m evals.run_evals --offline`: isolation, job ranking and retrieval evaluations
+- `python -m evals.retrieval_eval` and `python -m evals.heldout_retrieval`: retrieval quality (no model calls)
+- `python -m scripts.load_test`: HTTP and retrieval latency
 
 ## Repository layout
 
@@ -109,11 +116,10 @@ data/           knowledge-base seeds, sample resumes, job fallback set
 evals/          retrieval, ranking, agent, human-in-the-loop, injection and LangSmith experiments
 scripts/        seeding, validation (`validate_stack`), load test, cost report
 deploy/         ECR push, EC2 bootstrap, Caddyfile, IAM policies
-docs/           spec, features, validation, observability, MCP, deployment
+docs/           deployment guide
 tests/          offline test suite
 ```
 
-Further reading: [docs/FEATURES.md](docs/FEATURES.md) · [docs/MCP.md](docs/MCP.md) · [docs/OBSERVABILITY.md](docs/OBSERVABILITY.md) · [docs/CareerPilot_Project_Spec.pdf](docs/CareerPilot_Project_Spec.pdf)
 
 ## Content and data notes
 
