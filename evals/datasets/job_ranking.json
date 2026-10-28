@@ -1,0 +1,284 @@
+[
+ {
+  "id": "genai-dev",
+  "skills": [
+   "python",
+   "rag",
+   "embeddings",
+   "vector databases",
+   "fastapi",
+   "langchain",
+   "prompt engineering",
+   "mongodb"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-004",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-005",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-021",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-007",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-011",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "fullstack",
+  "skills": [
+   "javascript",
+   "react",
+   "node.js",
+   "mongodb",
+   "rest apis",
+   "typescript",
+   "docker",
+   "html",
+   "css"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-007",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-008",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-023",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-011",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-006",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "sde-fundamentals",
+  "skills": [
+   "java",
+   "data structures",
+   "algorithms",
+   "object-oriented programming",
+   "dbms",
+   "operating systems",
+   "sql",
+   "computer networks"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-002",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-013",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-020",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-018",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-004",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "devops",
+  "skills": [
+   "linux",
+   "docker",
+   "kubernetes",
+   "ci/cd",
+   "aws",
+   "terraform",
+   "python",
+   "scripting",
+   "networking",
+   "monitoring"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-011",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-017",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-022",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-008",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-003",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "ml-engineer",
+  "skills": [
+   "python",
+   "pytorch",
+   "scikit-learn",
+   "statistics",
+   "sql",
+   "docker",
+   "numpy"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-006",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-015",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-024",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-019",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-014",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "python-backend",
+  "skills": [
+   "python",
+   "fastapi",
+   "sql",
+   "docker",
+   "redis",
+   "git",
+   "unit testing",
+   "rest"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-009",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-001",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-010",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-018",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-008",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "data-engineer",
+  "skills": [
+   "python",
+   "sql",
+   "etl",
+   "spark",
+   "airflow",
+   "aws",
+   "kafka",
+   "data modelling"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-010",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-001",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-009",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-017",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-018",
+    "relevant": false
+   }
+  ]
+ },
+ {
+  "id": "qa-automation",
+  "skills": [
+   "python",
+   "selenium",
+   "sql",
+   "agile",
+   "testing",
+   "ci/cd",
+   "api testing",
+   "java"
+  ],
+  "jobs": [
+   {
+    "job_id": "fb-019",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-009",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-013",
+    "relevant": true
+   },
+   {
+    "job_id": "fb-004",
+    "relevant": false
+   },
+   {
+    "job_id": "fb-006",
+    "relevant": false
+   }
+  ]
+ }
+]

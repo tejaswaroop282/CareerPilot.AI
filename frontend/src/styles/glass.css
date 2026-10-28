@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.55;
+  color: var(--text-primary); background: var(--bg-base);
+  -webkit-font-smoothing: antialiased; letter-spacing: -0.005em;
+}
+h1, h2, h3 { letter-spacing: -0.02em; font-weight: 600; margin: 0; }
+
+/* backdrop: gradient and three static blurred orbs */
+.backdrop { position: fixed; inset: 0; z-index: -1; background: var(--bg-grad); overflow: hidden; }
+.backdrop .orb { position: absolute; border-radius: 9999px; filter: blur(90px); }
+.backdrop .orb.a { width: 520px; height: 520px; top: -140px; left: -120px; background: var(--orb-a); }
+.backdrop .orb.b { width: 460px; height: 460px; bottom: -160px; right: -100px; background: var(--orb-b); }
+.backdrop .orb.c { width: 380px; height: 380px; top: 38%; left: 52%; background: var(--orb-c); }
+.backdrop::after { content: ""; position: absolute; inset: 0; opacity: 0.04; background-image: repeating-radial-gradient(circle at 17% 32%, #fff 0, #fff 1px, transparent 1px, transparent 3px); }
+
+/* glass levels; a solid fallback applies when backdrop-filter is unsupported */
+.glass-1, .glass-2, .glass-solid {
+  background: var(--glass-solid); border: 1px solid var(--glass-border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass), inset 0 1px 0 var(--glass-highlight);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-1 { background: var(--glass-1); -webkit-backdrop-filter: blur(var(--glass-blur)); backdrop-filter: blur(var(--glass-blur)); }
+  .glass-2 { background: var(--glass-2); -webkit-backdrop-filter: blur(calc(var(--glass-blur) + 4px)); backdrop-filter: blur(calc(var(--glass-blur) + 4px)); }
+}
+.glass-solid { background: var(--glass-solid); }
+.scrim { background: var(--scrim); border-radius: var(--radius-md); }
+
+.lift { transition: transform 180ms ease-out, box-shadow 180ms ease-out; }
+.lift:hover { transform: translateY(-2px); box-shadow: var(--shadow-glass), 0 0 28px rgba(139, 92, 246, 0.18), inset 0 1px 0 var(--glass-highlight); }
+
+.field {
+  width: 100%; min-height: 44px; padding: 10px 14px; border-radius: var(--radius-md); color: var(--text-primary);
+  background: var(--glass-1); border: 1px solid var(--glass-border); outline: none; transition: box-shadow 150ms, border-color 150ms;
+}
+.field::placeholder { color: var(--text-secondary); opacity: 0.8; }
+.field:focus-visible { box-shadow: var(--shadow-glow); border-color: var(--accent-via); }
+select.field option { color: #141a3d; }
+
+:focus-visible { outline: 2px solid var(--accent-to); outline-offset: 2px; }
+.field:focus-visible { outline: none; }
+
+.skeleton { position: relative; overflow: hidden; background: var(--glass-1); border-radius: var(--radius-md); }
+.skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, var(--glass-2), transparent); animation: shimmer 1.4s infinite; }
+@keyframes shimmer { to { transform: translateX(100%); } }
+.typing span { display: inline-block; width: 6px; height: 6px; margin: 0 2px; border-radius: 9999px; background: var(--text-secondary); animation: blink 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.15s; }
+.typing span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes blink { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::after, *::before { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  .lift:hover { transform: none; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

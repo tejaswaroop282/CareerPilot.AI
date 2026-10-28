@@ -1,0 +1,751 @@
+[
+ {
+  "id": "r01",
+  "kb": "role",
+  "query": "what is the difference between a LAN and a WAN",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-cn-0001"
+   ]
+  }
+ },
+ {
+  "id": "r02",
+  "kb": "role",
+  "query": "how do devices on a network get a private IP and still reach the internet",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-cn-0021"
+   ]
+  }
+ },
+ {
+  "id": "r03",
+  "kb": "role",
+  "query": "how does TCP finish a connection",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-cn-0029"
+   ]
+  }
+ },
+ {
+  "id": "r04",
+  "kb": "role",
+  "query": "how does flow control with a window work in TCP",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-cn-0033"
+   ]
+  }
+ },
+ {
+  "id": "r05",
+  "kb": "role",
+  "query": "what does a TLS certificate prove to the browser",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-cn-0041"
+   ]
+  }
+ },
+ {
+  "id": "r06",
+  "kb": "role",
+  "query": "which mail protocols let me read email from a server",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-cn-0045"
+   ]
+  }
+ },
+ {
+  "id": "r07",
+  "kb": "role",
+  "query": "what does the process control block store",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0009"
+   ]
+  }
+ },
+ {
+  "id": "r08",
+  "kb": "role",
+  "query": "why does first come first served perform badly for short jobs",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0017"
+   ]
+  }
+ },
+ {
+  "id": "r09",
+  "kb": "role",
+  "query": "lock that only one thread can own at a time",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0025"
+   ]
+  }
+ },
+ {
+  "id": "r10",
+  "kb": "role",
+  "query": "how can deadlock be avoided before it happens",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0033"
+   ]
+  }
+ },
+ {
+  "id": "r11",
+  "kb": "role",
+  "query": "why does adding page frames sometimes increase page faults",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0045"
+   ]
+  }
+ },
+ {
+  "id": "r12",
+  "kb": "role",
+  "query": "logical addresses versus physical addresses and the MMU",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0037"
+   ]
+  }
+ },
+ {
+  "id": "r13",
+  "kb": "role",
+  "query": "why use a database instead of plain files",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0001"
+   ]
+  }
+ },
+ {
+  "id": "r14",
+  "kb": "role",
+  "query": "two keys in one table primary and unique",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0009"
+   ]
+  }
+ },
+ {
+  "id": "r15",
+  "kb": "role",
+  "query": "filtering rows before grouping versus after grouping in SQL",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0017"
+   ]
+  }
+ },
+ {
+  "id": "r16",
+  "kb": "role",
+  "query": "find repeated values in a column with SQL",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0021"
+   ]
+  }
+ },
+ {
+  "id": "r17",
+  "kb": "role",
+  "query": "explain first second and third normal form",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0033"
+   ]
+  }
+ },
+ {
+  "id": "r18",
+  "kb": "role",
+  "query": "atomicity consistency isolation durability bank transfer",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0037"
+   ]
+  }
+ },
+ {
+  "id": "r19",
+  "kb": "role",
+  "query": "how does an index speed up lookups",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0045"
+   ]
+  }
+ },
+ {
+  "id": "r20",
+  "kb": "role",
+  "query": "hiding details versus bundling data with methods",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-oops-0005"
+   ]
+  }
+ },
+ {
+  "id": "r21",
+  "kb": "role",
+  "query": "same method name different parameters versus redefining in a subclass",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-oops-0009"
+   ]
+  }
+ },
+ {
+  "id": "r22",
+  "kb": "role",
+  "query": "when to pick an interface over an abstract class",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-oops-0013"
+   ]
+  }
+ },
+ {
+  "id": "r23",
+  "kb": "role",
+  "query": "how do you build a singleton",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-oops-0045"
+   ]
+  }
+ },
+ {
+  "id": "r24",
+  "kb": "role",
+  "query": "does java pass objects by reference",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-oops-0049"
+   ]
+  }
+ },
+ {
+  "id": "r25",
+  "kb": "role",
+  "query": "sprint backlog and product backlog differences",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0013"
+   ]
+  }
+ },
+ {
+  "id": "r26",
+  "kb": "role",
+  "query": "bug severity versus priority examples",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0025"
+   ]
+  }
+ },
+ {
+  "id": "r27",
+  "kb": "role",
+  "query": "how do I measure the number of independent paths through code",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0041"
+   ]
+  }
+ },
+ {
+  "id": "r28",
+  "kb": "role",
+  "query": "chunk size problems in retrieval augmented generation",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-rag-0039"
+   ]
+  }
+ },
+ {
+  "id": "r29",
+  "kb": "role",
+  "query": "why models make things up confidently",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-hallucination-0042"
+   ]
+  }
+ },
+ {
+  "id": "r30",
+  "kb": "role",
+  "query": "should I prompt, retrieve or fine tune",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-approach-selection-0048"
+   ]
+  }
+ },
+ {
+  "id": "r31",
+  "kb": "role",
+  "query": "what is a token and how is pricing counted",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-llm-basics-0017"
+   ]
+  }
+ },
+ {
+  "id": "r32",
+  "kb": "role",
+  "query": "precision and recall for cancer detection",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-ml-evaluation-0012"
+   ]
+  }
+ },
+ {
+  "id": "r33",
+  "kb": "role",
+  "query": "how to measure a RAG pipeline quality",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-rag-0041"
+   ]
+  }
+ },
+ {
+  "id": "r34",
+  "kb": "role",
+  "query": "reduce dimensions of data by projecting onto directions of maximum variance",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-ml-theory-0010"
+   ]
+  }
+ },
+ {
+  "id": "r35",
+  "kb": "role",
+  "query": "parameter-efficient finetuning with low-rank adapters versus training all weights",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-llms-0008"
+   ]
+  }
+ },
+ {
+  "id": "r36",
+  "kb": "role",
+  "query": "how big should document pieces be when indexing for retrieval augmented generation",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-rag-and-agents-0003"
+   ]
+  }
+ },
+ {
+  "id": "r37",
+  "kb": "role",
+  "query": "memory paging for the key-value cache when serving language models",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-llm-serving-0002"
+   ]
+  }
+ },
+ {
+  "id": "r38",
+  "kb": "role",
+  "query": "splitting a huge model across many accelerators for training",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-distributed-training-0003"
+   ]
+  }
+ },
+ {
+  "id": "r39",
+  "kb": "role",
+  "query": "reusing a pretrained image network for a new small dataset",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-computer-vision-0004"
+   ]
+  }
+ },
+ {
+  "id": "r40",
+  "kb": "role",
+  "query": "watching a deployed model for drift and degradation",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-mlops-0004"
+   ]
+  }
+ },
+ {
+  "id": "r41",
+  "kb": "role",
+  "query": "false positive versus false negative in hypothesis testing",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-statistics-0002"
+   ]
+  }
+ },
+ {
+  "id": "r42",
+  "kb": "role",
+  "query": "how does the Kubernetes control plane and worker nodes fit together",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-devops-0027"
+   ]
+  }
+ },
+ {
+  "id": "r43",
+  "kb": "role",
+  "query": "can the compose configuration be written as JSON rather than YAML",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-docker-0054"
+   ]
+  }
+ },
+ {
+  "id": "r44",
+  "kb": "role",
+  "query": "compose starts services but the database is not ready yet",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-docker-0093"
+   ]
+  }
+ },
+ {
+  "id": "r45",
+  "kb": "role",
+  "query": "what software layer lets many virtual machines share one physical server",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-cloud-0132"
+   ]
+  }
+ },
+ {
+  "id": "r46",
+  "kb": "role",
+  "query": "ways to troubleshoot a bash script that misbehaves",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-unix-0184"
+   ]
+  }
+ },
+ {
+  "id": "r47",
+  "kb": "role",
+  "query": "environment variables the shell sets up at login",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-unix-0158"
+   ]
+  }
+ },
+ {
+  "id": "r48",
+  "kb": "role",
+  "query": "a Chef recipe",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-devops-0014"
+   ]
+  }
+ },
+ {
+  "id": "r49",
+  "kb": "role",
+  "query": "how is a cloud database different from an on-premises one",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-cloud-0119"
+   ]
+  }
+ },
+ {
+  "id": "r50",
+  "kb": "company",
+  "query": "serialize a binary tree to a string and rebuild it",
+  "filters": {
+   "company": "amazon",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "amazo-coding-0029"
+   ]
+  }
+ },
+ {
+  "id": "r51",
+  "kb": "company",
+  "query": "design a rate limiter that works across many servers",
+  "filters": {
+   "company": "amazon",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "amazo-system-design-0085"
+   ]
+  }
+ },
+ {
+  "id": "r52",
+  "kb": "company",
+  "query": "design a virtual file system held in memory",
+  "filters": {
+   "company": "amazon",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "amazo-system-design-0057"
+   ]
+  }
+ },
+ {
+  "id": "r53",
+  "kb": "company",
+  "query": "longest increasing path in a grid",
+  "filters": {
+   "company": "google",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "googl-coding-0046"
+   ]
+  }
+ },
+ {
+  "id": "r54",
+  "kb": "company",
+  "query": "water poured onto a terrain, where does it settle",
+  "filters": {
+   "company": "google",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "googl-coding-0016"
+   ]
+  }
+ },
+ {
+  "id": "r55",
+  "kb": "company",
+  "query": "remove the fewest parentheses so the string becomes valid",
+  "filters": {
+   "company": "meta",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "meta-coding-0001"
+   ]
+  }
+ },
+ {
+  "id": "r56",
+  "kb": "company",
+  "query": "count the ways to decode a digit string into letters",
+  "filters": {
+   "company": "meta",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "meta-coding-0066"
+   ]
+  }
+ },
+ {
+  "id": "r57",
+  "kb": "company",
+  "query": "design ephemeral stories that disappear after a day",
+  "filters": {
+   "company": "meta",
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "meta-system-design-0080"
+   ]
+  }
+ }
+]

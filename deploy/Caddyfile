@@ -1,0 +1,13 @@
+# The only public entry point. SITE_ADDRESS comes from .env.production:
+#   :80                         plain HTTP on the server's address
+#   app.example.com             automatic HTTPS (Let's Encrypt) once the name points at the server
+#   <ip-with-dashes>.sslip.io   a free host name for an IP, so HTTPS works without owning a domain
+{$SITE_ADDRESS::80} {
+	encode gzip
+
+	# Server-Sent Events (live progress) must not be buffered
+	reverse_proxy /api/stream/* frontend:80 {
+		flush_interval -1
+	}
+	reverse_proxy frontend:80
+}

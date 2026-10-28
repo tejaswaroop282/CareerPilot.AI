@@ -1,0 +1,336 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Ec2Describe",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeInstanceStatus",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeImages",
+        "ec2:DescribeAddresses",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeTags"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "ap-south-1"
+        }
+      }
+    },
+    {
+      "Sid": "RunInstance",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot",
+          "ec2:MetadataHttpTokens": "required"
+        },
+        "StringLike": {
+          "ec2:InstanceType": [
+            "t3.small",
+            "t3.medium"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "RunVolume",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:volume/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot"
+        },
+        "NumericLessThanEquals": {
+          "ec2:VolumeSize": "30"
+        }
+      }
+    },
+    {
+      "Sid": "RunEni",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:network-interface/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "RunSg",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:security-group/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "RunSubnetAmi",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [
+        "arn:aws:ec2:ap-south-1:217856377501:subnet/*",
+        "arn:aws:ec2:ap-south-1::image/*"
+      ]
+    },
+    {
+      "Sid": "TagAtCreate",
+      "Effect": "Allow",
+      "Action": "ec2:CreateTags",
+      "Resource": [
+        "arn:aws:ec2:ap-south-1:217856377501:instance/*",
+        "arn:aws:ec2:ap-south-1:217856377501:volume/*",
+        "arn:aws:ec2:ap-south-1:217856377501:network-interface/*",
+        "arn:aws:ec2:ap-south-1:217856377501:security-group/*",
+        "arn:aws:ec2:ap-south-1:217856377501:elastic-ip/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot",
+          "ec2:CreateAction": [
+            "RunInstances",
+            "CreateSecurityGroup",
+            "AllocateAddress"
+          ]
+        },
+        "ForAllValues:StringEquals": {
+          "aws:TagKeys": [
+            "project",
+            "Name"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "SgInVpc",
+      "Effect": "Allow",
+      "Action": "ec2:CreateSecurityGroup",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:vpc/*"
+    },
+    {
+      "Sid": "SgTagged",
+      "Effect": "Allow",
+      "Action": "ec2:CreateSecurityGroup",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:security-group/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "SgRules",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:security-group/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "EipAllocate",
+      "Effect": "Allow",
+      "Action": "ec2:AllocateAddress",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:elastic-ip/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "EipAssociate",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AssociateAddress",
+        "ec2:DisassociateAddress",
+        "ec2:ReleaseAddress"
+      ],
+      "Resource": [
+        "arn:aws:ec2:ap-south-1:217856377501:elastic-ip/*",
+        "arn:aws:ec2:ap-south-1:217856377501:instance/*",
+        "arn:aws:ec2:ap-south-1:217856377501:network-interface/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "InstanceLifecycle",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:StartInstances",
+        "ec2:StopInstances",
+        "ec2:RebootInstances",
+        "ec2:TerminateInstances"
+      ],
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "PassRole",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::217856377501:role/careerpilot-ec2-role",
+      "Condition": {
+        "StringEquals": {
+          "iam:PassedToService": "ec2.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Sid": "AmiLookup",
+      "Effect": "Allow",
+      "Action": "ssm:GetParameter",
+      "Resource": "arn:aws:ssm:ap-south-1::parameter/aws/service/ami-amazon-linux-latest/*"
+    },
+    {
+      "Sid": "Secrets",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:PutParameter",
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:AddTagsToResource"
+      ],
+      "Resource": "arn:aws:ssm:ap-south-1:217856377501:parameter/careerpilot/*"
+    },
+    {
+      "Sid": "CmdInstances",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": "arn:aws:ec2:ap-south-1:217856377501:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "ssm:resourceTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "CmdDocument",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": "arn:aws:ssm:ap-south-1::document/AWS-RunShellScript"
+    },
+    {
+      "Sid": "CmdResults",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetCommandInvocation",
+        "ssm:ListCommandInvocations",
+        "ssm:DescribeInstanceInformation"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BucketCreate",
+      "Effect": "Allow",
+      "Action": "s3:CreateBucket",
+      "Resource": "arn:aws:s3:::careerpilot-217856377501-aps1",
+      "Condition": {
+        "StringEquals": {
+          "s3:LocationConstraint": "ap-south-1"
+        }
+      }
+    },
+    {
+      "Sid": "BucketHarden",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutBucketPublicAccessBlock",
+        "s3:GetBucketPublicAccessBlock",
+        "s3:PutEncryptionConfiguration",
+        "s3:GetEncryptionConfiguration",
+        "s3:PutBucketTagging",
+        "s3:ListBucket"
+      ],
+      "Resource": "arn:aws:s3:::careerpilot-217856377501-aps1"
+    },
+    {
+      "Sid": "DeployBundle",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::careerpilot-217856377501-aps1/deploy/*"
+    },
+    {
+      "Sid": "EcrToken",
+      "Effect": "Allow",
+      "Action": "ecr:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "EcrCreate",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:CreateRepository",
+        "ecr:TagResource"
+      ],
+      "Resource": "arn:aws:ecr:ap-south-1:217856377501:repository/careerpilot-*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestTag/project": "careerpilot"
+        }
+      }
+    },
+    {
+      "Sid": "EcrPush",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:DescribeRepositories",
+        "ecr:DescribeImages",
+        "ecr:ListImages",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:InitiateLayerUpload",
+        "ecr:UploadLayerPart",
+        "ecr:CompleteLayerUpload",
+        "ecr:PutImage",
+        "ecr:BatchGetImage"
+      ],
+      "Resource": "arn:aws:ecr:ap-south-1:217856377501:repository/careerpilot-*"
+    },
+    {
+      "Sid": "LogGroups",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:PutRetentionPolicy",
+        "logs:TagResource"
+      ],
+      "Resource": "arn:aws:logs:ap-south-1:217856377501:log-group:/careerpilot/*"
+    },
+    {
+      "Sid": "WhoAmI",
+      "Effect": "Allow",
+      "Action": "sts:GetCallerIdentity",
+      "Resource": "*"
+    }
+  ]
+}

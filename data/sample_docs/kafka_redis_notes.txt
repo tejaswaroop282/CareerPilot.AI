@@ -1,0 +1,13 @@
+Kafka and Redis learning notes
+
+Kafka stores messages in topics that are split into partitions. Ordering is only guaranteed inside a single partition, so records that must stay ordered need the same key. A consumer group spreads the partitions of a topic across its consumers, and each partition is read by exactly one consumer in the group at a time. Adding more consumers than partitions leaves the extra consumers idle.
+
+Consumers track progress with offsets. If offsets are committed after processing, a crash causes the batch to be processed again, which gives at-least-once delivery. Committing before processing risks losing messages, which is at-most-once. Exactly-once processing inside Kafka needs an idempotent producer plus transactions that write the output records and the consumed offsets atomically.
+
+Retention in Kafka is time or size based, so old segments are deleted. Log compaction is different: it keeps only the latest record for each key, which suits changelog topics that rebuild state such as a table of user profiles.
+
+Redis is an in-memory store with rich data structures such as strings, hashes, lists, sets and sorted sets. Sorted sets are a natural fit for leaderboards and for sliding window rate limiters. Keys can have a TTL, and when memory runs out the eviction policy decides what to drop. The allkeys-lru policy evicts the least recently used key across the whole keyspace.
+
+The cache-aside pattern means the application reads the cache first, loads from the database on a miss, then writes the value to the cache. A cache stampede happens when a hot key expires and many requests hit the database at once. Mitigations are request coalescing so only one caller rebuilds the value, and adding random jitter to TTLs so keys do not expire together.
+
+Redis can persist data in two ways. RDB takes point-in-time snapshots, which are compact and fast to restore but can lose the last few minutes. AOF appends every write to a log and can be fsynced every second, which loses less data but produces larger files.

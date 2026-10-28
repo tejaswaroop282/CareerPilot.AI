@@ -1,0 +1,38 @@
+server {
+  listen 80;
+  server_name _;
+  root /usr/share/nginx/html;
+  index index.html;
+  client_max_body_size 25m;
+
+  # Server-Sent Events: no buffering so progress events reach the browser as they happen.
+  location /api/stream/ {
+    proxy_pass http://${BACKEND_HOST}:${BACKEND_PORT}/stream/;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_buffering off;
+    proxy_cache off;
+    proxy_read_timeout 3600s;
+  }
+
+  location /api/ {
+    proxy_pass http://${BACKEND_HOST}:${BACKEND_PORT}/;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_read_timeout 300s;
+  }
+
+  location / {
+    try_files $uri /index.html;  # SPA fallback
+    # the page itself must be revalidated on every load, otherwise a browser keeps pointing at an old hashed bundle
+    add_header Cache-Control "no-cache";
+  }
+
+  location ~* \.(js|css|woff2?|svg|png)$ {
+    expires 7d;
+    add_header Cache-Control "public, immutable";
+    try_files $uri =404;
+  }
+}

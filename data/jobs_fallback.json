@@ -1,0 +1,242 @@
+[
+  {
+    "id": "fb-001",
+    "title": "Backend Engineer",
+    "company": "Amazon Web Services",
+    "location": "Bengaluru",
+    "category": "backend",
+    "description": "Build and operate distributed services on AWS. Required: Python or Java, REST APIs, SQL and NoSQL databases, data structures and algorithms. Nice to have: Docker, Kubernetes, system design experience.",
+    "url": "https://example.com/sample-jobs/fb-001",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-002",
+    "title": "Software Development Engineer I",
+    "company": "Amazon",
+    "location": "Hyderabad",
+    "category": "sde",
+    "description": "Design, code and test features for a high-traffic retail platform. Required: Java or C++, data structures, algorithms, object-oriented design, operating systems basics. Nice to have: SQL, microservices, CI/CD.",
+    "url": "https://example.com/sample-jobs/fb-002",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-003",
+    "title": "Software Engineer, New Grad",
+    "company": "Google",
+    "location": "Bengaluru",
+    "category": "sde",
+    "description": "Work on large-scale systems with strong fundamentals. Required: C++ or Java or Python, algorithms, data structures, computer networks basics. Nice to have: distributed systems, machine learning.",
+    "url": "https://example.com/sample-jobs/fb-003",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-004",
+    "title": "Generative AI Engineer",
+    "company": "Nimbus Labs",
+    "location": "Remote",
+    "category": "genai",
+    "description": "Build retrieval-augmented generation products. Required: Python, LLM APIs, prompt engineering, embeddings, vector databases, RAG. Nice to have: LangChain, LangGraph, evaluation frameworks, FastAPI.",
+    "url": "https://example.com/sample-jobs/fb-004",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-005",
+    "title": "LLM Application Developer",
+    "company": "Cobalt AI",
+    "location": "Pune",
+    "category": "genai",
+    "description": "Ship LLM features for enterprise customers. Required: Python, RAG, vector databases, FastAPI, prompt design. Nice to have: agents, tool calling, Docker, MongoDB.",
+    "url": "https://example.com/sample-jobs/fb-005",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-006",
+    "title": "AI/ML Engineer",
+    "company": "Orchid Analytics",
+    "location": "Chennai",
+    "category": "aiml",
+    "description": "Train and deploy machine learning models. Required: Python, scikit-learn, PyTorch, statistics, SQL. Nice to have: MLOps, Docker, AWS, feature stores.",
+    "url": "https://example.com/sample-jobs/fb-006",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-007",
+    "title": "Full Stack Developer",
+    "company": "Brightpath",
+    "location": "Remote",
+    "category": "fullstack",
+    "description": "Build web apps end to end. Required: JavaScript, React, Node.js, REST APIs, MongoDB or PostgreSQL. Nice to have: TypeScript, Docker, AWS.",
+    "url": "https://example.com/sample-jobs/fb-007",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-008",
+    "title": "Frontend Engineer",
+    "company": "Lumen Retail",
+    "location": "Mumbai",
+    "category": "frontend",
+    "description": "Own the customer web experience. Required: React, JavaScript, HTML, CSS, accessibility, testing. Nice to have: Tailwind, performance tuning, design systems.",
+    "url": "https://example.com/sample-jobs/fb-008",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-009",
+    "title": "Python Developer",
+    "company": "Quartz Systems",
+    "location": "Hyderabad",
+    "category": "backend",
+    "description": "Develop internal services and automation. Required: Python, FastAPI or Django, SQL, Git, unit testing. Nice to have: Docker, Redis, message queues.",
+    "url": "https://example.com/sample-jobs/fb-009",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-010",
+    "title": "Data Engineer",
+    "company": "Tidewater Data",
+    "location": "Bengaluru",
+    "category": "data",
+    "description": "Build data pipelines. Required: Python, SQL, ETL, Spark or similar, data modelling. Nice to have: Airflow, AWS, Kafka.",
+    "url": "https://example.com/sample-jobs/fb-010",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-011",
+    "title": "DevOps Engineer",
+    "company": "Ironbridge Cloud",
+    "location": "Remote",
+    "category": "devops",
+    "description": "Run CI/CD and infrastructure. Required: Linux, Docker, Kubernetes, CI/CD, scripting. Nice to have: Terraform, AWS, monitoring.",
+    "url": "https://example.com/sample-jobs/fb-011",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-012",
+    "title": "Software Engineer, Platform",
+    "company": "Microsoft",
+    "location": "Hyderabad",
+    "category": "sde",
+    "description": "Build developer platform services. Required: C# or Java, data structures, operating systems, distributed systems basics, SQL. Nice to have: Azure, Kubernetes.",
+    "url": "https://example.com/sample-jobs/fb-012",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-013",
+    "title": "Associate Software Engineer",
+    "company": "Infosys",
+    "location": "Mysuru",
+    "category": "sde",
+    "description": "Join the engineering program. Required: one programming language, data structures, DBMS, object-oriented programming. Nice to have: SQL, Agile, testing.",
+    "url": "https://example.com/sample-jobs/fb-013",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-014",
+    "title": "Junior Backend Developer",
+    "company": "Marigold Pay",
+    "location": "Remote",
+    "category": "backend",
+    "description": "Work on payment APIs. Required: Java or Node.js, REST, SQL, Git. Nice to have: Spring Boot, Docker, Kafka.",
+    "url": "https://example.com/sample-jobs/fb-014",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-015",
+    "title": "Machine Learning Intern",
+    "company": "Aster Vision",
+    "location": "Remote",
+    "category": "aiml",
+    "description": "Support computer vision experiments. Required: Python, PyTorch, NumPy, basic statistics. Nice to have: OpenCV, Docker.",
+    "url": "https://example.com/sample-jobs/fb-015",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-016",
+    "title": "Prompt and Evaluation Engineer",
+    "company": "Cobalt AI",
+    "location": "Remote",
+    "category": "genai",
+    "description": "Design prompts and evaluation sets. Required: Python, prompt engineering, LLM evaluation, RAG basics. Nice to have: LangSmith, statistics.",
+    "url": "https://example.com/sample-jobs/fb-016",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-017",
+    "title": "Site Reliability Engineer",
+    "company": "Helix Networks",
+    "location": "Bengaluru",
+    "category": "devops",
+    "description": "Keep services reliable. Required: Linux, networking, Python or Go, monitoring, incident response. Nice to have: Kubernetes, Terraform.",
+    "url": "https://example.com/sample-jobs/fb-017",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-018",
+    "title": "Mobile Developer",
+    "company": "Pebble Apps",
+    "location": "Pune",
+    "category": "mobile",
+    "description": "Build Android apps. Required: Kotlin, Android SDK, REST APIs, Git. Nice to have: Jetpack Compose, testing.",
+    "url": "https://example.com/sample-jobs/fb-018",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-019",
+    "title": "QA Automation Engineer",
+    "company": "Sable Software",
+    "location": "Chennai",
+    "category": "qa",
+    "description": "Automate test suites. Required: Python or Java, Selenium, SQL, Agile, testing fundamentals. Nice to have: CI/CD, API testing.",
+    "url": "https://example.com/sample-jobs/fb-019",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-020",
+    "title": "Software Engineer, Infrastructure",
+    "company": "Flipkart",
+    "location": "Bengaluru",
+    "category": "sde",
+    "description": "Build scalable e-commerce infrastructure. Required: Java, data structures, algorithms, databases, computer networks. Nice to have: Kafka, Redis, system design.",
+    "url": "https://example.com/sample-jobs/fb-020",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-021",
+    "title": "Applied AI Engineer",
+    "company": "Amazon",
+    "location": "Bengaluru",
+    "category": "genai",
+    "description": "Build generative AI features on AWS. Required: Python, LLMs, RAG, embeddings, vector databases, AWS. Nice to have: agents, LangGraph, evaluation.",
+    "url": "https://example.com/sample-jobs/fb-021",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-022",
+    "title": "Cloud Engineer",
+    "company": "Zenith Infra",
+    "location": "Remote",
+    "category": "devops",
+    "description": "Operate cloud workloads. Required: AWS, Linux, Docker, networking, scripting. Nice to have: Terraform, Kubernetes.",
+    "url": "https://example.com/sample-jobs/fb-022",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-023",
+    "title": "Backend Engineer (Node.js)",
+    "company": "Tangent Labs",
+    "location": "Remote",
+    "category": "backend",
+    "description": "Build APIs. Required: Node.js, JavaScript, MongoDB, REST, Git. Nice to have: TypeScript, Docker, AWS S3.",
+    "url": "https://example.com/sample-jobs/fb-023",
+    "source": "fallback"
+  },
+  {
+    "id": "fb-024",
+    "title": "Research Engineer, NLP",
+    "company": "Verity AI",
+    "location": "Bengaluru",
+    "category": "genai",
+    "description": "Work on language model applications. Required: Python, PyTorch, transformers, embeddings, evaluation. Nice to have: fine-tuning, RAG, vector databases.",
+    "url": "https://example.com/sample-jobs/fb-024",
+    "source": "fallback"
+  }
+]

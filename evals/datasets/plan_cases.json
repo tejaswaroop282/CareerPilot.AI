@@ -1,0 +1,467 @@
+[
+ {
+  "request": "Give me 10 operating systems interview questions",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 10
+  }
+ },
+ {
+  "request": "Ask me 5 DBMS questions on normalization and transactions",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 5
+  }
+ },
+ {
+  "request": "I need computer networks questions about TCP and IP",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Quiz me on OOP concepts like polymorphism and inheritance",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Give me 8 questions about SDLC, agile and software testing",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 8
+  }
+ },
+ {
+  "request": "Questions on indexing and SQL joins please",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Ask 6 questions on deadlocks and scheduling",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 6
+  }
+ },
+ {
+  "request": "Give me 10 GenAI interview questions on RAG, embeddings, and vector databases",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 10
+  }
+ },
+ {
+  "request": "Ask me 5 questions about prompt engineering",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 5
+  }
+ },
+ {
+  "request": "I want LLM hallucination and responsible AI questions",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Give me 7 questions on transformers and tokens",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 7
+  }
+ },
+ {
+  "request": "Questions on AI agents and tool calling",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Run a mock interview on operating systems",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "mock_interview",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Mock interview me on RAG and embeddings",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "mock_interview",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Take me through a mock interview on DBMS, 5 questions",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "mock_interview",
+   "company": null,
+   "route": "retrieve",
+   "count": 5
+  }
+ },
+ {
+  "request": "Interview me one question at a time about computer networks",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "mock_interview",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Mock interview about prompting and agents",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "mock_interview",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Ask me questions about my Ocular AI project",
+  "target_role": "sde",
+  "expect": {
+   "intent": "project_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "project": "Ocular AI"
+  }
+ },
+ {
+  "request": "Quiz me on my DocuChat RAG project",
+  "target_role": "genai",
+  "expect": {
+   "intent": "project_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "project": "DocuChat RAG"
+  }
+ },
+ {
+  "request": "What would an interviewer ask about Ocular AI?",
+  "target_role": "sde",
+  "expect": {
+   "intent": "project_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "project": "Ocular AI"
+  }
+ },
+ {
+  "request": "Grill me on DocuChat RAG design decisions",
+  "target_role": "sde",
+  "expect": {
+   "intent": "project_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "project": "DocuChat RAG"
+  }
+ },
+ {
+  "request": "Mock interview me on my Ocular AI project",
+  "target_role": "sde",
+  "expect": {
+   "intent": "project_questions",
+   "role": "sde",
+   "mode": "mock_interview",
+   "company": null,
+   "route": "retrieve",
+   "project": "Ocular AI"
+  }
+ },
+ {
+  "request": "Prepare me for an Amazon SDE interview",
+  "target_role": "sde",
+  "expect": {
+   "intent": "company_prep",
+   "role": "sde",
+   "mode": "question_set",
+   "company": "amazon",
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Help me prepare for a Google software engineer interview",
+  "target_role": "sde",
+  "expect": {
+   "intent": "company_prep",
+   "role": "sde",
+   "mode": "question_set",
+   "company": "google",
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "I have a Microsoft interview next week",
+  "target_role": "sde",
+  "expect": {
+   "intent": "company_prep",
+   "role": "sde",
+   "mode": "question_set",
+   "company": "microsoft",
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Prepare me for Infosys",
+  "target_role": "sde",
+  "expect": {
+   "intent": "company_prep",
+   "role": "sde",
+   "mode": "question_set",
+   "company": "infosys",
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Prep me for a Flipkart SDE round",
+  "target_role": "sde",
+  "expect": {
+   "intent": "company_prep",
+   "role": "sde",
+   "mode": "question_set",
+   "company": "flipkart",
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Amazon interview preparation, 10 questions",
+  "target_role": "sde",
+  "expect": {
+   "intent": "company_prep",
+   "role": "sde",
+   "mode": "question_set",
+   "company": "amazon",
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Prepare me for a nurse interview",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": null,
+   "mode": "question_set",
+   "company": null,
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Give me questions for a chef position",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": null,
+   "mode": "question_set",
+   "company": null,
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Interview prep for a civil engineer",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": null,
+   "mode": "question_set",
+   "company": null,
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Ask me pilot interview questions",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": null,
+   "mode": "question_set",
+   "company": null,
+   "route": "confirm"
+  }
+ },
+ {
+  "request": "Help me prepare",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "clarify_or_confirm"
+  }
+ },
+ {
+  "request": "Ask me something",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "clarify_or_confirm"
+  }
+ },
+ {
+  "request": "Interview questions please",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "clarify_or_confirm"
+  }
+ },
+ {
+  "request": "I have an interview soon",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "clarify_or_confirm"
+  }
+ },
+ {
+  "request": "Questions on binary trees and graphs for my SDE interview",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Prepare me for a backend engineer interview",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Machine learning basics interview questions",
+  "target_role": "genai",
+  "expect": {
+   "intent": "role_questions",
+   "role": "genai",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ },
+ {
+  "request": "Give me 3 questions on mutex and semaphore",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve",
+   "count": 3
+  }
+ },
+ {
+  "request": "Questions on Git and branching",
+  "target_role": "sde",
+  "expect": {
+   "intent": "role_questions",
+   "role": "sde",
+   "mode": "question_set",
+   "company": null,
+   "route": "retrieve"
+  }
+ }
+]

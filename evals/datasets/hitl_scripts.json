@@ -1,0 +1,99 @@
+{
+ "scenarios": [
+  {
+   "name": "clarification then answer",
+   "request": "Help me prepare",
+   "mode": "question_set",
+   "resumes": [
+    {
+     "text": "Operating systems, 3 questions on scheduling"
+    }
+   ],
+   "expect": [
+    "awaiting_input:clarification",
+    "done"
+   ]
+  },
+  {
+   "name": "confirm plan approved with edits",
+   "request": "Prepare me for a Stripe SDE interview",
+   "mode": "question_set",
+   "resumes": [
+    {
+     "approved": true,
+     "edits": {
+      "count": 3,
+      "topics": [
+       "os"
+      ]
+     }
+    }
+   ],
+   "expect": [
+    "awaiting_input:confirm_plan",
+    "done"
+   ]
+  },
+  {
+   "name": "confirm plan rejected",
+   "request": "Prepare me for a Stripe SDE interview",
+   "mode": "question_set",
+   "resumes": [
+    {
+     "approved": false
+    }
+   ],
+   "expect": [
+    "awaiting_input:confirm_plan",
+    "done"
+   ]
+  },
+  {
+   "name": "unsupported role",
+   "request": "Prepare me for a nurse interview",
+   "mode": "question_set",
+   "resumes": [
+    {
+     "approved": true,
+     "edits": {}
+    }
+   ],
+   "expect": [
+    "awaiting_input:confirm_plan",
+    "done"
+   ]
+  },
+  {
+   "name": "mock interview two answers",
+   "request": "Mock interview me on operating systems, 2 questions",
+   "mode": "mock_interview",
+   "resumes": [
+    {
+     "answer": "A mutex gives exclusive ownership of a resource to one thread at a time."
+    },
+    {
+     "answer": "Deadlock needs mutual exclusion, hold and wait, no preemption and circular wait."
+    }
+   ],
+   "expect": [
+    "awaiting_input:answer",
+    "awaiting_input:answer",
+    "done"
+   ]
+  },
+  {
+   "name": "mock interview wrong then right",
+   "request": "Mock interview me on DBMS, 1 question",
+   "mode": "mock_interview",
+   "resumes": [
+    {
+     "answer": "I do not know."
+    }
+   ],
+   "expect": [
+    "awaiting_input:answer",
+    "done"
+   ]
+  }
+ ]
+}

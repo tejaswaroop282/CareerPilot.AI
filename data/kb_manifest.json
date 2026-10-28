@@ -1,0 +1,162 @@
+{
+  "roles": {
+    "genai": {
+      "aliases": [
+        "generative ai",
+        "gen ai",
+        "genai engineer",
+        "ai engineer",
+        "llm engineer",
+        "llm developer",
+        "genai developer",
+        "generative ai developer",
+        "ai chatbot developer",
+        "prompt engineer"
+      ],
+      "topics": [
+        "agents",
+        "approach-selection",
+        "embeddings",
+        "hallucination",
+        "llm-basics",
+        "llm-training",
+        "ml-evaluation",
+        "ml-fundamentals",
+        "project-defence",
+        "prompting",
+        "rag",
+        "responsible-ai",
+        "security",
+        "transformers",
+        "vector-databases"
+      ],
+      "questions": 50,
+      "resources": 0
+    },
+    "sde": {
+      "aliases": [
+        "software engineer",
+        "software development engineer",
+        "sde i",
+        "software developer",
+        "backend engineer"
+      ],
+      "topics": [
+        "cn",
+        "dbms",
+        "oops",
+        "os",
+        "sdlc"
+      ],
+      "questions": 250,
+      "resources": 0
+    },
+    "aiml": {
+      "aliases": [
+        "machine learning engineer",
+        "ml engineer",
+        "ai/ml engineer",
+        "ai ml engineer",
+        "applied scientist",
+        "data scientist",
+        "ai intern",
+        "ai developer",
+        "ai/ml intern",
+        "ml intern",
+        "machine learning intern",
+        "ai researcher"
+      ],
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "distributed-training",
+        "llm-evaluation",
+        "llm-serving",
+        "llms",
+        "ml-system-design",
+        "ml-theory",
+        "mlops",
+        "nlp",
+        "rag-and-agents",
+        "reinforcement-learning",
+        "statistics"
+      ],
+      "questions": 135,
+      "resources": 0
+    },
+    "devops": {
+      "aliases": [
+        "devops engineer",
+        "site reliability engineer",
+        "sre",
+        "cloud engineer",
+        "platform engineer",
+        "devops"
+      ],
+      "topics": [
+        "cloud",
+        "devops",
+        "docker",
+        "unix"
+      ],
+      "questions": 194,
+      "resources": 0
+    }
+  },
+  "companies": {
+    "amazon": {
+      "aliases": [
+        "amazon web services",
+        "aws",
+        "amazon.com"
+      ],
+      "roles": {
+        "sde": 89
+      },
+      "records": 89
+    },
+    "apple": {
+      "aliases": [],
+      "roles": {
+        "sde": 56
+      },
+      "records": 56
+    },
+    "google": {
+      "aliases": [
+        "alphabet",
+        "google llc"
+      ],
+      "roles": {
+        "sde": 91
+      },
+      "records": 91
+    },
+    "meta": {
+      "aliases": [
+        "facebook",
+        "meta platforms"
+      ],
+      "roles": {
+        "sde": 82
+      },
+      "records": 82
+    },
+    "microsoft": {
+      "aliases": [
+        "msft"
+      ],
+      "roles": {
+        "sde": 59
+      },
+      "records": 59
+    },
+    "netflix": {
+      "aliases": [],
+      "roles": {
+        "sde": 52
+      },
+      "records": 52
+    }
+  }
+}

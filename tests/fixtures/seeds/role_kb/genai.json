@@ -1,0 +1,31 @@
+{
+  "role": "genai",
+  "aliases": ["generative ai", "gen ai"],
+  "questions": [
+    {"id": "genai-rag-0001", "role": "genai", "topic": "rag", "difficulty": "easy", "type": "question",
+     "question": "What is retrieval-augmented generation and why is it used?",
+     "key_points": ["Retrieves external documents at query time", "Grounds answers in retrieved context", "Reduces hallucination without retraining"],
+     "source": "test-fixture"},
+    {"id": "genai-rag-0002", "role": "genai", "topic": "rag", "difficulty": "medium", "type": "question",
+     "question": "How does chunk size affect retrieval quality in a RAG system?",
+     "key_points": ["Small chunks improve precision but lose context", "Large chunks dilute the embedding signal", "Overlap and structure-aware splitting help"],
+     "source": "test-fixture"},
+    {"id": "genai-emb-0001", "role": "genai", "topic": "embeddings", "difficulty": "easy", "type": "question",
+     "question": "What is an embedding and how is similarity between embeddings measured?",
+     "key_points": ["Dense vector representation of meaning", "Cosine similarity or dot product", "Similar meaning gives nearby vectors"],
+     "source": "test-fixture"},
+    {"id": "genai-vdb-0001", "role": "genai", "topic": "vector-databases", "difficulty": "medium", "type": "question",
+     "question": "Explain how HNSW indexes speed up approximate nearest neighbour search.",
+     "key_points": ["Layered proximity graph", "Greedy search from sparse top layers down", "Trades a little recall for large speedups"],
+     "source": "test-fixture"},
+    {"id": "genai-vdb-0002", "role": "genai", "topic": "vector-databases", "difficulty": "hard", "type": "question",
+     "question": "When would you combine BM25 with dense vector search, and how do you fuse the results?",
+     "key_points": ["BM25 catches exact keyword and rare term matches", "Dense search catches paraphrases", "Reciprocal rank fusion merges rank lists without score calibration"],
+     "source": "test-fixture"}
+  ],
+  "resources": [
+    {"id": "genai-res-0001", "role": "genai", "topic": "rag", "type": "resource", "title": "Test fixture RAG primer",
+     "url": "https://example.com/rag", "summary": "A short fixture summary explaining retrieval pipelines for tests only.",
+     "source": "test-fixture", "license": "self-authored"}
+  ]
+}

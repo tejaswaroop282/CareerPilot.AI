@@ -1,0 +1,9 @@
+services:
+  backend:
+    command: ["uvicorn", "app.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    volumes:
+      - ./app:/srv/app
+      - ./scripts:/srv/scripts
+      - ./tests:/srv/tests
+      - ./evals:/srv/evals
+      - ./pytest.ini:/srv/pytest.ini

@@ -1,0 +1,69 @@
+# Production on one EC2 machine (spec section 12, path A). MongoDB is Atlas, files live in S3, Chroma and the model cache
+# live on named volumes (put /var/lib/docker on an EBS volume). Only Caddy is reachable from the internet.
+#
+#   docker compose --env-file .env.production -f docker-compose.prod.yml up -d          (pulls ECR_REGISTRY/careerpilot-*:IMAGE_TAG)
+#   add --build to build from source instead
+#
+# Local development keeps using docker-compose.yml (Mongo and MinIO containers); this file never starts those.
+x-logging: &logging
+  driver: json-file
+  options: {max-size: "10m", max-file: "5"}   # swap for the awslogs driver with docker-compose.cloudwatch.yml
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}   # ":80" serves plain HTTP on the IP; a host name gets an automatic HTTPS certificate
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [frontend]
+    logging: *logging
+
+  frontend:
+    image: ${ECR_REGISTRY:-local}/careerpilot-frontend:${IMAGE_TAG:-latest}
+    build:
+      context: frontend
+    restart: unless-stopped
+    expose: ["80"]
+    depends_on: [backend]
+    logging: *logging
+
+  backend:
+    image: ${ECR_REGISTRY:-local}/careerpilot-backend:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    restart: unless-stopped
+    env_file: .env.production
+    environment:
+      APP_ENV: production
+      LOG_FORMAT: json
+      CHROMA_DIR: /data/chroma
+      HF_HOME: /models
+      MCP_SERVER_URL: http://mcp:8001/mcp
+    expose: ["8000"]
+    volumes:
+      - chroma_data:/data/chroma
+      - model_cache:/models
+    depends_on: [mcp]
+    logging: *logging
+
+  mcp:
+    image: ${ECR_REGISTRY:-local}/careerpilot-mcp:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/mcp.Dockerfile
+    restart: unless-stopped
+    env_file: .env.production
+    expose: ["8001"]
+    logging: *logging
+
+volumes:
+  chroma_data:
+  model_cache:
+  caddy_data:
+  caddy_config:

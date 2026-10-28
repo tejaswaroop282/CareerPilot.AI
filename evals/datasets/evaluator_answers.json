@@ -1,0 +1,383 @@
+[
+ {
+  "id": "genai-ml-fundamentals-0003:good",
+  "question": "Supervised vs unsupervised vs reinforcement learning.",
+  "key_points": [
+   "Supervised learns from labelled examples to predict labels for new data \u2014 spam detection, price prediction.",
+   "Unsupervised finds structure in unlabelled data \u2014 clustering customers, detecting anomalies.",
+   "Reinforcement learns behaviour from rewards through trial and error \u2014 game playing, robotics, and the human-feedback stage of LLM training.",
+   "Labels, structure, rewards \u2014 three signals."
+  ],
+  "answer": "Supervised learns from labelled examples to predict labels for new data \u2014 spam detection, price prediction. Unsupervised finds structure in unlabelled data \u2014 clustering customers, detecting anomalies. Reinforcement learns behaviour from rewards through trial and error \u2014 game playing, robotics, and the human-feedback stage of LLM training. Labels, structure, rewards \u2014 three signals.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-ml-fundamentals-0003:partial",
+  "question": "Supervised vs unsupervised vs reinforcement learning.",
+  "key_points": [
+   "Supervised learns from labelled examples to predict labels for new data \u2014 spam detection, price prediction.",
+   "Unsupervised finds structure in unlabelled data \u2014 clustering customers, detecting anomalies.",
+   "Reinforcement learns behaviour from rewards through trial and error \u2014 game playing, robotics, and the human-feedback stage of LLM training.",
+   "Labels, structure, rewards \u2014 three signals."
+  ],
+  "answer": "Supervised learns from labelled examples to predict labels for new data \u2014 spam detection, price prediction.",
+  "reference_rank": 2,
+  "human_score": 9
+ },
+ {
+  "id": "genai-ml-fundamentals-0003:poor",
+  "question": "Supervised vs unsupervised vs reinforcement learning.",
+  "key_points": [
+   "Supervised learns from labelled examples to predict labels for new data \u2014 spam detection, price prediction.",
+   "Unsupervised finds structure in unlabelled data \u2014 clustering customers, detecting anomalies.",
+   "Reinforcement learns behaviour from rewards through trial and error \u2014 game playing, robotics, and the human-feedback stage of LLM training.",
+   "Labels, structure, rewards \u2014 three signals."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-ml-evaluation-0010:good",
+  "question": "Explain the bias-variance trade-off.",
+  "key_points": [
+   "Bias is systematic error from a model too simple \u2014 it misses the pattern the same way everywhere.",
+   "Variance is sensitivity to the training sample \u2014 a complex model fits noise and swings between datasets.",
+   "Reducing one usually raises the other; tuning walks the middle.",
+   "High bias shows as underfitting, high variance as overfitting \u2014 the two vocabularies describe one trade."
+  ],
+  "answer": "Bias is systematic error from a model too simple \u2014 it misses the pattern the same way everywhere. Variance is sensitivity to the training sample \u2014 a complex model fits noise and swings between datasets. Reducing one usually raises the other; tuning walks the middle. High bias shows as underfitting, high variance as overfitting \u2014 the two vocabularies describe one trade.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-ml-evaluation-0010:partial",
+  "question": "Explain the bias-variance trade-off.",
+  "key_points": [
+   "Bias is systematic error from a model too simple \u2014 it misses the pattern the same way everywhere.",
+   "Variance is sensitivity to the training sample \u2014 a complex model fits noise and swings between datasets.",
+   "Reducing one usually raises the other; tuning walks the middle.",
+   "High bias shows as underfitting, high variance as overfitting \u2014 the two vocabularies describe one trade."
+  ],
+  "answer": "Bias is systematic error from a model too simple \u2014 it misses the pattern the same way everywhere.",
+  "reference_rank": 2,
+  "human_score": 9
+ },
+ {
+  "id": "genai-ml-evaluation-0010:poor",
+  "question": "Explain the bias-variance trade-off.",
+  "key_points": [
+   "Bias is systematic error from a model too simple \u2014 it misses the pattern the same way everywhere.",
+   "Variance is sensitivity to the training sample \u2014 a complex model fits noise and swings between datasets.",
+   "Reducing one usually raises the other; tuning walks the middle.",
+   "High bias shows as underfitting, high variance as overfitting \u2014 the two vocabularies describe one trade."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-llm-basics-0016:good",
+  "question": "What is a large language model, and what is a foundation model?",
+  "key_points": [
+   "An LLM is a neural network with billions of parameters trained on vast text to predict the next token \u2014 from which fluent generation, summarisation, translation and coding all emerge.",
+   "A foundation model is the broader term: any very large pre-trained model adaptable to many downstream tasks, of which text LLMs are the most familiar kind."
+  ],
+  "answer": "An LLM is a neural network with billions of parameters trained on vast text to predict the next token \u2014 from which fluent generation, summarisation, translation and coding all emerge. A foundation model is the broader term: any very large pre-trained model adaptable to many downstream tasks, of which text LLMs are the most familiar kind.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-llm-basics-0016:partial",
+  "question": "What is a large language model, and what is a foundation model?",
+  "key_points": [
+   "An LLM is a neural network with billions of parameters trained on vast text to predict the next token \u2014 from which fluent generation, summarisation, translation and coding all emerge.",
+   "A foundation model is the broader term: any very large pre-trained model adaptable to many downstream tasks, of which text LLMs are the most familiar kind."
+  ],
+  "answer": "An LLM is a neural network with billions of parameters trained on vast text to predict the next token \u2014 from which fluent generation, summarisation, translation and coding all emerge.",
+  "reference_rank": 2,
+  "human_score": 5
+ },
+ {
+  "id": "genai-llm-basics-0016:poor",
+  "question": "What is a large language model, and what is a foundation model?",
+  "key_points": [
+   "An LLM is a neural network with billions of parameters trained on vast text to predict the next token \u2014 from which fluent generation, summarisation, translation and coding all emerge.",
+   "A foundation model is the broader term: any very large pre-trained model adaptable to many downstream tasks, of which text LLMs are the most familiar kind."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-transformers-0021:good",
+  "question": "What is the transformer, and why did it displace RNNs?",
+  "key_points": [
+   "The architecture behind modern LLMs, built on self-attention \u2014 every token can weigh every other token directly.",
+   "RNNs read sequentially, so training could not parallelise and distant context faded through the chain.",
+   "Transformers process all positions at once \u2014 massively parallel training \u2014 and connect any two positions in one step, capturing long-range dependencies.",
+   "Those two wins are the whole displacement story."
+  ],
+  "answer": "The architecture behind modern LLMs, built on self-attention \u2014 every token can weigh every other token directly. RNNs read sequentially, so training could not parallelise and distant context faded through the chain. Transformers process all positions at once \u2014 massively parallel training \u2014 and connect any two positions in one step, capturing long-range dependencies. Those two wins are the whole displacement story.",
+  "reference_rank": 3,
+  "human_score": 8
+ },
+ {
+  "id": "genai-transformers-0021:partial",
+  "question": "What is the transformer, and why did it displace RNNs?",
+  "key_points": [
+   "The architecture behind modern LLMs, built on self-attention \u2014 every token can weigh every other token directly.",
+   "RNNs read sequentially, so training could not parallelise and distant context faded through the chain.",
+   "Transformers process all positions at once \u2014 massively parallel training \u2014 and connect any two positions in one step, capturing long-range dependencies.",
+   "Those two wins are the whole displacement story."
+  ],
+  "answer": "The architecture behind modern LLMs, built on self-attention \u2014 every token can weigh every other token directly.",
+  "reference_rank": 2,
+  "human_score": 8
+ },
+ {
+  "id": "genai-transformers-0021:poor",
+  "question": "What is the transformer, and why did it displace RNNs?",
+  "key_points": [
+   "The architecture behind modern LLMs, built on self-attention \u2014 every token can weigh every other token directly.",
+   "RNNs read sequentially, so training could not parallelise and distant context faded through the chain.",
+   "Transformers process all positions at once \u2014 massively parallel training \u2014 and connect any two positions in one step, capturing long-range dependencies.",
+   "Those two wins are the whole displacement story."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-prompting-0027:good",
+  "question": "Zero-shot, one-shot and few-shot prompting.",
+  "key_points": [
+   "Zero-shot: the instruction alone.",
+   "One-shot: one worked example included.",
+   "Few-shot: several examples, from which the model infers the pattern, format and edge handling.",
+   "Few-shot is the cheapest accuracy upgrade available \u2014 often the difference between an unusable output and a production one, at the cost of only prompt tokens."
+  ],
+  "answer": "Zero-shot: the instruction alone. One-shot: one worked example included. Few-shot: several examples, from which the model infers the pattern, format and edge handling. Few-shot is the cheapest accuracy upgrade available \u2014 often the difference between an unusable output and a production one, at the cost of only prompt tokens.",
+  "reference_rank": 3,
+  "human_score": 10
+ },
+ {
+  "id": "genai-prompting-0027:partial",
+  "question": "Zero-shot, one-shot and few-shot prompting.",
+  "key_points": [
+   "Zero-shot: the instruction alone.",
+   "One-shot: one worked example included.",
+   "Few-shot: several examples, from which the model infers the pattern, format and edge handling.",
+   "Few-shot is the cheapest accuracy upgrade available \u2014 often the difference between an unusable output and a production one, at the cost of only prompt tokens."
+  ],
+  "answer": "Zero-shot: the instruction alone.",
+  "reference_rank": 2,
+  "human_score": 3
+ },
+ {
+  "id": "genai-prompting-0027:poor",
+  "question": "Zero-shot, one-shot and few-shot prompting.",
+  "key_points": [
+   "Zero-shot: the instruction alone.",
+   "One-shot: one worked example included.",
+   "Few-shot: several examples, from which the model infers the pattern, format and edge handling.",
+   "Few-shot is the cheapest accuracy upgrade available \u2014 often the difference between an unusable output and a production one, at the cost of only prompt tokens."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-embeddings-0034:good",
+  "question": "Cosine similarity, and why not plain SQL for semantic search?",
+  "key_points": [
+   "Cosine similarity measures the angle between two vectors \u2014 the standard closeness score for text embeddings.",
+   "SQL matches values and patterns: LIKE finds 'refund' only where the string occurs, and has no notion of meaning-distance, so 'money back' is invisible to it.",
+   "Semantic search needs the geometry embeddings provide; keyword search needs the exactness SQL provides.",
+   "Different questions, different tools."
+  ],
+  "answer": "Cosine similarity measures the angle between two vectors \u2014 the standard closeness score for text embeddings. SQL matches values and patterns: LIKE finds 'refund' only where the string occurs, and has no notion of meaning-distance, so 'money back' is invisible to it. Semantic search needs the geometry embeddings provide; keyword search needs the exactness SQL provides. Different questions, different tools.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-embeddings-0034:partial",
+  "question": "Cosine similarity, and why not plain SQL for semantic search?",
+  "key_points": [
+   "Cosine similarity measures the angle between two vectors \u2014 the standard closeness score for text embeddings.",
+   "SQL matches values and patterns: LIKE finds 'refund' only where the string occurs, and has no notion of meaning-distance, so 'money back' is invisible to it.",
+   "Semantic search needs the geometry embeddings provide; keyword search needs the exactness SQL provides.",
+   "Different questions, different tools."
+  ],
+  "answer": "Cosine similarity measures the angle between two vectors \u2014 the standard closeness score for text embeddings.",
+  "reference_rank": 2,
+  "human_score": 9
+ },
+ {
+  "id": "genai-embeddings-0034:poor",
+  "question": "Cosine similarity, and why not plain SQL for semantic search?",
+  "key_points": [
+   "Cosine similarity measures the angle between two vectors \u2014 the standard closeness score for text embeddings.",
+   "SQL matches values and patterns: LIKE finds 'refund' only where the string occurs, and has no notion of meaning-distance, so 'money back' is invisible to it.",
+   "Semantic search needs the geometry embeddings provide; keyword search needs the exactness SQL provides.",
+   "Different questions, different tools."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-rag-0038:good",
+  "question": "Tell the RAG pipeline as a story.",
+  "key_points": [
+   "Two halves. Ingestion: collect documents, clean them, split into chunks with overlap, embed each chunk, store vectors with metadata.",
+   "Question time: embed the user's query, retrieve the top-k nearest chunks, optionally rerank and filter by permissions, build a prompt of instructions plus retrieved context plus question, generate the grounded answer and cite the sources.",
+   "Ingestion once, retrieval per question."
+  ],
+  "answer": "Two halves. Ingestion: collect documents, clean them, split into chunks with overlap, embed each chunk, store vectors with metadata. Question time: embed the user's query, retrieve the top-k nearest chunks, optionally rerank and filter by permissions, build a prompt of instructions plus retrieved context plus question, generate the grounded answer and cite the sources. Ingestion once, retrieval per question.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-rag-0038:partial",
+  "question": "Tell the RAG pipeline as a story.",
+  "key_points": [
+   "Two halves. Ingestion: collect documents, clean them, split into chunks with overlap, embed each chunk, store vectors with metadata.",
+   "Question time: embed the user's query, retrieve the top-k nearest chunks, optionally rerank and filter by permissions, build a prompt of instructions plus retrieved context plus question, generate the grounded answer and cite the sources.",
+   "Ingestion once, retrieval per question."
+  ],
+  "answer": "Two halves. Ingestion: collect documents, clean them, split into chunks with overlap, embed each chunk, store vectors with metadata.",
+  "reference_rank": 2,
+  "human_score": 6
+ },
+ {
+  "id": "genai-rag-0038:poor",
+  "question": "Tell the RAG pipeline as a story.",
+  "key_points": [
+   "Two halves. Ingestion: collect documents, clean them, split into chunks with overlap, embed each chunk, store vectors with metadata.",
+   "Question time: embed the user's query, retrieve the top-k nearest chunks, optionally rerank and filter by permissions, build a prompt of instructions plus retrieved context plus question, generate the grounded answer and cite the sources.",
+   "Ingestion once, retrieval per question."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-hallucination-0044:good",
+  "question": "Is the model's confidence a signal of correctness?",
+  "key_points": [
+   "No. The tone is uniformly assured whether the content is right or fabricated \u2014 confidence is a style the model learned, not an internal accuracy meter.",
+   "Trust comes from outside the fluency: citations to retrievable sources, validation against data and tool-verified claims.",
+   "Judge the evidence, never the tone."
+  ],
+  "answer": "No. The tone is uniformly assured whether the content is right or fabricated \u2014 confidence is a style the model learned, not an internal accuracy meter. Trust comes from outside the fluency: citations to retrievable sources, validation against data and tool-verified claims. Judge the evidence, never the tone.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-hallucination-0044:partial",
+  "question": "Is the model's confidence a signal of correctness?",
+  "key_points": [
+   "No. The tone is uniformly assured whether the content is right or fabricated \u2014 confidence is a style the model learned, not an internal accuracy meter.",
+   "Trust comes from outside the fluency: citations to retrievable sources, validation against data and tool-verified claims.",
+   "Judge the evidence, never the tone."
+  ],
+  "answer": "No. The tone is uniformly assured whether the content is right or fabricated \u2014 confidence is a style the model learned, not an internal accuracy meter.",
+  "reference_rank": 2,
+  "human_score": 6
+ },
+ {
+  "id": "genai-hallucination-0044:poor",
+  "question": "Is the model's confidence a signal of correctness?",
+  "key_points": [
+   "No. The tone is uniformly assured whether the content is right or fabricated \u2014 confidence is a style the model learned, not an internal accuracy meter.",
+   "Trust comes from outside the fluency: citations to retrievable sources, validation against data and tool-verified claims.",
+   "Judge the evidence, never the tone."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-responsible-ai-0046:good",
+  "question": "Where does AI bias come from and what limits it?",
+  "key_points": [
+   "Mostly from data: models reproduce and amplify the patterns of their training sets \u2014 a hiring model trained on a biased decade recommends the bias forward; skewed representation degrades accuracy for the underrepresented.",
+   "Limits: diverse and audited data, evaluation broken out by group, fairness metrics, red-team testing and human review on consequential decisions.",
+   "Bias is inherited, so the controls target the inheritance."
+  ],
+  "answer": "Mostly from data: models reproduce and amplify the patterns of their training sets \u2014 a hiring model trained on a biased decade recommends the bias forward; skewed representation degrades accuracy for the underrepresented. Limits: diverse and audited data, evaluation broken out by group, fairness metrics, red-team testing and human review on consequential decisions. Bias is inherited, so the controls target the inheritance.",
+  "reference_rank": 3,
+  "human_score": 9
+ },
+ {
+  "id": "genai-responsible-ai-0046:partial",
+  "question": "Where does AI bias come from and what limits it?",
+  "key_points": [
+   "Mostly from data: models reproduce and amplify the patterns of their training sets \u2014 a hiring model trained on a biased decade recommends the bias forward; skewed representation degrades accuracy for the underrepresented.",
+   "Limits: diverse and audited data, evaluation broken out by group, fairness metrics, red-team testing and human review on consequential decisions.",
+   "Bias is inherited, so the controls target the inheritance."
+  ],
+  "answer": "Mostly from data: models reproduce and amplify the patterns of their training sets \u2014 a hiring model trained on a biased decade recommends the bias forward; skewed representation degrades accuracy for the underrepresented.",
+  "reference_rank": 2,
+  "human_score": 7
+ },
+ {
+  "id": "genai-responsible-ai-0046:poor",
+  "question": "Where does AI bias come from and what limits it?",
+  "key_points": [
+   "Mostly from data: models reproduce and amplify the patterns of their training sets \u2014 a hiring model trained on a biased decade recommends the bias forward; skewed representation degrades accuracy for the underrepresented.",
+   "Limits: diverse and audited data, evaluation broken out by group, fairness metrics, red-team testing and human review on consequential decisions.",
+   "Bias is inherited, so the controls target the inheritance."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ },
+ {
+  "id": "genai-project-defence-0050:good",
+  "question": "Deliver the six-answer AI project defence.",
+  "key_points": [
+   "Prepared per project, in this shape. Model: which and why \u2014 capability, cost, latency, hosting.",
+   "Data: where it came from, what consent and cleaning it had. Approach: prompting, RAG or fine-tuning \u2014 justified by the triad.",
+   "Hallucination: grounding, instructions, validation, refusal.",
+   "Scale: what happens at ten thousand users \u2014 caching, queues, token costs.",
+   "Security: keys in secrets management, permission-filtered retrieval, injection defences.",
+   "Six answers, one breath each \u2014 panels ask them in exactly this shape."
+  ],
+  "answer": "Prepared per project, in this shape. Model: which and why \u2014 capability, cost, latency, hosting. Data: where it came from, what consent and cleaning it had. Approach: prompting, RAG or fine-tuning \u2014 justified by the triad. Hallucination: grounding, instructions, validation, refusal. Scale: what happens at ten thousand users \u2014 caching, queues, token costs. Security: keys in secrets management, permission-filtered retrieval, injection defences. Six answers, one breath each \u2014 panels ask them in exactly this shape.",
+  "reference_rank": 3,
+  "human_score": 8
+ },
+ {
+  "id": "genai-project-defence-0050:partial",
+  "question": "Deliver the six-answer AI project defence.",
+  "key_points": [
+   "Prepared per project, in this shape. Model: which and why \u2014 capability, cost, latency, hosting.",
+   "Data: where it came from, what consent and cleaning it had. Approach: prompting, RAG or fine-tuning \u2014 justified by the triad.",
+   "Hallucination: grounding, instructions, validation, refusal.",
+   "Scale: what happens at ten thousand users \u2014 caching, queues, token costs.",
+   "Security: keys in secrets management, permission-filtered retrieval, injection defences.",
+   "Six answers, one breath each \u2014 panels ask them in exactly this shape."
+  ],
+  "answer": "Prepared per project, in this shape. Model: which and why \u2014 capability, cost, latency, hosting.",
+  "reference_rank": 2,
+  "human_score": 6
+ },
+ {
+  "id": "genai-project-defence-0050:poor",
+  "question": "Deliver the six-answer AI project defence.",
+  "key_points": [
+   "Prepared per project, in this shape. Model: which and why \u2014 capability, cost, latency, hosting.",
+   "Data: where it came from, what consent and cleaning it had. Approach: prompting, RAG or fine-tuning \u2014 justified by the triad.",
+   "Hallucination: grounding, instructions, validation, refusal.",
+   "Scale: what happens at ten thousand users \u2014 caching, queues, token costs.",
+   "Security: keys in secrets management, permission-filtered retrieval, injection defences.",
+   "Six answers, one breath each \u2014 panels ask them in exactly this shape."
+  ],
+  "answer": "I am not sure. I think it is something related to this topic but I do not remember the details.",
+  "reference_rank": 1,
+  "human_score": 0
+ }
+]

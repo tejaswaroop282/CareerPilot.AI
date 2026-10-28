@@ -1,0 +1,61 @@
+{
+  "company": "amazon",
+  "aliases": [
+    "amazon web services",
+    "aws",
+    "amazon.com"
+  ],
+  "records": [
+    {
+      "id": "amzn-sde-0001",
+      "company": "amazon",
+      "role": "sde",
+      "round": "onsite",
+      "topic": "leadership",
+      "type": "pattern",
+      "text": "Behavioral rounds probe the leadership principles such as ownership and customer obsession with structured stories.",
+      "source": "test-fixture",
+      "license": "self-authored",
+      "confidence": "medium",
+      "year": 2024
+    },
+    {
+      "id": "amzn-sde-0002",
+      "company": "amazon",
+      "role": "sde",
+      "round": "onsite",
+      "topic": "arrays",
+      "type": "question",
+      "text": "Given a stream of orders, return the k most frequent products.",
+      "source": "test-fixture",
+      "license": "self-authored",
+      "confidence": "low",
+      "year": 2024,
+      "key_points": [
+        "Hash map or heap approach",
+        "State time and space complexity",
+        "Handle empty input and ties"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "amzn-sde-0003",
+      "company": "amazon",
+      "role": "sde",
+      "round": "oa",
+      "topic": "graphs",
+      "type": "question",
+      "text": "Find the minimum number of warehouses needed to reach every city given a road graph.",
+      "source": "test-fixture",
+      "license": "self-authored",
+      "confidence": "low",
+      "year": 2024,
+      "key_points": [
+        "Hash map or heap approach",
+        "State time and space complexity",
+        "Handle empty input and ties"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

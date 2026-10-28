@@ -1,0 +1,75 @@
+{
+  "role": "sde",
+  "aliases": [
+    "software engineer",
+    "software development engineer",
+    "sde i"
+  ],
+  "questions": [
+    {
+      "id": "sde-arrays-0001",
+      "role": "sde",
+      "topic": "arrays",
+      "difficulty": "easy",
+      "type": "question",
+      "question": "How would you find two numbers in an array that add up to a target?",
+      "key_points": [
+        "Hash map of seen values",
+        "One pass gives O(n) time",
+        "Sorting plus two pointers is an alternative"
+      ],
+      "source": "test-fixture"
+    },
+    {
+      "id": "sde-sysdes-0001",
+      "role": "sde",
+      "topic": "system-design",
+      "difficulty": "hard",
+      "type": "question",
+      "question": "Design a URL shortener that serves a high read volume.",
+      "key_points": [
+        "Key generation strategy",
+        "Cache in front of the datastore",
+        "Read-heavy so replicate and shard"
+      ],
+      "source": "test-fixture"
+    },
+    {
+      "id": "sde-behav-0001",
+      "role": "sde",
+      "topic": "behavioral",
+      "difficulty": "easy",
+      "type": "question",
+      "question": "Tell me about a time you disagreed with a teammate on a technical decision.",
+      "key_points": [
+        "Situation and stakes",
+        "How you listened and used data",
+        "Outcome and what you learned"
+      ],
+      "source": "test-fixture"
+    },
+    {
+      "id": "sde-os-0001",
+      "role": "sde",
+      "topic": "os",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Which scheduling algorithm can cause starvation of long processes?",
+      "options": [
+        "Round robin",
+        "Shortest job first",
+        "First come first served",
+        "Multilevel feedback with aging"
+      ],
+      "correct_index": 1,
+      "explanation": "Shortest job first keeps picking short jobs, so a long job may wait indefinitely unless aging is used.",
+      "key_points": [
+        "SJF favours short jobs",
+        "Long jobs can wait forever",
+        "Aging fixes starvation"
+      ],
+      "source": "test-fixture"
+    }
+  ],
+  "resources": []
+}

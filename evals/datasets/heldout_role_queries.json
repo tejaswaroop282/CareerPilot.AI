@@ -1,0 +1,392 @@
+[
+ {
+  "id": "h01",
+  "kb": "role",
+  "query": "ways to quantify and monitor the performance and consumption of services hosted online",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-cloud-0111"
+   ]
+  }
+ },
+ {
+  "id": "h02",
+  "kb": "role",
+  "query": "situations where the paid version of the Puppet automation tool helps manage servers",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-devops-0025"
+   ]
+  }
+ },
+ {
+  "id": "h03",
+  "kb": "role",
+  "query": "teaching language models to invoke external functions and keeping function definitions easy to maintain",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-rag-and-agents-0007"
+   ]
+  }
+ },
+ {
+  "id": "h04",
+  "kb": "role",
+  "query": "a document describing what software must do and the qualities of a well written requirement",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0002"
+   ]
+  }
+ },
+ {
+  "id": "h05",
+  "kb": "role",
+  "query": "situations where adjusting model weights beats retrieving documents at inference time",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-rag-and-agents-0005"
+   ]
+  }
+ },
+ {
+  "id": "h06",
+  "kb": "role",
+  "query": "which programming language operations engineers like to use for automation",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-devops-0018"
+   ]
+  }
+ },
+ {
+  "id": "h07",
+  "kb": "role",
+  "query": "protecting data and workloads when running applications on remote provider infrastructure",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-cloud-0107"
+   ]
+  }
+ },
+ {
+  "id": "h08",
+  "kb": "role",
+  "query": "problems with using a language model to grade other model outputs and how to compensate",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-llm-evaluation-0003"
+   ]
+  }
+ },
+ {
+  "id": "h09",
+  "kb": "role",
+  "query": "finding which running programs have an open handle on a given file",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-unix-0191"
+   ]
+  }
+ },
+ {
+  "id": "h10",
+  "kb": "role",
+  "query": "the company that combines different vendors' technology into a working solution for a customer in the cloud",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-cloud-0126"
+   ]
+  }
+ },
+ {
+  "id": "h11",
+  "kb": "role",
+  "query": "combining rows from two tables: inner, left, right and full variants",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-dbms-0027"
+   ]
+  }
+ },
+ {
+  "id": "h12",
+  "kb": "role",
+  "query": "how layers are reused so repeated image builds run faster",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-docker-0086"
+   ]
+  }
+ },
+ {
+  "id": "h13",
+  "kb": "role",
+  "query": "giving a model no examples versus a single example versus several examples in the prompt",
+  "filters": {
+   "role": "genai"
+  },
+  "expect": {
+   "ids": [
+    "genai-prompting-0027"
+   ]
+  }
+ },
+ {
+  "id": "h14",
+  "kb": "role",
+  "query": "exception handling blocks that always run cleanup code",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-oops-0037"
+   ]
+  }
+ },
+ {
+  "id": "h15",
+  "kb": "role",
+  "query": "when some picture categories have far fewer samples than others, what to do",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-computer-vision-0009"
+   ]
+  }
+ },
+ {
+  "id": "h16",
+  "kb": "role",
+  "query": "sending a command's output to a file or reading its input from a file in the shell",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-unix-0178"
+   ]
+  }
+ },
+ {
+  "id": "h17",
+  "kb": "role",
+  "query": "choosing a subset of input variables before training and why it helps",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-ml-theory-0009"
+   ]
+  }
+ },
+ {
+  "id": "h18",
+  "kb": "role",
+  "query": "the agreed checklist a team uses to decide a work item is finished",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0016"
+   ]
+  }
+ },
+ {
+  "id": "h19",
+  "kb": "role",
+  "query": "testing behaviour under heavy user counts, extreme overload and large data amounts",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0033"
+   ]
+  }
+ },
+ {
+  "id": "h20",
+  "kb": "role",
+  "query": "an image instruction that triggers when the image is used as a base for another build",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-docker-0085"
+   ]
+  }
+ },
+ {
+  "id": "h21",
+  "kb": "role",
+  "query": "the command interpreter program that reads what you type on a Linux terminal",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-unix-0149"
+   ]
+  }
+ },
+ {
+  "id": "h22",
+  "kb": "role",
+  "query": "software delivered over the internet by subscription instead of installed locally",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-cloud-0104"
+   ]
+  }
+ },
+ {
+  "id": "h23",
+  "kb": "role",
+  "query": "the attention-based neural network architecture behind modern language models",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-nlp-0002"
+   ]
+  }
+ },
+ {
+  "id": "h24",
+  "kb": "role",
+  "query": "two developers changed the same lines and version control cannot combine them automatically",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-sdlc-0046"
+   ]
+  }
+ },
+ {
+  "id": "h25",
+  "kb": "role",
+  "query": "splitting optimizer state, gradients and parameters across GPUs in stages to save memory",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-distributed-training-0002"
+   ]
+  }
+ },
+ {
+  "id": "h26",
+  "kb": "role",
+  "query": "penalty that keeps the tuned model close to the starting model during reward optimization",
+  "filters": {
+   "role": "aiml"
+  },
+  "expect": {
+   "ids": [
+    "aiml-reinforcement-learning-0017"
+   ]
+  }
+ },
+ {
+  "id": "h27",
+  "kb": "role",
+  "query": "the sequence of steps to define and run a multi-container application from a YAML file",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-docker-0071"
+   ]
+  }
+ },
+ {
+  "id": "h28",
+  "kb": "role",
+  "query": "the typical commands used inside the file that describes how to build a container image",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-docker-0087"
+   ]
+  }
+ },
+ {
+  "id": "h29",
+  "kb": "role",
+  "query": "deleting everything in the current folder including hidden items",
+  "filters": {
+   "role": "devops"
+  },
+  "expect": {
+   "ids": [
+    "devops-unix-0145"
+   ]
+  }
+ },
+ {
+  "id": "h30",
+  "kb": "role",
+  "query": "an operating system that lets many users share the processor by rapidly switching between jobs",
+  "filters": {
+   "role": "sde"
+  },
+  "expect": {
+   "ids": [
+    "sde-os-0005"
+   ]
+  }
+ }
+]

@@ -1,0 +1,83 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "BucketListAndHeadBucket",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::careerpilot-217856377501-aps1",
+      "Condition": {
+        "StringLikeIfExists": {
+          "s3:prefix": [
+            "users/*",
+            "global/*",
+            "healthcheck/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "AppObjectsReadWrite",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::careerpilot-217856377501-aps1/users/*",
+        "arn:aws:s3:::careerpilot-217856377501-aps1/global/*",
+        "arn:aws:s3:::careerpilot-217856377501-aps1/healthcheck/*"
+      ]
+    },
+    {
+      "Sid": "AppDeleteUserFilesAndHealthcheckOnly",
+      "Effect": "Allow",
+      "Action": "s3:DeleteObject",
+      "Resource": [
+        "arn:aws:s3:::careerpilot-217856377501-aps1/users/*",
+        "arn:aws:s3:::careerpilot-217856377501-aps1/healthcheck/*"
+      ]
+    },
+    {
+      "Sid": "ReadDeployBundle",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::careerpilot-217856377501-aps1/deploy/*"
+    },
+    {
+      "Sid": "ReadOwnSecretsOnly",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:GetParametersByPath"
+      ],
+      "Resource": "arn:aws:ssm:ap-south-1:217856377501:parameter/careerpilot/*"
+    },
+    {
+      "Sid": "EcrTokenNoResourceLevel",
+      "Effect": "Allow",
+      "Action": "ecr:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "EcrPullOwnImagesOnly",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage"
+      ],
+      "Resource": "arn:aws:ecr:ap-south-1:217856377501:repository/careerpilot-*"
+    },
+    {
+      "Sid": "WriteOwnLogStreams",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:ap-south-1:217856377501:log-group:/careerpilot/*:*"
+    }
+  ]
+}

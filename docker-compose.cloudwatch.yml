@@ -1,0 +1,18 @@
+# Optional: send container logs to CloudWatch (the log group /careerpilot/containers is created beforehand by the deployer; the instance role needs only CreateLogStream and PutLogEvents).
+#   docker compose --env-file .env.production -f docker-compose.prod.yml -f docker-compose.cloudwatch.yml up -d
+x-cw: &cw
+  driver: awslogs
+  options:
+    awslogs-region: ${AWS_REGION:-ap-south-1}
+    awslogs-group: /careerpilot/containers
+    awslogs-create-group: "false"
+
+services:
+  caddy:
+    logging: {<<: *cw, options: {awslogs-region: "${AWS_REGION:-ap-south-1}", awslogs-group: /careerpilot/containers, awslogs-create-group: "false", tag: caddy}}
+  frontend:
+    logging: {<<: *cw, options: {awslogs-region: "${AWS_REGION:-ap-south-1}", awslogs-group: /careerpilot/containers, awslogs-create-group: "false", tag: frontend}}
+  backend:
+    logging: {<<: *cw, options: {awslogs-region: "${AWS_REGION:-ap-south-1}", awslogs-group: /careerpilot/containers, awslogs-create-group: "false", tag: backend}}
+  mcp:
+    logging: {<<: *cw, options: {awslogs-region: "${AWS_REGION:-ap-south-1}", awslogs-group: /careerpilot/containers, awslogs-create-group: "false", tag: mcp}}

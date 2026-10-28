@@ -1,0 +1,56 @@
+/* Design tokens (spec 10.2). Components use these variables only. Dark first; [data-theme="light"] overrides. */
+:root {
+  --bg-base: #0b1020;
+  --bg-grad: linear-gradient(160deg, #0b1020 0%, #121a3a 55%, #1a1446 100%);
+  --glass-1: rgba(255, 255, 255, 0.06);
+  --glass-2: rgba(255, 255, 255, 0.1);
+  --glass-solid: rgba(17, 22, 46, 0.94);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-highlight: rgba(255, 255, 255, 0.22);
+  --glass-blur: 20px;
+  --text-primary: #f5f7ff;
+  --text-secondary: #a9b1d6;
+  --scrim: rgba(8, 11, 28, 0.55);
+  --accent-from: #6366f1;
+  --accent-via: #8b5cf6;
+  --accent-to: #22d3ee;
+  --accent-grad: linear-gradient(120deg, var(--accent-from), var(--accent-via) 55%, var(--accent-to));
+  --kb-personal: #a78bfa;
+  --kb-role: #60a5fa;
+  --kb-company: #fbbf24;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #fb7185;
+  --info: #38bdf8;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-glass: 0 10px 40px rgba(2, 4, 20, 0.45);
+  --shadow-glow: 0 0 0 3px rgba(139, 92, 246, 0.35);
+  --orb-a: rgba(99, 102, 241, 0.35);
+  --orb-b: rgba(34, 211, 238, 0.22);
+  --orb-c: rgba(139, 92, 246, 0.3);
+}
+
+:root[data-theme="light"] {
+  --bg-base: #eef1ff;
+  --bg-grad: linear-gradient(160deg, #eef1ff 0%, #e4e9ff 55%, #ece4ff 100%);
+  --glass-1: rgba(255, 255, 255, 0.6);
+  --glass-2: rgba(255, 255, 255, 0.78);
+  --glass-solid: rgba(255, 255, 255, 0.97);
+  --glass-border: rgba(30, 41, 90, 0.14);
+  --glass-highlight: rgba(255, 255, 255, 0.9);
+  --text-primary: #141a3d;
+  --text-secondary: #4a5380;
+  --scrim: rgba(255, 255, 255, 0.7);
+  --kb-personal: #6d3fe0;
+  --kb-role: #1d5fd6;
+  --kb-company: #a05a00;
+  --success: #0f8f63;
+  --warning: #a05a00;
+  --danger: #c4284a;
+  --info: #0b78b0;
+  --shadow-glass: 0 10px 30px rgba(40, 50, 120, 0.15);
+  --orb-a: rgba(99, 102, 241, 0.22);
+  --orb-b: rgba(34, 211, 238, 0.2);
+  --orb-c: rgba(139, 92, 246, 0.18);
+}

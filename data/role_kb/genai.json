@@ -1,0 +1,833 @@
+{
+ "role": "genai",
+ "aliases": [
+  "generative ai",
+  "gen ai",
+  "genai engineer",
+  "ai engineer",
+  "llm engineer",
+  "llm developer",
+  "genai developer",
+  "generative ai developer",
+  "ai chatbot developer",
+  "prompt engineer"
+ ],
+ "questions": [
+  {
+   "id": "genai-ml-fundamentals-0001",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Separate AI, ML, DL and GenAI.",
+   "key_points": [
+    "Nested circles. AI is the broad goal — machines doing tasks that need intelligence.",
+    "ML is the approach of learning patterns from data instead of hand-written rules.",
+    "DL is ML using many-layered neural networks that learn their own features.",
+    "GenAI is the newest ring — models that create new content: text, images, code.",
+    "Each inner circle is a way of achieving the outer one."
+   ],
+   "pitfall": "Listing four unrelated definitions. The nesting is the answer — each term is a subset and a method of the one before it.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0002",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "How is machine learning different from traditional programming?",
+   "key_points": [
+    "The inputs and outputs swap.",
+    "Traditional programming: rules plus data in, answers out — a human writes the logic.",
+    "Machine learning: data plus answers in, rules out — the model learns the logic from examples.",
+    "That inversion is why ML wins where rules are unwritable — nobody can hand-code what makes a photo a cat."
+   ],
+   "pitfall": "'ML programs itself.' The inversion — examples in, rules out — is the precise idea, and the cat-photo case is the standard proof.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0003",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Supervised vs unsupervised vs reinforcement learning.",
+   "key_points": [
+    "Supervised learns from labelled examples to predict labels for new data — spam detection, price prediction.",
+    "Unsupervised finds structure in unlabelled data — clustering customers, detecting anomalies.",
+    "Reinforcement learns behaviour from rewards through trial and error — game playing, robotics, and the human-feedback stage of LLM training.",
+    "Labels, structure, rewards — three signals."
+   ],
+   "pitfall": "Forgetting the RL example. RLHF makes reinforcement learning current — connecting it to LLM training upgrades a textbook answer.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0004",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Classification vs regression vs clustering.",
+   "key_points": [
+    "Classification predicts a category — spam or not, disease or not; regression predicts a continuous number — price, temperature; both are supervised.",
+    "Clustering groups similar items without labels — customer segments — and is unsupervised.",
+    "The panel test is placement: given a problem, name which of the three it is."
+   ],
+   "pitfall": "Placing clustering under supervised learning. No labels is its defining property — the supervised-unsupervised line runs between the first two and the third.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0005",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Predictive AI vs generative AI.",
+   "key_points": [
+    "Predictive AI scores or classifies what already exists — will this customer churn, is this transaction fraud.",
+    "Generative AI produces new artifacts — the email itself, the image, the code.",
+    "Same foundations, different output type: a judgement about the world against a new piece of it.",
+    "Most enterprise AI before 2022 was predictive; the wave since is generative."
+   ],
+   "pitfall": "'Generative replaced predictive.' Both are in production everywhere — output type, not era, is the distinction.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0006",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Training vs inference.",
+   "key_points": [
+    "Training adjusts the model's parameters by showing it data and correcting errors — computationally massive, done rarely.",
+    "Inference uses the frozen trained model to answer — comparatively cheap, done at every request.",
+    "Every chat with an LLM is inference; the model learned nothing from your conversation unless someone later trains on it."
+   ],
+   "pitfall": "'The model learns from every chat.' Inference changes nothing — the frozen-weights point corrects the most common lay misconception aloud.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0007",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Parameters vs hyperparameters.",
+   "key_points": [
+    "Parameters are what training learns — the weights inside the model, billions of them in an LLM.",
+    "Hyperparameters are what humans choose before training — learning rate, epochs, network depth, tree depth.",
+    "The model finds its parameters; you tune its hyperparameters, usually against the validation set."
+   ],
+   "pitfall": "Mixing the two words. Learned-by-training against chosen-by-humans — plus 'tuned on validation data' as the working detail.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0008",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What are features and labels, and why three datasets?",
+   "key_points": [
+    "Features are the input variables; the label is the answer the model must learn to produce.",
+    "Data splits three ways: train to fit the parameters, validation to tune hyperparameters and compare models, test — untouched until the end — to report honest performance.",
+    "Touch the test set during development and the reported number stops being honest."
+   ],
+   "pitfall": "Tuning on the test set. The untouched-until-the-end rule is the entire reason the third split exists — leakage is the word to say.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-fundamentals-0009",
+   "role": "genai",
+   "topic": "ml-fundamentals",
+   "subtopic": "foundations",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Overfitting vs underfitting, with fixes.",
+   "key_points": [
+    "Overfitting: the model memorised the training data — excellent train scores, poor performance on new data; fixes are more data, regularisation, a simpler model and cross-validation.",
+    "Underfitting: the model is too simple to capture the pattern — poor everywhere; fixes are a richer model, better features and longer training.",
+    "The train-test score gap is the diagnostic."
+   ],
+   "pitfall": "Diagnosing without the score gap. High train and low test means overfit; low both means underfit — the gap reading is the practical skill being tested.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-evaluation-0010",
+   "role": "genai",
+   "topic": "ml-evaluation",
+   "subtopic": "ml-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the bias-variance trade-off.",
+   "key_points": [
+    "Bias is systematic error from a model too simple — it misses the pattern the same way everywhere.",
+    "Variance is sensitivity to the training sample — a complex model fits noise and swings between datasets.",
+    "Reducing one usually raises the other; tuning walks the middle.",
+    "High bias shows as underfitting, high variance as overfitting — the two vocabularies describe one trade."
+   ],
+   "pitfall": "Treating bias-variance and overfit-underfit as separate topics. They are the same phenomenon in two vocabularies — connecting them is the mark.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-evaluation-0011",
+   "role": "genai",
+   "topic": "ml-evaluation",
+   "subtopic": "ml-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is a confusion matrix?",
+   "key_points": [
+    "The two-by-two grid of classification outcomes: true positives, false positives, true negatives, false negatives.",
+    "Every classification metric is a ratio read off it — accuracy, precision, recall, specificity.",
+    "Its value is separating the error types: a false alarm and a missed case are different mistakes with different costs, and the matrix keeps them apart."
+   ],
+   "pitfall": "Reciting the four cells without the point. Separating error types by cost is why the matrix exists — say false alarm against missed case.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-evaluation-0012",
+   "role": "genai",
+   "topic": "ml-evaluation",
+   "subtopic": "ml-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Precision vs recall, and which does cancer screening optimise?",
+   "key_points": [
+    "Precision: of everything I flagged, how much was actually positive — TP over TP plus FP.",
+    "Recall: of everything actually positive, how much did I catch — TP over TP plus FN.",
+    "Screening optimises recall, because a missed cancer costs far more than a false alarm that further tests resolve.",
+    "Spam filtering leans the other way — precision, so real mail is not lost."
+   ],
+   "pitfall": "Formulas without the cost reasoning. The screening-versus-spam pairing shows the metrics are understood as decisions, not definitions.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-evaluation-0013",
+   "role": "genai",
+   "topic": "ml-evaluation",
+   "subtopic": "ml-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the accuracy trap?",
+   "key_points": [
+    "On imbalanced data accuracy flatters a useless model: with 99% honest transactions, predicting 'not fraud' always scores 99% while catching nothing.",
+    "The fix is metrics that respect the minority class — precision, recall, F1 and ROC-AUC — or rebalancing the data.",
+    "Any fraud, disease or defect problem is imbalanced by nature, so the trap is the default, not the exception."
+   ],
+   "pitfall": "Reporting accuracy on a fraud model. The 99%-and-useless example is the answer — and naming F1 as the replacement completes it.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-evaluation-0014",
+   "role": "genai",
+   "topic": "ml-evaluation",
+   "subtopic": "ml-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is cross-validation?",
+   "key_points": [
+    "Instead of one train-validation split, k-fold cross-validation rotates: split the data into k parts, train on k−1 and validate on the held-out part, repeating k times so every point is validated once.",
+    "The averaged score is far more stable than a single split's — one lucky or unlucky split no longer decides the model."
+   ],
+   "pitfall": "'Testing multiple times.' The rotation — every fold validates exactly once — is the mechanism, and stability is the benefit to name.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-ml-evaluation-0015",
+   "role": "genai",
+   "topic": "ml-evaluation",
+   "subtopic": "ml-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are data leakage and class imbalance?",
+   "key_points": [
+    "Leakage is information from outside the training scope contaminating training — a feature that encodes the answer, or preprocessing fitted on the full dataset before splitting — producing brilliant offline scores that collapse in production.",
+    "Class imbalance is a skewed label distribution that misleads accuracy and starves the minority class; handled by resampling, class weights and the right metrics.",
+    "Both are silent score-inflators."
+   ],
+   "pitfall": "Blaming production drops on 'bad luck.' Leakage is the first suspect when offline scores look too good — the split-before-preprocessing rule is the fix worth saying.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-llm-basics-0016",
+   "role": "genai",
+   "topic": "llm-basics",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is a large language model, and what is a foundation model?",
+   "key_points": [
+    "An LLM is a neural network with billions of parameters trained on vast text to predict the next token — from which fluent generation, summarisation, translation and coding all emerge.",
+    "A foundation model is the broader term: any very large pre-trained model adaptable to many downstream tasks, of which text LLMs are the most familiar kind."
+   ],
+   "pitfall": "'A model that stores all the text it read.' It stores parameters, not documents — pattern weights, not a database, and that correction is the next question's setup.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-llm-basics-0017",
+   "role": "genai",
+   "topic": "llm-basics",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is a token, and why does everything get billed in tokens?",
+   "key_points": [
+    "The unit an LLM actually reads and writes — roughly a word piece; common words are one token, rare words split into several.",
+    "Models process token by token, so compute scales with token count — which is why context limits, latency and pricing are all denominated in tokens rather than words or characters."
+   ],
+   "pitfall": "'A token is a word.' Word pieces — and the compute-scales-with-tokens point explains why the whole ecosystem counts in them.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-llm-basics-0018",
+   "role": "genai",
+   "topic": "llm-basics",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the context window, and does a longer one guarantee better answers?",
+   "key_points": [
+    "The maximum tokens the model can attend to in one exchange — its working memory; everything beyond it simply is not seen.",
+    "Longer windows allow bigger documents and conversations, but do not guarantee better answers: attention dilutes over long contexts, relevant material can be lost in the middle and irrelevant filler actively hurts.",
+    "Selection quality still decides."
+   ],
+   "pitfall": "'More context always means better answers.' Dilution and lost-in-the-middle are the counterpoints — long context is capacity, not comprehension.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-llm-basics-0019",
+   "role": "genai",
+   "topic": "llm-basics",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How does an LLM actually generate an answer?",
+   "key_points": [
+    "By repeatedly predicting the next token given everything so far — compute a probability distribution over the vocabulary, sample one token, append it and repeat until a stop.",
+    "There is no lookup and no plan object — the apparent reasoning is patterns learned at scale expressing themselves one token at a time.",
+    "This single mechanism explains both the fluency and the hallucinations."
+   ],
+   "pitfall": "'It searches its database for the answer.' There is no database — next-token prediction is the whole mechanism, and it is the root explanation for hallucination later.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-llm-basics-0020",
+   "role": "genai",
+   "topic": "llm-basics",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What do temperature, top-p and top-k control?",
+   "key_points": [
+    "The sampling dials. Temperature reshapes the probability curve — low sharpens it toward the most likely token, deterministic and repeatable; high flattens it, creative and varied.",
+    "Top-k restricts sampling to the k most likely tokens; top-p to the smallest set covering probability p.",
+    "For extracting fields from invoices: temperature near zero.",
+    "For brainstorming taglines: higher."
+   ],
+   "pitfall": "Quoting dials without a use case. The invoice-versus-brainstorm pairing is the expected application — deterministic for extraction, varied for creation.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-transformers-0021",
+   "role": "genai",
+   "topic": "transformers",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the transformer, and why did it displace RNNs?",
+   "key_points": [
+    "The architecture behind modern LLMs, built on self-attention — every token can weigh every other token directly.",
+    "RNNs read sequentially, so training could not parallelise and distant context faded through the chain.",
+    "Transformers process all positions at once — massively parallel training — and connect any two positions in one step, capturing long-range dependencies.",
+    "Those two wins are the whole displacement story."
+   ],
+   "pitfall": "'Transformers are just bigger.' Parallel training plus direct long-range connections — the architectural wins came first; scale followed because training became feasible.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-transformers-0022",
+   "role": "genai",
+   "topic": "transformers",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain self-attention with the Q, K and V intuition.",
+   "key_points": [
+    "Each token issues a query — what am I looking for; every token offers a key — what I contain — and a value — my content.",
+    "Attention scores each query against all keys and blends the values by relevance, so 'it' in a sentence attends strongly to the noun it refers to.",
+    "Multi-head attention runs several such patterns in parallel — one head tracking syntax, another coreference."
+   ],
+   "pitfall": "Mathematical notation with no intuition. The 'it finds its noun' example is what the panel wants — relevance-weighted blending in one image.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-transformers-0023",
+   "role": "genai",
+   "topic": "transformers",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why is positional encoding needed?",
+   "key_points": [
+    "Because attention by itself is order-blind — it sees a set of tokens, not a sequence, and 'dog bites man' would equal 'man bites dog'.",
+    "Position signals are added to token embeddings so the model knows where each token sits, restoring word order and with it grammar.",
+    "Without it, sequence meaning collapses."
+   ],
+   "pitfall": "Skipping the why. Attention's order-blindness is the reason — and the dog-bites-man reversal is the two-second proof.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-transformers-0024",
+   "role": "genai",
+   "topic": "transformers",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Encoder-only, decoder-only and encoder-decoder models — which is which?",
+   "key_points": [
+    "Encoder-only models read and understand — classification, embeddings; BERT is the family name.",
+    "Decoder-only models generate token by token — chat LLMs live here; the GPT family.",
+    "Encoder-decoder models transform one sequence into another — translation, summarisation; T5-style.",
+    "The placement question panels ask: chat assistants are decoder-only."
+   ],
+   "pitfall": "Guessing the chat placement. Decoder-only for generation is the tested cell — anchor each family to one task and one example.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-llm-training-0025",
+   "role": "genai",
+   "topic": "llm-training",
+   "subtopic": "llms-the-transformer",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What do pre-training, fine-tuning and RLHF each contribute?",
+   "key_points": [
+    "Pre-training on broad text teaches language and world patterns through next-token prediction — capability.",
+    "Instruction fine-tuning on curated examples teaches the model to follow directions — usefulness.",
+    "RLHF ranks outputs by human preference and trains toward the preferred — alignment of tone, helpfulness and safety.",
+    "Capability, usefulness, alignment — and note RLHF does not add facts or fix accuracy."
+   ],
+   "pitfall": "'RLHF makes the model accurate.' It aligns style and behaviour with preference — factual accuracy is not what preference ranking trains.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-prompting-0026",
+   "role": "genai",
+   "topic": "prompting",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is prompt engineering, and what does a strong prompt contain?",
+   "key_points": [
+    "Designing the input so the model reliably produces the output you need — the cheapest lever in the stack, because no training is involved.",
+    "A strong prompt states a role, gives context, defines the task precisely, sets constraints, supplies the input, fixes the output format and shows an example or two.",
+    "The more of these present, the narrower the model's room to wander."
+   ],
+   "pitfall": "'Just ask clearly.' The named components — role, context, task, constraints, format, examples — are the discipline that separates engineering from hoping.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-prompting-0027",
+   "role": "genai",
+   "topic": "prompting",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Zero-shot, one-shot and few-shot prompting.",
+   "key_points": [
+    "Zero-shot: the instruction alone.",
+    "One-shot: one worked example included.",
+    "Few-shot: several examples, from which the model infers the pattern, format and edge handling.",
+    "Few-shot is the cheapest accuracy upgrade available — often the difference between an unusable output and a production one, at the cost of only prompt tokens."
+   ],
+   "pitfall": "Treating examples as decoration. Examples teach the format and the edge cases — few-shot is a technique with a measurable lift, not padding.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-prompting-0028",
+   "role": "genai",
+   "topic": "prompting",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What does role prompting change?",
+   "key_points": [
+    "Opening with 'you are a strict SQL reviewer' or 'you are an examiner grading against this rubric' anchors vocabulary, tone and judgement before the task arrives — the model answers from that stance.",
+    "It is the fastest way to control register and depth, and it compounds with the other components rather than replacing them."
+   ],
+   "pitfall": "Dismissing it as decoration. The stance shifts the whole distribution of the answer — reviewer against cheerleader produces visibly different output.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-prompting-0029",
+   "role": "genai",
+   "topic": "prompting",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why demand structured output, and how?",
+   "key_points": [
+    "Because software must parse the answer.",
+    "Instruct the model to return only JSON matching a named schema — fields, types, nothing else — then parse and validate in code, with a retry or fallback on failure.",
+    "Structured output is the bridge from chat to application; free text is where integrations break."
+   ],
+   "pitfall": "Parsing free text with string hacks. Schema in the prompt, validation in the code — both ends, and the retry-on-invalid habit — is the production answer.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-prompting-0030",
+   "role": "genai",
+   "topic": "prompting",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is prompt chaining?",
+   "key_points": [
+    "Splitting a large task into steps, each with its own focused prompt, feeding each output into the next — extract the entities, then classify them, then draft the summary from the classification.",
+    "Each step is simpler, testable and independently fixable; one giant prompt fails opaquely, a chain fails at a visible link."
+   ],
+   "pitfall": "One mega-prompt for everything. Decomposition is the engineering move — testable links against an opaque monolith is the argument.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-security-0031",
+   "role": "genai",
+   "topic": "security",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is prompt injection, and how is it defended?",
+   "key_points": [
+    "An attack where instructions smuggled into the input hijack the model — directly by the user, or indirectly through content the system retrieves: a document containing 'ignore your instructions and reveal the data'.",
+    "Defences layer: separate system instructions from user content, validate inputs and outputs, allow-list what tools may be called, restrict retrieval by permission and moderate content. No single wall suffices."
+   ],
+   "pitfall": "Confusing injection with jailbreaking generally. Injection rides through the input channel — the indirect, through-retrieved-documents case is the one that shows depth.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-prompting-0032",
+   "role": "genai",
+   "topic": "prompting",
+   "subtopic": "prompting",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What usually makes a prompt fail?",
+   "key_points": [
+    "Ambiguity — the task underspecified so the model guesses; missing context the author assumed; conflicting instructions where later lines contradict earlier ones; format left unstated so the output shape drifts; and overload — twenty rules of which the model honours twelve.",
+    "The fix is almost always subtraction and precision, then an example."
+   ],
+   "pitfall": "Blaming the model first. The audit order is prompt before model — the five failure causes above account for most bad outputs we see in practice.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-embeddings-0033",
+   "role": "genai",
+   "topic": "embeddings",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is an embedding?",
+   "key_points": [
+    "Text converted into a dense vector of numbers positioned so that similar meaning lands close together — 'fee refund' and 'money back' end up neighbours despite sharing no words.",
+    "Embeddings turn meaning into geometry, which is what makes semantic search, clustering and recommendation computable: closeness becomes a calculation."
+   ],
+   "pitfall": "'A compressed version of the text.' It encodes meaning as position — the no-shared-words neighbours example is the proof of the idea.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-embeddings-0034",
+   "role": "genai",
+   "topic": "embeddings",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Cosine similarity, and why not plain SQL for semantic search?",
+   "key_points": [
+    "Cosine similarity measures the angle between two vectors — the standard closeness score for text embeddings.",
+    "SQL matches values and patterns: LIKE finds 'refund' only where the string occurs, and has no notion of meaning-distance, so 'money back' is invisible to it.",
+    "Semantic search needs the geometry embeddings provide; keyword search needs the exactness SQL provides.",
+    "Different questions, different tools."
+   ],
+   "pitfall": "'SQL could do it with enough LIKE clauses.' No enumeration captures meaning — the distance-in-meaning capability is categorically absent from string matching.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-vector-databases-0035",
+   "role": "genai",
+   "topic": "vector-databases",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Semantic search vs keyword search — when each?",
+   "key_points": [
+    "Keyword search wins on exactness — IDs, part numbers, names, quoted phrases; nothing beats an exact match for an invoice number.",
+    "Semantic search wins on meaning — questions phrased differently from the documents.",
+    "Production systems run hybrid: keyword precision plus semantic recall, merged and reranked.",
+    "Ask which the query needs: the string or the meaning."
+   ],
+   "pitfall": "Replacing keyword search entirely with vectors. Exact identifiers degrade under pure vector search — hybrid is the deployed answer.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-vector-databases-0036",
+   "role": "genai",
+   "topic": "vector-databases",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is a vector database, and what happens if the embedding model changes?",
+   "key_points": [
+    "A store built for embeddings: it indexes vectors for fast approximate nearest-neighbour search, returns top-k similar items and filters by metadata alongside.",
+    "Change the embedding model and every stored vector must be regenerated — old and new vectors live in incompatible spaces, and mixing them silently corrupts every similarity score."
+   ],
+   "pitfall": "Missing the re-embedding consequence. 'Re-embed everything, the spaces are incompatible' is the operational question this topic exists to ask.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-rag-0037",
+   "role": "genai",
+   "topic": "rag",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is RAG and why does it exist?",
+   "key_points": [
+    "Retrieval-Augmented Generation: fetch relevant documents at question time and generate the answer grounded in them, with citations.",
+    "It exists because the model's training is frozen and generic — it knows nothing after its cutoff and nothing private.",
+    "RAG supplies current and proprietary knowledge per question, without retraining — and wrong-answer risk drops because the answer must trace to retrieved text."
+   ],
+   "pitfall": "'RAG trains the model on your documents.' Nothing is trained — retrieval at question time is the mechanism, and that is also why updates are as easy as re-ingesting.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-rag-0038",
+   "role": "genai",
+   "topic": "rag",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Tell the RAG pipeline as a story.",
+   "key_points": [
+    "Two halves. Ingestion: collect documents, clean them, split into chunks with overlap, embed each chunk, store vectors with metadata.",
+    "Question time: embed the user's query, retrieve the top-k nearest chunks, optionally rerank and filter by permissions, build a prompt of instructions plus retrieved context plus question, generate the grounded answer and cite the sources.",
+    "Ingestion once, retrieval per question."
+   ],
+   "pitfall": "Merging the halves. Ingestion-then-query is the structure — telling it as two phases with the citation ending is the accepted narration.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-rag-0039",
+   "role": "genai",
+   "topic": "rag",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why does chunking matter, and what goes wrong?",
+   "key_points": [
+    "Chunks are the retrieval unit: too large and irrelevant text rides along, diluting the context; too small and answers split across chunks so no single retrieval suffices.",
+    "Splitting by structure — headings, paragraphs — with overlap preserves coherent, findable units.",
+    "Bad chunking is the first suspect behind irrelevant retrieval; it silently caps the whole system's quality."
+   ],
+   "pitfall": "Treating chunk size as a random config. Retrieval quality inherits chunk quality — the too-big and too-small failure pair is the explanation to give.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-rag-0040",
+   "role": "genai",
+   "topic": "rag",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Name the standard RAG failures with a fix for each.",
+   "key_points": [
+    "Irrelevant retrieval — improve chunking, add reranking, filter by metadata, rewrite the query.",
+    "Hallucination despite context — tighten instructions to answer only from context and say not found, lower temperature, validate citations.",
+    "Outdated or conflicting documents — versioned ingestion with freshness metadata and deduplication.",
+    "Leaking restricted content — enforce the user's permissions at retrieval, before the prompt.",
+    "Failure named, fix attached — that pairing is the answer format."
+   ],
+   "pitfall": "Diagnosing everything as 'the model is bad.' RAG failures are mostly pipeline failures — retrieval, chunking, instructions, access — and locating them there is the skill.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-rag-0041",
+   "role": "genai",
+   "topic": "rag",
+   "subtopic": "embeddings-rag",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How do you evaluate a RAG system?",
+   "key_points": [
+    "Two layers, separately. Retrieval: are the right chunks coming back — precision and recall against known-good pairs.",
+    "Generation: is the answer faithful to the retrieved context, relevant to the question and correctly cited.",
+    "A golden set of question-answer-source triples enables regression testing whenever prompts, chunking or models change.",
+    "It answers is not the same as it answers well."
+   ],
+   "pitfall": "One vibe-check score for the whole. Separating retrieval quality from generation faithfulness is the discipline — a wrong answer from right chunks is a different bug than right answer from wrong chunks.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-hallucination-0042",
+   "role": "genai",
+   "topic": "hallucination",
+   "subtopic": "reliability-responsibility",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why do LLMs hallucinate?",
+   "key_points": [
+    "Because the mechanism is next-token plausibility, not truth verification — fluency and factuality are different properties.",
+    "The model fills gaps to complete patterns, fabricating details and citations with the same confident tone as real ones; its training also ends at a cutoff while the world moves.",
+    "Hallucination is the mechanism's native behaviour, not a bug switch someone forgot."
+   ],
+   "pitfall": "'Hallucination is a bug being patched out.' It is inherent to plausibility-based generation — mitigated by grounding and validation, not deleted by an update.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-hallucination-0043",
+   "role": "genai",
+   "topic": "hallucination",
+   "subtopic": "reliability-responsibility",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What actually reduces hallucination?",
+   "key_points": [
+    "Ground with retrieval and instruct: answer only from the provided context, say not found otherwise.",
+    "Lower the temperature for factual tasks.",
+    "Demand structured output and validate it against source data.",
+    "Verify claims with tools — search, database lookups — where stakes justify it.",
+    "Permit refusal, restrict the domain and add human review for consequential outputs. Layers, not a single fix."
+   ],
+   "pitfall": "Offering one silver bullet. The layered list — grounding, instructions, temperature, validation, refusal, review — is the accepted shape of this answer.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-hallucination-0044",
+   "role": "genai",
+   "topic": "hallucination",
+   "subtopic": "reliability-responsibility",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Is the model's confidence a signal of correctness?",
+   "key_points": [
+    "No. The tone is uniformly assured whether the content is right or fabricated — confidence is a style the model learned, not an internal accuracy meter.",
+    "Trust comes from outside the fluency: citations to retrievable sources, validation against data and tool-verified claims.",
+    "Judge the evidence, never the tone."
+   ],
+   "pitfall": "Trusting fluent, detailed answers more. Fabrications arrive equally fluent and detailed — evidence over tone is the rule this question exists to elicit.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-responsible-ai-0045",
+   "role": "genai",
+   "topic": "responsible-ai",
+   "subtopic": "reliability-responsibility",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are the core responsible-AI principles?",
+   "key_points": [
+    "Fairness — no systematic disadvantage to groups; transparency and explainability — users know AI is involved and decisions can be accounted for; privacy — data minimised and consented; security; reliability; accountability — a human owns outcomes; and human oversight over consequential decisions.",
+    "In practice they become concrete controls: disclosure, audit logs, review gates and bias testing."
+   ],
+   "pitfall": "A principle recital with no controls. Each principle maps to a control — naming disclosure, audit logs and review gates turns ethics into engineering.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-responsible-ai-0046",
+   "role": "genai",
+   "topic": "responsible-ai",
+   "subtopic": "reliability-responsibility",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Where does AI bias come from and what limits it?",
+   "key_points": [
+    "Mostly from data: models reproduce and amplify the patterns of their training sets — a hiring model trained on a biased decade recommends the bias forward; skewed representation degrades accuracy for the underrepresented.",
+    "Limits: diverse and audited data, evaluation broken out by group, fairness metrics, red-team testing and human review on consequential decisions.",
+    "Bias is inherited, so the controls target the inheritance."
+   ],
+   "pitfall": "'The algorithm is neutral.' The data carries the history — the hiring example makes inheritance concrete, and the group-wise evaluation is the working control.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-security-0047",
+   "role": "genai",
+   "topic": "security",
+   "subtopic": "reliability-responsibility",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Prompt injection vs jailbreaking, and the defence stack.",
+   "key_points": [
+    "Injection hijacks through the input channel — hostile instructions in user input or inside retrieved documents, aimed at your application's behaviour.",
+    "Jailbreaking targets the model's own safety rules — crafting prompts that trick it past refusals.",
+    "Defences layer: isolate system prompts from content, validate input and output, allow-list tools, enforce retrieval permissions, moderate content and require human approval for critical actions."
+   ],
+   "pitfall": "Merging the two attacks. Your app's behaviour against the model's safety rules — different targets, and the layered defence list is the second half either way.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-approach-selection-0048",
+   "role": "genai",
+   "topic": "approach-selection",
+   "subtopic": "applied-questions",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Prompting vs RAG vs fine-tuning — how do you choose?",
+   "key_points": [
+    "By what is missing. Behaviour missing — tone, format, role: prompt engineering, the cheapest lever.",
+    "Knowledge missing — current or private information: RAG, which supplies it at question time with citations and easy updates.",
+    "Specialisation missing — a repeated task pattern, a house style, a domain dialect: fine-tuning.",
+    "And they stack: a fine-tuned model, retrieval-grounded, well-prompted.",
+    "The triad justified against the use case is the most repeated GenAI question we record."
+   ],
+   "pitfall": "'Fine-tuning is how you add new facts.' Facts belong to RAG — retrievable, citable, updatable; fine-tuning teaches patterns and style. That swap is the classic error.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-agents-0049",
+   "role": "genai",
+   "topic": "agents",
+   "subtopic": "applied-questions",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "An AI agent vs a chatbot — and what is tool calling?",
+   "key_points": [
+    "A chatbot answers within the conversation.",
+    "An agent pursues a goal: it plans, calls tools, observes results and loops until done — booking the ticket rather than describing how.",
+    "Tool calling is the mechanism: the model emits a structured call — function name plus JSON arguments — your application executes it and returns the result for the next step.",
+    "The model decides; the application acts."
+   ],
+   "pitfall": "'The model executes actions itself.' It only emits the structured intent — the application executes, which is exactly where permissions and safety live.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  },
+  {
+   "id": "genai-project-defence-0050",
+   "role": "genai",
+   "topic": "project-defence",
+   "subtopic": "applied-questions",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Deliver the six-answer AI project defence.",
+   "key_points": [
+    "Prepared per project, in this shape. Model: which and why — capability, cost, latency, hosting.",
+    "Data: where it came from, what consent and cleaning it had. Approach: prompting, RAG or fine-tuning — justified by the triad.",
+    "Hallucination: grounding, instructions, validation, refusal.",
+    "Scale: what happens at ten thousand users — caching, queues, token costs.",
+    "Security: keys in secrets management, permission-filtered retrieval, injection defences.",
+    "Six answers, one breath each — panels ask them in exactly this shape."
+   ],
+   "pitfall": "Improvising these in the chair. The six are known in advance and asked in this order — an unprepared defence is where AI resumes fail, and preparation is the whole answer.",
+   "source": "CCC Placement Review Series 2026, Generative AI and AI Fundamentals (user-supplied study material; sentences taken from the book)"
+  }
+ ],
+ "resources": []
+}

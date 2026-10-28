@@ -1,0 +1,2407 @@
+{
+ "role": "aiml",
+ "aliases": [
+  "machine learning engineer",
+  "ml engineer",
+  "ai/ml engineer",
+  "ai ml engineer",
+  "applied scientist",
+  "data scientist",
+  "ai intern",
+  "ai developer",
+  "ai/ml intern",
+  "ml intern",
+  "machine learning intern",
+  "ai researcher"
+ ],
+ "questions": [
+  {
+   "id": "aiml-ml-theory-0001",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What's the difference between supervised, unsupervised, and reinforcement learning?",
+   "key_points": [
+    "Supervised learning uses labeled data to train a model for prediction.",
+    "Unsupervised learning works with unlabeled data to discover structure or patterns.",
+    "Reinforcement learning trains an agent via rewards and penalties from interactions with an environment.",
+    "Key difference: presence of labels (supervised), no labels (unsupervised), and sequential decision making (reinforcement)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://developers.google.com/machine-learning/intro-to-ml/what-is-ml",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0002",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the bias-variance tradeoff.",
+   "key_points": [
+    "Bias error arises from overly simplistic models that miss underlying patterns.",
+    "Variance error comes from models that fit noise in training data, causing instability.",
+    "Total error = bias² + variance + irreducible error.",
+    "Balancing model complexity reduces both bias and variance to achieve optimal generalization."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://machinelearningmastery.com/gentle-introduction-to-the-bias-variance-trade-off-in-machine-learning/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0003",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is overfitting and how do you combat it?",
+   "key_points": [
+    "Overfitting occurs when a model captures noise instead of the true signal, performing poorly on new data.",
+    "Use more training data to reduce variance.",
+    "Apply regularization (L1/L2) to penalize large coefficients.",
+    "Employ cross‑validation to monitor generalization performance.",
+    "Simplify the model or prune features to improve robustness."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://aws.amazon.com/what-is/overfitting/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0004",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Compare L1 and L2 regularization.",
+   "key_points": [
+    "L1 regularization adds the absolute value of coefficients, encouraging sparsity (feature selection).",
+    "L2 regularization adds the squared value of coefficients, shrinking them smoothly.",
+    "L1 can zero out irrelevant features; L2 retains all features with reduced magnitude.",
+    "L2 often yields better stability; L1 is useful when interpretability and feature reduction are needed."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.analyticsvidhya.com/blog/2016/01/complete-tutorial-ridge-lasso-regression-python/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0005",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain precision, recall, F1-score, and ROC-AUC.",
+   "key_points": [
+    "Precision = TP / (TP + FP); measures correctness of positive predictions.",
+    "Recall = TP / (TP + FN); measures coverage of actual positives.",
+    "F1‑score is the harmonic mean of precision and recall, balancing both.",
+    "ROC curve plots TPR vs. FPR across thresholds; AUC quantifies overall discriminative ability.",
+    "Higher AUC indicates better ranking of positive over negative instances."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0006",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is cross-validation and why is it important?",
+   "key_points": [
+    "Cross‑validation splits data into training and validation folds to assess model performance.",
+    "K‑fold CV rotates the validation set across k partitions, reducing variance of the estimate.",
+    "It helps detect overfitting and provides a more reliable estimate of generalization error.",
+    "Common variants: stratified, leave‑one‑out, and time‑series aware CV."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/cross-validation-in-machine-learning-72924a69872f",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0007",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the difference between bagging and boosting.",
+   "key_points": [
+    "Bagging builds multiple independent models on bootstrap samples and aggregates predictions (e.g., majority vote).",
+    "Boosting builds models sequentially, each focusing on errors of the previous one.",
+    "Bagging reduces variance; boosting reduces bias and can improve accuracy.",
+    "Examples: Random Forest (bagging) vs. AdaBoost / Gradient Boosting (boosting)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0008",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How do decision trees work? Explain Random Forests and Gradient Boosting.",
+   "key_points": [
+    "Decision trees split data recursively on feature thresholds to maximize information gain or impurity reduction.",
+    "Random Forest creates many trees on random feature subsets and aggregates their votes for robustness.",
+    "Gradient Boosting builds trees sequentially, each correcting residuals of the previous ensemble.",
+    "Both ensemble methods improve accuracy over single trees, with different trade‑offs in bias, variance, and training time."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/decision-trees-and-random-forests-df0c3123f991",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0009",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is feature selection and why is it important?",
+   "key_points": [
+    "Feature selection chooses a subset of relevant variables for model building.",
+    "It reduces dimensionality, improves model interpretability, and can enhance performance.",
+    "Methods include filter (statistical tests), wrapper (model‑based evaluation), and embedded (regularization) approaches.",
+    "Removing irrelevant or redundant features helps prevent overfitting and speeds up training."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://machinelearningmastery.com/an-introduction-to-feature-selection/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-theory-0010",
+   "role": "aiml",
+   "topic": "ml-theory",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How does PCA work? When would you use it?",
+   "key_points": [
+    "PCA finds orthogonal axes (principal components) that maximize variance by eigen‑decomposition of the covariance matrix or SVD of the data matrix.",
+    "Steps: center data, compute covariance, get eigenvectors/values, sort by eigenvalue, project onto top‑k components.",
+    "Time complexity O(nd^2) for covariance (n samples, d dimensions) or O(ndk) with truncated SVD; space O(d^2).",
+    "Used for dimensionality reduction, noise filtering, visualization, and speeding up downstream models when features are correlated.",
+    "Edge cases: data not centered, too few samples vs dimensions, interpretability loss, assumes linear relationships."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://builtin.com/data-science/step-step-explanation-principal-component-analysis",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Essential Machine Learning Theory for Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0001",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "Explain the architecture of a neural network.",
+   "key_points": [
+    "A neural network is a directed acyclic graph of layers where each layer applies a linear transformation (weights + bias) followed by a non‑linear activation.",
+    "Typical architecture: input layer → hidden layers (fully‑connected, convolutional, recurrent, etc.) → output layer; each layer outputs a vector passed forward.",
+    "Parameters are learned via gradient‑based optimization; the network depth and width determine capacity and expressiveness.",
+    "Common design choices: number of layers, units per layer, activation functions, weight initialization, and regularization techniques.",
+    "Complexity per forward pass: O(#weights); memory O(#weights + activations) for backpropagation."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.ibm.com/cloud/learn/neural-networks",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0002",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are activation functions? Compare sigmoid, tanh, ReLU, Leaky ReLU, and softmax.",
+   "key_points": [
+    "Activation functions introduce non‑linearity; they map a neuron's pre‑activation to its output.",
+    "Sigmoid: σ(x)=1/(1+e⁻ˣ), output (0,1), smooth, suffers from saturation → vanishing gradients, costly exponentials.",
+    "Tanh: (eˣ‑e⁻ˣ)/(eˣ+e⁻ˣ), output (‑1,1), zero‑centered but still saturates at extremes.",
+    "ReLU: max(0,x), cheap, sparse activation, avoids saturation on positive side but dead‑neuron problem for large negative inputs.",
+    "Leaky ReLU: αx for x<0 (α≈0.01), mitigates dead neurons while keeping simplicity."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0003",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is backpropagation?",
+   "key_points": [
+    "Backpropagation computes gradients of the loss w.r.t. each weight by applying the chain rule layer‑by‑layer from output to input.",
+    "Two phases: forward pass (store activations) then backward pass (propagate error signals and compute ∂L/∂W).",
+    "Uses vectorized matrix operations; gradient for a weight matrix W in layer ℓ is δ^{ℓ}·(a^{ℓ‑1})^T where δ is the error term.",
+    "Time complexity O(#weights) per iteration; space O(#weights + activations) to store intermediate values.",
+    "Key edge cases: non‑differentiable activations (handled via sub‑gradients), exploding/vanishing gradients, and need for proper weight initialization."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/@14prakash/back-propagation-is-very-simple-who-made-it-complicated-97b794c97e5c",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0004",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain the vanishing/exploding gradient problem.",
+   "key_points": [
+    "Vanishing gradient: gradients shrink exponentially through many layers (especially with sigmoid/tanh), causing early layers to learn slowly.",
+    "Exploding gradient: gradients grow exponentially, leading to numerical overflow and unstable updates.",
+    "Root causes: repeated multiplication by Jacobians with eigenvalues <1 (vanish) or >1 (explode).",
+    "Mitigations: use ReLU‑like activations, proper weight initialization (He/Xavier), batch normalization, gradient clipping, and residual connections.",
+    "Complexity impact: affects convergence speed and may require more epochs or different optimizer settings."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/the-vanishing-exploding-gradient-problem-in-deep-neural-networks-191358470c11",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0005",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is dropout and why is it used?",
+   "key_points": [
+    "Dropout randomly zeroes a fraction p of activations during training, creating a thinned network each mini‑batch.",
+    "Acts as model averaging: each update trains a different sub‑network, reducing co‑adaptation of neurons.",
+    "At inference, scale weights (or activations) by (1‑p) to approximate the ensemble expectation.",
+    "Improves generalization and prevents overfitting, especially in large fully‑connected layers.",
+    "Implementation cost: O(1) per activation; no extra parameters; edge case: too high dropout rate can under‑fit."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/@amarbudhiraja/https-medium-com-amarbudhiraja-learning-less-to-learn-better-dropout-in-deep-machine-learning-74334da4bfc5",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0006",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are optimizers? Compare SGD, Adam, RMSprop, etc.",
+   "key_points": [
+    "Optimizers adjust weights using gradients; they differ in how they scale/accumulate past gradients.",
+    "SGD: w←w‑η∇L, simple, may need momentum to accelerate and escape shallow minima; O(1) memory.",
+    "Adam: maintains per‑parameter first (m) and second (v) moment estimates; update w←w‑η·m̂/(√v̂+ε); combines RMSprop + momentum; O(#weights) memory.",
+    "RMSprop: exponential moving average of squared gradients to adapt learning rates; w←w‑η∇L/√E[g²]+ε; O(1) extra memory per parameter.",
+    "Trade‑offs: SGD often generalizes better with proper tuning; Adam converges faster but may need learning‑rate decay; RMSprop similar to Adam without bias correction."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/optimizers-for-training-neural-network-59450d71caf6",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0007",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain batch normalization.",
+   "key_points": [
+    "Batch normalization normalizes layer inputs to zero mean and unit variance per mini‑batch, then scales and shifts with learnable γ, β.",
+    "Reduces internal covariate shift, allowing higher learning rates and faster convergence.",
+    "During training: compute batch statistics; during inference: use running averages.",
+    "Adds O(#features) parameters and negligible compute; can be placed after linear/conv layers before activation.",
+    "Edge cases: small batch sizes degrade statistics; may interact with dropout; sometimes unnecessary with residual connections."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://d2l.ai/chapter_convolutional-modern/batch-norm.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0008",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is transfer learning and how is it useful?",
+   "key_points": [
+    "Transfer learning reuses a model pretrained on a large source dataset (e.g., ImageNet) for a different target task.",
+    "Two common strategies: freeze early layers and fine‑tune later layers; or fine‑tune the whole network with a smaller learning rate.",
+    "Benefits: reduces required labeled data, speeds up training, often yields higher accuracy on limited data.",
+    "Typical workflow: load pretrained weights, replace final classification head, optionally add domain‑specific layers, train.",
+    "Edge cases: domain mismatch (features not transferable), catastrophic forgetting if fine‑tuned aggressively."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://machinelearningmastery.com/transfer-learning-for-deep-learning/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0009",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the architecture of CNNs.",
+   "key_points": [
+    "CNNs consist of stacked convolutional layers that apply learnable filters to local receptive fields, followed by non‑linearities and pooling.",
+    "Convolution reduces parameters via weight sharing; output size = (input‑kernel+2·padding)/stride +1.",
+    "Pooling (max/average) provides translation invariance and reduces spatial dimensions.",
+    "Typical architecture: Conv → ReLU → Pool → (optional BatchNorm) repeated, ending with fully‑connected or global‑average‑pooling classifier.",
+    "Complexity per conv layer: O(H·W·C_in·K²·C_out); space O(C_out·H·W) for activations."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-deep-learning-0010",
+   "role": "aiml",
+   "topic": "deep-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What are LSTMs and GRUs? How do they solve the vanishing gradient problem?",
+   "key_points": [
+    "LSTM and GRU are gated recurrent units that control information flow with learnable gates (input, forget, output for LSTM; reset, update for GRU).",
+    "Gates create paths with derivative close to 1, mitigating vanishing gradients over long sequences.",
+    "LSTM cell: c_t = f_t⊙c_{t‑1}+i_t⊙\tilde{c}_t; h_t = o_t⊙tanh(c_t). GRU merges cell and hidden state for fewer parameters.",
+    "Both enable learning long‑range dependencies; GRU is simpler and often faster, LSTM can be more expressive.",
+    "Complexity per time step: O(hidden_dim² + hidden_dim·input_dim); space O(hidden_dim) for states."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Deep Learning Concepts from Basic to Advanced); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-llms-0001",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Walk through the Transformer architecture end to end.",
+   "key_points": [
+    "Transformer consists of an encoder‑decoder stack; each layer has multi‑head self‑attention, feed‑forward network, residual connections, and layer norm.",
+    "Self‑attention computes weighted sums of value vectors, where weights are softmax(QKᵀ/√d_k); multi‑head splits into h parallel heads.",
+    "Positional encodings inject order information since attention is permutation‑invariant.",
+    "Decoder adds masked self‑attention (preventing future tokens) and encoder‑decoder attention to attend to source representations.",
+    "Complexity: O(N²·d) for attention on sequence length N (quadratic), O(N·d²) for feed‑forward; space O(N·d). Edge cases: long sequences → memory bottleneck, mitigated by sparse/linear attention variants."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1706.03762",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Attention Is All You Need"
+  },
+  {
+   "id": "aiml-llms-0002",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain self-attention, and why it is scaled by the square root of the key dimension.",
+   "key_points": [
+    "Self‑attention computes a weighted sum of value vectors where weights are softmax of dot‑products between query and key vectors.",
+    "The dot‑product magnitude grows with key dimension; scaling by 1/√d_k keeps the softmax distribution stable and prevents vanishing/exploding gradients.",
+    "Implementation uses three linear projections (Q, K, V) followed by matrix multiplication QK^T, scaling, softmax, and multiplication with V.",
+    "Time complexity per layer: O(N^2·d) for sequence length N and hidden size d; space complexity O(N^2) for the attention matrix.",
+    "Edge cases: very long sequences (quadratic cost) require approximations (e.g., sliding window, sparse or low‑rank attention)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://jalammar.github.io/illustrated-transformer/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: The Illustrated Transformer"
+  },
+  {
+   "id": "aiml-llms-0003",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the difference between encoder-only, decoder-only and encoder-decoder models?",
+   "key_points": [
+    "Encoder‑only models (e.g., BERT) process the whole input bidirectionally and output contextual embeddings; used for classification, token‑level tasks.",
+    "Decoder‑only models (e.g., GPT) generate tokens autoregressively, attending only to past tokens; suited for language generation.",
+    "Encoder‑decoder (seq2seq) models combine both: encoder builds a representation of the source, decoder generates output conditioned on that representation (e.g., T5, BART).",
+    "Complexity differences: encoder‑only needs full self‑attention on input (O(N^2)), decoder‑only adds causal mask, encoder‑decoder adds cross‑attention between encoder and decoder states.",
+    "Typical use‑case trade‑off: encoder‑only for understanding tasks, decoder‑only for pure generation, encoder‑decoder for translation or summarization where source‑target alignment matters."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://huggingface.co/docs/transformers/main/en/llm_tutorial",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Hugging Face LLM guide"
+  },
+  {
+   "id": "aiml-llms-0004",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How do rotary position embeddings work, and why did they replace absolute embeddings?",
+   "key_points": [
+    "Rotary Position Embedding (RoPE) multiplies query and key vectors by a complex rotation matrix derived from sinusoidal frequencies, encoding relative positions directly in the dot‑product.",
+    "Because rotation is applied to Q and K before the dot‑product, the resulting attention scores naturally depend on the distance between token positions.",
+    "RoPE removes the need for separate absolute positional embeddings, allowing the model to extrapolate to longer sequences and share position information across heads.",
+    "It is computationally cheap (element‑wise multiplication) and integrates seamlessly with existing transformer code.",
+    "Edge cases: requires careful handling of even/odd hidden dimensions and may need fine‑tuning of frequency base for very long contexts."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2104.09864",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: RoFormer / RoPE"
+  },
+  {
+   "id": "aiml-llms-0005",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain multi-head, multi-query and grouped-query attention, and the tradeoff each makes.",
+   "key_points": [
+    "Multi‑head attention splits the hidden dimension into h heads, each with its own Q/K/V projection, enabling the model to attend to different subspaces simultaneously.",
+    "Multi‑query attention uses a single set of K and V projections shared across all heads while keeping separate Q projections; reduces memory for KV cache in inference.",
+    "Grouped‑query attention groups heads into G groups, each group sharing K/V matrices; a middle ground between full multi‑head and multi‑query.",
+    "Trade‑offs: multi‑head gives maximal expressivity but O(N·d) KV cache; multi‑query cuts KV memory by ~h×, slightly lower expressivity; grouped‑query balances memory vs. capacity.",
+    "All variants keep the same O(N^2·d) compute for the QK^T step; inference speed gains come mainly from reduced cache size."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1706.03762",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Attention Is All You Need"
+  },
+  {
+   "id": "aiml-llms-0006",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is a Mixture of Experts model, and why route to only a couple of experts per token?",
+   "key_points": [
+    "Mixture‑of‑Experts (MoE) layers contain many expert feed‑forward networks; a gating network routes each token to a subset (usually 1‑2) of experts.",
+    "Routing sparsity keeps compute per token constant while scaling model capacity linearly with number of experts.",
+    "Only the selected experts are activated, so memory and FLOPs grow sub‑linearly; this enables trillion‑parameter models on modest hardware.",
+    "Training uses load‑balancing losses (e.g., auxiliary entropy or capacity loss) to avoid expert collapse.",
+    "Edge cases: routing overhead, expert starvation, and the need for specialized kernels (e.g., SwitchTransformer, GShard)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2401.04088",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Mixtral of Experts"
+  },
+  {
+   "id": "aiml-llms-0007",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain the compute-optimal scaling laws and what they changed about model training.",
+   "key_points": [
+    "Compute‑optimal scaling laws state that for a fixed compute budget, model performance is maximized by jointly scaling model size, dataset size, and training tokens according to power‑law relationships.",
+    "Empirically, optimal token count ≈ 20·parameter count; deviating (too few tokens or too many parameters) yields diminishing returns.",
+    "These laws shifted training from “bigger is always better” to balanced regimes, informing decisions on when to increase data vs. parameters.",
+    "They also predict that larger models benefit more from longer training, guiding curriculum and checkpoint strategies.",
+    "Key edge case: compute‑optimal regime assumes well‑behaved data distribution; domain‑specific or low‑quality data can break the scaling predictions."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2203.15556",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Chinchilla"
+  },
+  {
+   "id": "aiml-llms-0008",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Compare full fine-tuning, LoRA and QLoRA. When would you pick each?",
+   "key_points": [
+    "Full fine‑tuning updates all model weights; highest capacity to adapt but requires large GPU memory and risk of catastrophic forgetting.",
+    "LoRA adds low‑rank adapters (ΔW = A·B) to frozen pretrained weights; only the small adapter matrices are trained, reducing memory to a few percent of full model.",
+    "QLoRA quantizes the base model to 4‑bit (or 8‑bit) using a frozen quantizer, then applies LoRA on top; enables fine‑tuning of 70B‑scale models on a single GPU.",
+    "Choose full fine‑tuning when maximal performance gain is needed and resources allow (e.g., domain‑specific high‑stakes tasks).",
+    "Pick LoRA for rapid iteration, multi‑task adapters, or when GPU memory is limited; pick QLoRA when the base model is too large to fit in FP16/FP32 memory."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2106.09685",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: LoRA"
+  },
+  {
+   "id": "aiml-llms-0009",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain RLHF end to end: reward model, policy optimisation, and where it breaks.",
+   "key_points": [
+    "RLHF pipeline: (1) collect human preference data, (2) train a reward model to predict those preferences, (3) use the reward as a signal in policy optimisation (usually PPO) to fine‑tune the language model.",
+    "Reward model is a supervised classifier/regressor on pairwise comparisons; its quality directly limits RLHF performance.",
+    "PPO updates the policy by maximizing expected reward while keeping KL divergence to the original model bounded, preventing collapse.",
+    "Break points: reward model mis‑alignment, high variance in policy gradients, and instability from large KL penalties; also costly compute for many rollout generations.",
+    "Practical mitigations include reward‑model ensembles, KL‑regularisation tuning, and early stopping based on human‑in‑the‑loop evaluations."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2203.02155",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: InstructGPT"
+  },
+  {
+   "id": "aiml-llms-0010",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Compare DPO with PPO-based RLHF. Why has DPO become common?",
+   "key_points": [
+    "Direct Preference Optimization (DPO) formulates fine‑tuning as a supervised learning problem that directly maximizes the likelihood of preferred responses under a pairwise loss.",
+    "Unlike PPO, DPO does not require on‑policy rollouts or a separate policy‑gradient step; it trains on the same static preference dataset.",
+    "DPO eliminates KL‑penalty tuning and reduces variance, making training faster and more stable.",
+    "It still relies on a high‑quality reward model or human‑generated preference pairs, but the optimization is simpler and can be done with standard Adam.",
+    "Adopt DPO when compute budget is limited, when you have a large curated preference dataset, or when PPO’s instability outweighs its benefits."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2305.18290",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Direct Preference Optimization"
+  },
+  {
+   "id": "aiml-llms-0011",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is Constitutional AI and how does it reduce dependence on human labels?",
+   "key_points": [
+    "Constitutional AI augments RLHF by providing a set of high‑level principles (the “constitution”) that the model must obey during self‑critique and refinement.",
+    "The model generates a response, then a critique step checks for violations of the constitution; a second pass rewrites the answer to satisfy the rules.",
+    "Because the constitution is hand‑crafted, it reduces reliance on large amounts of human preference data while still steering behavior.",
+    "It can be combined with a small reward model for fine‑grained preferences, but the bulk of alignment comes from rule‑based self‑supervision.",
+    "Effective when human labeling is scarce or expensive, and when the desired behavior can be expressed as clear, enforceable rules."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2212.08073",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Constitutional AI"
+  },
+  {
+   "id": "aiml-llms-0012",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why does chain-of-thought prompting improve reasoning, and when does it not?",
+   "key_points": [
+    "Chain‑of‑thought (CoT) prompting asks the model to generate intermediate reasoning steps before the final answer, turning a single‑shot prediction into a multi‑step inference process.",
+    "CoT leverages the model’s latent reasoning ability, allowing it to decompose complex problems and reduce error propagation from premature answers.",
+    "It works best on tasks that have a logical or arithmetic structure and where the model has seen similar step‑by‑step patterns during pretraining.",
+    "CoT may fail when the task lacks a clear decomposition, when the model’s context window is too short for the full chain, or when the prompt induces hallucinated reasoning steps.",
+    "Mitigations include few‑shot examples, self‑consistency (sampling multiple chains and voting), and limiting chain length to stay within context limits."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2201.11903",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: Chain-of-Thought Prompting"
+  },
+  {
+   "id": "aiml-llms-0013",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What causes hallucination, and which mitigations actually work in production?",
+   "key_points": [
+    "Hallucinations arise when the model generates tokens that are plausible but not grounded in the input or external knowledge; causes include distributional drift, over‑reliance on language priors, and insufficient context.",
+    "Key mitigations that work in production: retrieval‑augmented generation (RAG) to ground outputs, instruction‑tuned fine‑tuning on factual data, and post‑generation verification (e.g., fact‑checkers).",
+    "Model‑level tricks such as temperature reduction, nucleus sampling with low p, and penalizing repeated n‑grams reduce but do not eliminate hallucinations.",
+    "System‑level approaches—pipeline that flags low‑confidence answers, human‑in‑the‑loop review for critical domains, and continuous monitoring of factual error rates—are essential.",
+    "Edge case: highly creative tasks (storytelling) intentionally require hallucination; alignment must distinguish between acceptable creativity and harmful misinformation."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2005.11401",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: RAG"
+  },
+  {
+   "id": "aiml-llms-0014",
+   "role": "aiml",
+   "topic": "llms",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain catastrophic forgetting during fine-tuning and how to limit it.",
+   "key_points": [
+    "Catastrophic forgetting: model overwrites pre‑trained weights when fine‑tuned on a narrow downstream dataset, losing general knowledge.",
+    "Mitigation: use a low learning rate, freeze early layers, or apply parameter‑efficient methods (LoRA, adapters, prefix‑tuning).",
+    "Regularisation tricks: Elastic Weight Consolidation (EWC) or L2‑regularisation towards original weights.",
+    "Data‑centric fix: mix a small proportion of the original pre‑training corpus (rehearsal) or use multi‑task training.",
+    "Evaluation: monitor both downstream metrics and a held‑out general‑knowledge benchmark to detect drift."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2106.09685",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM and Generative AI Interview Questions); GPL-3.0 source repository; reference: LoRA"
+  },
+  {
+   "id": "aiml-rag-and-agents-0001",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Design a RAG pipeline end to end, from ingestion through to a cited answer.",
+   "key_points": [
+    "Ingestion: crawl or receive documents, run OCR/cleaning, then chunk (e.g., 200‑300 token windows) with overlap.",
+    "Embedding: encode each chunk with a dense vector model (e.g., OpenAI text‑embedding‑ada) and store in a vector DB (FAISS, Milvus).",
+    "Retrieval: at query time, embed the user question, perform similarity search, fetch top‑k chunks.",
+    "Rerank (optional): use a cross‑encoder to reorder results for higher relevance.",
+    "Generation & citation: feed retrieved chunks plus the original query to a LLM with a prompt that forces citation markers; post‑process to attach source IDs/URLs."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2005.11401",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: RAG"
+  },
+  {
+   "id": "aiml-rag-and-agents-0002",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Compare dense, sparse (BM25) and hybrid retrieval. When does BM25 still win?",
+   "key_points": [
+    "Dense retrieval: learns embeddings end‑to‑end, excels on semantic similarity, O(N·d) indexing, O(log N) query with ANN.",
+    "Sparse (BM25): term‑frequency based, no training, fast inverted index, strong on exact keyword matches and rare terms.",
+    "Hybrid: combine scores (e.g., linear blend) or cascade (BM25 first, then dense rerank) to get both lexical precision and semantic recall.",
+    "BM25 still wins when queries contain rare keywords, domain‑specific jargon, or when the corpus is small/low‑resource and dense models lack coverage.",
+    "Hybrid advantage grows with heterogeneous corpora where some docs are well‑represented in embeddings and others are not."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2005.11401",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: RAG"
+  },
+  {
+   "id": "aiml-rag-and-agents-0003",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What chunking strategy would you choose, and how does chunk size affect recall?",
+   "key_points": [
+    "Chunking strategy: usually fixed‑size overlapping windows (e.g., 200‑300 tokens) or semantic splits using headings / HTML tags.",
+    "Smaller chunks increase recall because more granular matches can be retrieved, but raise index size and may lose context for generation.",
+    "Larger chunks preserve context for answer synthesis but can miss fine‑grained relevance and increase latency.",
+    "Overlap (e.g., 20‑30 % stride) mitigates boundary effects while keeping index manageable.",
+    "Choose based on downstream LLM context window and the typical answer length you need."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2005.11401",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: RAG"
+  },
+  {
+   "id": "aiml-rag-and-agents-0004",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why add a re-ranker after retrieval, and what does it cost you?",
+   "key_points": [
+    "Retriever gives a coarse set of candidates; a re‑ranker (cross‑encoder) evaluates query‑document interaction for higher precision.",
+    "Cost: re‑ranking requires running a much larger model per candidate (often O(k) inference), increasing latency and compute expense.",
+    "Trade‑off: you can limit k (e.g., top‑20) to keep cost bounded, or run the re‑ranker only on high‑traffic queries.",
+    "Benefit: improves relevance, reduces hallucination, and yields better citations, especially for dense‑only pipelines.",
+    "Implementation tip: cache re‑rank scores for popular queries to amortise cost."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2005.11401",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: RAG"
+  },
+  {
+   "id": "aiml-rag-and-agents-0005",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "When is fine-tuning the right answer instead of RAG?",
+   "key_points": [
+    "Fine‑tuning is preferable when you need deterministic, domain‑specific answers that must follow strict format or policy.",
+    "RAG shines when knowledge changes frequently, the answer space is large, or you need up‑to‑date citations.",
+    "If the task is classification or short‑form generation with limited variability, a fine‑tuned model is cheaper at inference.",
+    "When latency budget is tight and you cannot afford the extra retrieval step, fine‑tuning may be the only viable option.",
+    "Consider data availability: fine‑tuning requires a sizable labeled set; RAG can work with raw documents."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2106.09685",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: LoRA"
+  },
+  {
+   "id": "aiml-rag-and-agents-0006",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain the ReAct loop and where agents typically fail.",
+   "key_points": [
+    "ReAct loop: LLM alternates between reasoning (thought) and acting (tool calls), appending each step to the prompt.",
+    "Failure modes: tool‑call parsing errors, infinite loops when the model repeatedly asks the same question, and hallucinated arguments that never lead to a valid action.",
+    "Missing grounding: the model may reason on stale or incorrect context if retrieval isn’t refreshed each step.",
+    "Error handling: need explicit stop conditions, tool‑call validation, and fallback to a safe default when tool fails.",
+    "Scalability issue: each iteration grows the prompt, eventually hitting context limits."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2210.03629",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: ReAct"
+  },
+  {
+   "id": "aiml-rag-and-agents-0007",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How do models learn to call tools, and how do you keep tool schemas maintainable?",
+   "key_points": [
+    "Tool‑calling is learned via supervised fine‑tuning on demonstrations where the model outputs a JSON‑like schema (function name + arguments).",
+    "Few‑shot prompting with explicit “function call” examples can also teach the behavior without gradient updates.",
+    "Maintainability: version tool schemas separately, expose them via a registry, and generate prompt snippets programmatically.",
+    "Validate arguments against JSON schema at runtime; reject or correct malformed calls before execution.",
+    "When schemas evolve, use backward‑compatible field names and keep a migration layer that maps old calls to new signatures."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2302.04761",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: Toolformer"
+  },
+  {
+   "id": "aiml-rag-and-agents-0008",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the Model Context Protocol and what problem does it solve?",
+   "key_points": [
+    "Model Context Protocol (MCP) defines a standard JSON envelope for sending prompts, system messages, and tool results between components.",
+    "It solves the “prompt‑bloat” and interoperability problem when chaining LLMs, retrievers, and external tools.",
+    "MCP includes fields for token budget, versioning, and a deterministic ordering of messages, enabling reproducible runs.",
+    "Allows different vendors’ models to be swapped without changing orchestration code, because the protocol abstracts the payload.",
+    "Facilitates logging, debugging, and safety checks by providing a uniform schema for all context elements."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://modelcontextprotocol.io/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: MCP"
+  },
+  {
+   "id": "aiml-rag-and-agents-0009",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "When should a workflow be a single agent, and when a multi-agent system?",
+   "key_points": [
+    "Single‑agent design works when the task is linear, has a clear goal, and the reasoning depth fits within one context window.",
+    "Multi‑agent systems are useful for decomposable problems, parallel sub‑tasks, or when specialized agents (search, calculator, planner) bring distinct expertise.",
+    "Consider coordination overhead: message passing, state sharing, and conflict resolution add latency and complexity.",
+    "Use a single agent if latency is critical and the problem space is narrow; switch to multi‑agent when you need modularity, scalability, or domain‑specific tools.",
+    "Hybrid approach: a master orchestrator agent delegates to specialist agents but keeps overall control in one top‑level loop."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.anthropic.com/engineering/building-effective-agents",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: Building Effective Agents"
+  },
+  {
+   "id": "aiml-rag-and-agents-0010",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design memory for an agent: working, episodic and semantic.",
+   "key_points": [
+    "Working memory: short‑term store of recent observations and tool results, kept in the prompt (e.g., last 5 turns).",
+    "Episodic memory: persistent log of past interactions, indexed (vector or key‑value) for retrieval when context is needed later.",
+    "Semantic (long‑term) memory: distilled knowledge base (facts, embeddings) that the agent can query instead of re‑processing raw text.",
+    "Design: write‑through from working → episodic (after each turn), periodic summarisation into semantic memory to keep size bounded.",
+    "Retrieval: at each step, fetch relevant episodic entries + semantic facts, prepend to prompt, and prune older working entries to respect token limits."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.anthropic.com/engineering/building-effective-agents",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: Building Effective Agents"
+  },
+  {
+   "id": "aiml-rag-and-agents-0011",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How do you classify and gate risky agent actions such as irreversible writes?",
+   "key_points": [
+    "Risk classification: tag actions (e.g., write‑to‑DB, file‑system delete, external API) with a risk level (low/medium/high).",
+    "Gatekeeping: before executing a high‑risk action, require explicit confirmation, additional verification LLM, or human‑in‑the‑loop.",
+    "Policy engine: maintain a rule set (ACLs, resource quotas) that the agent checks against the proposed action payload.",
+    "Audit trail: log the decision path, model reasoning, and the final approved action for post‑mortem analysis.",
+    "Fail‑safe defaults: if the gate cannot be satisfied (e.g., missing verification), abort the action and return a safe error message."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.anthropic.com/engineering/building-effective-agents",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: Building Effective Agents"
+  },
+  {
+   "id": "aiml-rag-and-agents-0012",
+   "role": "aiml",
+   "topic": "rag-and-agents",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is prompt injection, and how do you defend an agent that browses the web?",
+   "key_points": [
+    "Prompt injection is when a user manipulates the prompt to make the model output unintended or harmful content.",
+    "Defend by sanitizing user‑generated text, using instruction‑tuning or system prompts that enforce a safe sandbox.",
+    "Isolate the browsing tool: run it in a separate process, validate URLs, and restrict network calls.",
+    "Apply content filters and post‑generation safety checks before displaying results.",
+    "Log and rate‑limit suspicious inputs to detect repeated injection attempts."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.anthropic.com/engineering/building-effective-agents",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, RAG, Agents and Context Engineering); GPL-3.0 source repository; reference: Building Effective Agents"
+  },
+  {
+   "id": "aiml-llm-evaluation-0001",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How do you evaluate an LLM feature that has no single correct answer?",
+   "key_points": [
+    "Use human‑in‑the‑loop evaluation: multiple annotators rank or score outputs on relevance, correctness, and style.",
+    "Apply pairwise comparison or Elo‑style scoring to aggregate subjective judgments.",
+    "Complement with automatic metrics (e.g., BLEU, ROUGE, embedding similarity) as proxies, but treat them as secondary.",
+    "Report inter‑annotator agreement (Cohen's κ or Krippendorff's α) to show reliability.",
+    "Iterate by defining clear rubrics so that “no single correct answer” becomes a structured evaluation."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://platform.openai.com/docs/guides/evals",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: OpenAI Evals guide"
+  },
+  {
+   "id": "aiml-llm-evaluation-0002",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Build an eval suite for a customer who has never measured quality.",
+   "key_points": [
+    "Start with a baseline: define core quality dimensions (accuracy, relevance, safety, latency).",
+    "Create a mixed set of human‑annotated reference outputs and automated metrics for each dimension.",
+    "Implement a scoring pipeline that aggregates human scores and metric scores into a single quality index.",
+    "Validate the suite by running it on a known model and checking that scores correlate with business KPIs.",
+    "Provide dashboards and alerts so the customer can track quality trends over time."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://platform.openai.com/docs/guides/evals",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: OpenAI Evals guide"
+  },
+  {
+   "id": "aiml-llm-evaluation-0003",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What are the failure modes of LLM-as-a-judge, and how do you correct for them?",
+   "key_points": [
+    "LLM‑as‑judge can be biased toward fluency, miss factual errors, or inherit the same hallucinations as the model being judged.",
+    "It may over‑reward style‑matching and under‑reward correctness, leading to gaming of the metric.",
+    "Mitigate by calibrating the judge with a gold‑standard dataset and using multiple judges (ensemble) to reduce variance.",
+    "Add a verification layer: cross‑check judge scores with external fact‑checkers or rule‑based checks.",
+    "Continuously monitor judge drift and re‑fine‑tune the judge on fresh human‑rated data."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://platform.openai.com/docs/guides/evals",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: OpenAI Evals guide"
+  },
+  {
+   "id": "aiml-llm-evaluation-0004",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How do you measure retrieval quality separately from generation quality?",
+   "key_points": [
+    "Separate retrieval evaluation: use standard IR metrics (Recall@k, MRR, NDCG) on a held‑out query‑document set.",
+    "Generation evaluation: after retrieval, assess the model’s answer with metrics like BLEU, ROUGE, or human relevance scores.",
+    "Run ablations where you feed the same retrieved set to a baseline generator to isolate retrieval impact.",
+    "Report end‑to‑end metrics (e.g., answer correctness) alongside the two component scores.",
+    "Use a “gold passage” benchmark to ensure retrieval quality is measured independently of generation style."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2005.11401",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: RAG"
+  },
+  {
+   "id": "aiml-llm-evaluation-0005",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain benchmark contamination and how you would detect it.",
+   "key_points": [
+    "Benchmark contamination occurs when training data includes examples from the evaluation set, inflating scores.",
+    "Detect by hashing all benchmark documents and searching for matches in the pre‑training corpus.",
+    "Use provenance metadata (source URLs, timestamps) to flag overlap.",
+    "Run a “clean” evaluation where contaminated examples are removed and compare scores.",
+    "Report contamination rate and adjust leaderboard results accordingly."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2009.03300",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: MMLU"
+  },
+  {
+   "id": "aiml-llm-evaluation-0006",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How would you run an A/B test to show model A beats model B for your users?",
+   "key_points": [
+    "Define a clear success metric (e.g., conversion rate, click‑through, task completion) and collect it for both models.",
+    "Randomly split users into control (model B) and treatment (model A) groups, ensuring statistical power.",
+    "Run the experiment for a sufficient duration to capture variance and compute confidence intervals.",
+    "Use Bayesian A/B testing or frequentist hypothesis testing (e.g., two‑sample t‑test) to assess significance.",
+    "Monitor secondary metrics (latency, error rate) to rule out confounding factors."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://platform.openai.com/docs/guides/evals",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: OpenAI Evals guide"
+  },
+  {
+   "id": "aiml-llm-evaluation-0007",
+   "role": "aiml",
+   "topic": "llm-evaluation",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design a red-teaming process for a model you are about to ship.",
+   "key_points": [
+    "Assemble a cross‑functional red‑team: security, safety, domain experts, and external adversaries.",
+    "Define threat models (prompt injection, jailbreak, data leakage, bias exploitation).",
+    "Create a structured workflow: generate adversarial prompts, run the model, log failures, and prioritize fixes.",
+    "Automate fuzzing with prompt templates and use LLM‑generated adversarial examples to scale coverage.",
+    "Document findings, assign severity, and integrate mitigations into the model release checklist."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2212.08073",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Evaluation and Guardrails); GPL-3.0 source repository; reference: Constitutional AI"
+  },
+  {
+   "id": "aiml-llm-serving-0001",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is the KV cache, why does it dominate inference memory, and how do you manage it?",
+   "key_points": [
+    "KV cache stores key and value vectors for each token’s attention to avoid recomputation during autoregressive decoding.",
+    "Memory grows O(sequence_length × num_layers × head_dim), dominating GPU memory for long contexts.",
+    "Manage it by chunking (sliding window), using quantization (FP16→INT8), or offloading older layers to CPU.",
+    "Enable selective cache eviction or “re‑cycling” for tokens that are no longer attended to.",
+    "Consider architectures like Transformer‑XL or Retrieval‑augmented models that limit cache size."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2309.06180",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: vLLM and PagedAttention"
+  },
+  {
+   "id": "aiml-llm-serving-0002",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain PagedAttention and the problem it solves.",
+   "key_points": [
+    "PagedAttention breaks the attention matrix into fixed‑size pages that fit in on‑chip memory.",
+    "It streams pages sequentially, computing attention for a block of queries against all keys/values without materializing the full matrix.",
+    "Reduces memory from O(L²) to O(L × page_size), enabling longer context windows.",
+    "Maintains exact attention results (no approximation) by careful accumulation of softmax denominators.",
+    "Used in large‑context models where GPU memory is the bottleneck."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2309.06180",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: vLLM and PagedAttention"
+  },
+  {
+   "id": "aiml-llm-serving-0003",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How does FlashAttention speed up attention without changing the maths?",
+   "key_points": [
+    "FlashAttention fuses the three attention passes (QKᵀ, softmax, V multiplication) into a single kernel.",
+    "It keeps the intermediate QKᵀ matrix in registers / shared memory, avoiding O(L²) writes to global memory.",
+    "Result: lower memory bandwidth, higher compute utilization, and up to 2‑3× speed‑up on GPUs.",
+    "Mathematically identical to standard scaled dot‑product attention; only the implementation changes.",
+    "Works best for moderate sequence lengths where the whole attention block fits in on‑chip memory."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2205.14135",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: FlashAttention"
+  },
+  {
+   "id": "aiml-llm-serving-0004",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain speculative decoding and when it stops paying off.",
+   "key_points": [
+    "Speculative decoding runs a fast, smaller draft model to generate multiple tokens, then verifies them with the target model.",
+    "If the draft tokens are accepted, they are emitted without extra forward passes; otherwise, the target model corrects them.",
+    "Speed‑up is proportional to the draft model’s accuracy and the number of tokens guessed per verification.",
+    "Stops paying off when the draft model’s error rate is high, the verification overhead dominates, or latency constraints are strict.",
+    "Typical break‑even point: draft accuracy ≈ 80‑90% and batch size of 4‑8 tokens per speculation."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2211.17192",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: Speculative Decoding"
+  },
+  {
+   "id": "aiml-llm-serving-0005",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Compare continuous batching with static batching for a serving system.",
+   "key_points": [
+    "Continuous batching groups requests dynamically at runtime, while static batching pre‑defines a fixed batch size before inference.",
+    "Continuous batching reduces latency for bursty traffic by filling batches on‑the‑fly, but may incur extra scheduling overhead.",
+    "Static batching gives predictable GPU utilization and easier memory planning, but can waste compute when request volume is low.",
+    "Implementation: continuous batching often uses a request queue and a timer/size threshold; static batching uses a fixed inference loop.",
+    "Edge cases: very low traffic (continuous batching may fall back to batch‑size 1) and memory fragmentation for variable‑length inputs."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://docs.vllm.ai/en/latest/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: vLLM docs"
+  },
+  {
+   "id": "aiml-llm-serving-0006",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Compare int8, int4, GPTQ and AWQ quantization, and the quality you give up.",
+   "key_points": [
+    "int8 quantization maps 32‑bit weights to 8‑bit integers with a scale/zero‑point; int4 halves the bit‑width again, further reducing memory and bandwidth.",
+    "GPTQ (Gradient‑based Post‑Training Quantization) and AWQ (Activation‑aware Weight Quantization) are advanced PTQ methods that use per‑layer or per‑group statistics to minimize error.",
+    "Quality loss: int8 usually <1% perplexity drop; int4 can add 2‑5% degradation; GPTQ can keep int4 quality close to int8 by fine‑tuning quantization parameters; AWQ often yields the best trade‑off for int4 with <1% loss.",
+    "Hardware support: int8 is widely supported on CPUs/GPUs; int4 and GPTQ/AWQ require newer accelerators (e.g., NVIDIA Tensor Cores, Habana Gaudi).",
+    "Edge cases: models with large activation ranges or out‑of‑distribution inputs suffer more from aggressive (int4) quantization."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2210.17323",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: GPTQ"
+  },
+  {
+   "id": "aiml-llm-serving-0007",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "You must cut serving cost by half without hurting quality. What do you try, in order?",
+   "key_points": [
+    "First try model‑size reduction: switch to a smaller checkpoint or apply pruning while monitoring validation loss.",
+    "Next, apply aggressive post‑training quantization (int4/GPTQ or AWQ) and benchmark quality; quantization often halves memory and compute cost.",
+    "If still high, enable tensor parallelism or pipeline parallelism to spread work across more GPUs, reducing per‑GPU load.",
+    "Consider mixed‑precision inference (bf16/int8) and enable kernel fusion/flash‑attention to cut compute cycles.",
+    "Finally, tune serving configuration: use continuous batching, request caching, and lower max‑new‑tokens for low‑impact queries."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://docs.vllm.ai/en/latest/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: vLLM docs"
+  },
+  {
+   "id": "aiml-llm-serving-0008",
+   "role": "aiml",
+   "topic": "llm-serving",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the tradeoff between time to first token and total throughput.",
+   "key_points": [
+    "Time‑to‑first‑token (TTFT) is dominated by model loading, KV‑cache warm‑up, and the first transformer layer latency.",
+    "Total throughput (tokens/sec) benefits from larger batches and pipeline parallelism, which amortize per‑token overhead.",
+    "Increasing batch size reduces TTFT for subsequent tokens but can increase the initial latency for the first token.",
+    "Trade‑off: latency‑critical applications (e.g., chat) prioritize low TTFT, while batch‑oriented workloads (e.g., summarization) prioritize throughput.",
+    "Edge cases: very long sequences cause KV‑cache growth, hurting TTFT; short sequences make throughput gains negligible."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://docs.vllm.ai/en/latest/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, LLM Inference, Serving and Cost Optimization); GPL-3.0 source repository; reference: vLLM docs"
+  },
+  {
+   "id": "aiml-distributed-training-0001",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Compare data, tensor, pipeline and sequence parallelism.",
+   "key_points": [
+    "Data parallelism replicates the whole model on each device and splits the batch; communication is gradient all‑reduce.",
+    "Tensor (or operator) parallelism splits individual weight matrices across devices, reducing per‑GPU memory but requiring all‑reduce for each matmul.",
+    "Pipeline parallelism partitions layers into stages; each micro‑batch flows through the pipeline, improving memory efficiency at the cost of bubbles.",
+    "Sequence parallelism (e.g., ZeRO‑3 or activation sharding) distributes the sequence dimension across GPUs, useful for very long inputs.",
+    "Choosing a scheme depends on model size vs. batch size, inter‑connect bandwidth, and target latency/throughput."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1910.02054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: ZeRO"
+  },
+  {
+   "id": "aiml-distributed-training-0002",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain ZeRO sharding stages 1 to 3 and what each one saves.",
+   "key_points": [
+    "ZeRO‑1 shards optimizer states (momentum, variance) across ranks, saving O(#params) memory per GPU.",
+    "ZeRO‑2 adds sharding of gradients, cutting another factor of world‑size in memory usage.",
+    "ZeRO‑3 shards the parameters themselves, achieving near‑linear memory scaling and enabling trillion‑parameter models.",
+    "Each stage adds communication overhead: ZeRO‑1 only needs to broadcast optimizer updates; ZeRO‑2 adds gradient all‑reduce; ZeRO‑3 requires parameter gather/scatter each step.",
+    "Edge case: very small batch sizes may suffer from communication latency in ZeRO‑3, making ZeRO‑2 a better trade‑off."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1910.02054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: ZeRO"
+  },
+  {
+   "id": "aiml-distributed-training-0003",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How would you shard a 200B-parameter model across thousands of accelerators?",
+   "key_points": [
+    "Combine tensor parallelism (e.g., 3‑D mesh) to split each large weight matrix across many GPUs, reducing per‑GPU parameter storage.",
+    "Add pipeline parallelism to split the 200 B model into 8‑12 stages, each stage placed on a subset of GPUs.",
+    "Use ZeRO‑3 (parameter sharding) within each stage to further shrink memory, especially for embeddings and final layers.",
+    "Employ activation checkpointing and recomputation to trade compute for memory, keeping peak usage under device limits.",
+    "Plan communication topology: high‑bandwidth NVLink or InfiniBand for intra‑stage tensor sharding, and efficient all‑reduce for optimizer state."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1910.02054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: ZeRO"
+  },
+  {
+   "id": "aiml-distributed-training-0004",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What are pipeline bubbles and how do you reduce them?",
+   "key_points": [
+    "Pipeline bubbles are idle slots when a stage has no micro‑batch to process because upstream/downstream stages are not ready.",
+    "They arise from mismatched stage compute times, small micro‑batch counts, or uneven layer distribution.",
+    "Mitigation: balance layers per stage, increase number of micro‑batches, use “flush‑forward” scheduling, or apply interleaved 2‑D pipeline parallelism.",
+    "Hybrid parallelism (tensor + pipeline) can reduce bubble impact by making each stage compute faster.",
+    "Edge case: extremely deep models with few GPUs may still suffer bubbles despite balancing; adding more micro‑batches is the primary fix."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1910.02054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: ZeRO"
+  },
+  {
+   "id": "aiml-distributed-training-0005",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How do you handle a node failure eight hours into a training run?",
+   "key_points": [
+    "Detect failure via health checks; checkpoint the training state (model, optimizer, RNG) before the failure point.",
+    "If using ZeRO/DeepSpeed, rely on its automatic checkpoint‑restart that can re‑assemble sharded states on remaining nodes.",
+    "Re‑launch the failed node(s) and resume from the latest checkpoint; if checkpoint interval is too long, fall back to a recent backup.",
+    "Consider elastic training frameworks (e.g., PyTorch Elastic, DeepSpeed Elastic) that can dynamically shrink/expand the world size.",
+    "Edge case: failure during a critical all‑reduce may corrupt gradients; ensure checkpoint is taken after a synchronization barrier."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1910.02054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: ZeRO"
+  },
+  {
+   "id": "aiml-distributed-training-0006",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Your loss spikes at step 40k. How do you debug it?",
+   "key_points": [
+    "Inspect loss curve and learning‑rate schedule; a spike at a specific step often coincides with LR warm‑up or decay boundaries.",
+    "Check for gradient explosion: look at gradient norms, NaNs, or overflow in mixed‑precision (fp16) scaling.",
+    "Verify data pipeline: a corrupted batch (e.g., NaN labels, mismatched dimensions) can cause sudden loss increase.",
+    "Run a short reproducibility test by fixing the random seed and replaying the problematic step.",
+    "If using distributed training, ensure all‑reduce is correctly synchronizing; a straggler can introduce stale parameters."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2203.15556",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: Chinchilla"
+  },
+  {
+   "id": "aiml-distributed-training-0007",
+   "role": "aiml",
+   "topic": "distributed-training",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain mixed-precision training and why bf16 is usually preferred over fp16.",
+   "key_points": [
+    "Mixed‑precision training keeps weights in FP32 (or BF16) while using lower‑precision (FP16/BF16) for activations and gradients to reduce memory and speed up matmuls.",
+    "BF16 has a 8‑bit exponent like FP32, preserving dynamic range and avoiding overflow/underflow that FP16 suffers from.",
+    "FP16 requires loss‑scaling to prevent gradient underflow; BF16 typically does not need scaling, simplifying the training loop.",
+    "Hardware: modern GPUs/TPUs provide native BF16 matmul units with similar throughput to FP16, making BF16 the preferred choice.",
+    "Edge case: models with extreme activation ranges or custom kernels may still benefit from FP16 with careful scaling."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1910.02054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Distributed Training and Scaling); GPL-3.0 source repository; reference: ZeRO"
+  },
+  {
+   "id": "aiml-nlp-0001",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is word embedding? Explain Word2Vec, GloVe.",
+   "key_points": [
+    "A word embedding maps each token ID to a dense vector learned during training, serving as the first layer of most NLP models.",
+    "Word2Vec (CBOW/Skip‑gram) learns embeddings by predicting a word from its context (or vice‑versa) using shallow neural nets.",
+    "GloVe builds a global co‑occurrence matrix and factorizes it, optimizing a weighted least‑squares objective to capture word‑word statistics.",
+    "Both produce static embeddings (one vector per word) unlike contextual models; Word2Vec is predictive, GloVe is count‑based.",
+    "Key differences: Word2Vec scales linearly with corpus size, GloVe requires the full co‑occurrence matrix but can capture global statistics better."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://d2l.ai/chapter_natural-language-processing-pretraining/index.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0002",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain the Transformer architecture.",
+   "key_points": [
+    "Core building blocks: multi-head self‑attention, position‑wise feed‑forward layers, residual connections, and layer normalization.",
+    "Self‑attention computes weighted sums of token embeddings; multiple heads capture different relational patterns.",
+    "Positional encodings inject order information because attention is permutation‑invariant.",
+    "Typical complexity: O(L^2·d) time and O(L^2) memory for sequence length L and model dimension d; variants (e.g., Linformer, Performer) reduce it.",
+    "Trained with masked language modeling or sequence‑to‑sequence objectives; fine‑tuned for downstream tasks."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0003",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How does BERT work?",
+   "key_points": [
+    "BERT is a bidirectional encoder built from stacked Transformer encoder layers.",
+    "Pre‑training tasks: Masked Language Modeling (randomly mask 15% tokens) and Next Sentence Prediction (binary classification of sentence order).",
+    "Uses WordPiece tokenization and adds [CLS] token for classification, [SEP] to separate sentences.",
+    "Fine‑tuning adds a task‑specific head (e.g., linear classifier) on top of the final hidden state of [CLS]; all parameters are updated.",
+    "Complexity same as Transformer encoder: O(L^2·d) time, O(L·d) space per layer; inference is linear in depth."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0004",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is attention mechanism in NLP?",
+   "key_points": [
+    "Attention computes a weighted sum of value vectors, where weights are derived from similarity of query and key vectors.",
+    "Scaled dot‑product attention: scores = Q·K^T / sqrt(d_k), then softmax to obtain attention weights.",
+    "Self‑attention applies the same mechanism within a single sequence, enabling each token to attend to all others.",
+    "Multi‑head attention runs several attention heads in parallel, concatenating results to increase representational capacity.",
+    "Time/space cost O(L^2·d) for sequence length L; alternatives like sparse or linear attention reduce quadratic cost."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0005",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "How would you handle text preprocessing for NLP tasks?",
+   "key_points": [
+    "Normalize text: lowercasing (or case‑preserving for languages where case matters), Unicode normalization, and removal of control characters.",
+    "Tokenization: choose word‑level, subword (BPE/WordPiece/SentencePiece), or character level depending on model and vocabulary size.",
+    "Handle out‑of‑vocabulary tokens with <UNK> or subword fallback; optionally apply stemming/lemmatization for classic models.",
+    "Remove or encode noise: punctuation, HTML tags, URLs, and optionally stop‑words; consider preserving them for models that learn context.",
+    "Create numerical features: map tokens to IDs, pad/truncate to fixed length, generate attention masks, and optionally add positional encodings."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/nlp-text-preprocessing-a-practical-guide-and-template-d80874676e79",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0006",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain how GPT models work.",
+   "key_points": [
+    "GPT models are decoder‑only Transformers that generate text autoregressively, predicting the next token given previous ones.",
+    "Training objective: causal language modeling (maximizing likelihood of token t conditioned on tokens < t).",
+    "Uses masked self‑attention with a triangular mask so each position can only attend to earlier positions.",
+    "Stacked transformer blocks (self‑attention + feed‑forward) with layer norm and residual connections; large‑scale models use billions of parameters.",
+    "Inference uses greedy decoding, beam search, or sampling (top‑k / nucleus) and has O(L·d) per token after caching past key/value states."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://jalammar.github.io/illustrated-gpt2/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0007",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is beam search in sequence generation?",
+   "key_points": [
+    "Beam search keeps the top‑k most likely partial sequences at each decoding step, expanding each with all possible next tokens.",
+    "Score of a hypothesis is typically the sum (or log‑sum) of token log‑probabilities; length normalization or coverage penalties mitigate bias toward short sequences.",
+    "Complexity: O(k·V·L) where V is vocabulary size and L is output length; memory grows with beam width k.",
+    "Trade‑off: larger beam improves quality but increases latency and may lead to generic outputs; often combined with sampling for diversity.",
+    "Variants include diverse beam search, stochastic beam search, and constrained beam search for specific token patterns."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://d2l.ai/chapter_recurrent-modern/beam-search.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0008",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How do you evaluate NLP models?",
+   "key_points": [
+    "Task‑specific metrics: accuracy/F1 for classification, BLEU/ROUGE/METEOR for generation, Exact Match/EM for QA, mAP for detection.",
+    "Cross‑validation or held‑out test set to avoid overfitting; for large language models, use benchmark suites (GLUE, SuperGLUE, SQuAD).",
+    "Analyze confusion matrix, per‑class precision/recall, and error cases to guide data or model improvements.",
+    "Consider calibration (reliability diagrams) and robustness checks (adversarial examples, out‑of‑distribution data).",
+    "Report both quantitative scores and qualitative examples; track training curves for loss, perplexity, and validation metric."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/evaluating-text-output-in-nlp-bleu-at-your-own-risk-e8609665a213",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0009",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain ROUGE, BLEU, and METEOR metrics.",
+   "key_points": [
+    "BLEU measures n‑gram precision against reference translations, includes brevity penalty; widely used for machine translation.",
+    "ROUGE (especially ROUGE‑L, ROUGE‑1/2) measures recall‑oriented n‑gram overlap, common for summarization evaluation.",
+    "METEOR aligns hypothesis and reference using exact, stem, synonym, and paraphrase matches; combines precision, recall, and fragmentation penalty.",
+    "BLEU is corpus‑level, sensitive to exact wording; ROUGE focuses on coverage; METEOR aims for better correlation with human judgments.",
+    "All require tokenization and possibly stemming; scores range 0–1 (or 0–100) and higher is better."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/explorations-in-language-and-learning/metrics-for-nlg-evaluation-c89b6a781054",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-nlp-0010",
+   "role": "aiml",
+   "topic": "nlp",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are subword tokenization methods? Compare BPE, WordPiece, and SentencePiece.",
+   "key_points": [
+    "Subword tokenization splits rare words into frequent sub‑units, balancing vocabulary size and coverage.",
+    "BPE (Byte‑Pair Encoding) iteratively merges most frequent character pairs; deterministic and language‑agnostic.",
+    "WordPiece (used by BERT) builds a vocabulary by maximizing likelihood of training data; includes a “##” continuation marker.",
+    "SentencePiece treats text as a raw byte sequence, supports both BPE and unigram language‑model based tokenization, and can produce subword or character models.",
+    "Trade‑offs: BPE is simple and fast; WordPiece yields slightly better language‑model performance; SentencePiece handles whitespace‑less languages and provides a unified training pipeline."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://huggingface.co/docs/transformers/tokenizer_summary",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Natural Language Processing Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0001",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the architecture of a CNN.",
+   "key_points": [
+    "Typical CNN stack: input → convolutional layers → non‑linear activation (ReLU) → pooling → optional normalization → fully‑connected classifier.",
+    "Convolutions apply learnable kernels sliding over spatial dimensions, sharing parameters and exploiting local connectivity.",
+    "Depth (number of layers) and width (number of filters) control model capacity; modern nets use residual connections (ResNet) to ease training.",
+    "Spatial dimensions are reduced via stride or pooling, which also provides translation invariance.",
+    "Complexity per layer: O(H·W·C_in·K^2·C_out) where H,W are feature map size, K kernel size, C_in/C_out channels."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0002",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are the different types of CNN layers?",
+   "key_points": [
+    "Convolution layer: learns spatial filters; can be 1D, 2D, or 3D depending on data.",
+    "Pooling layer (max, average, global): down‑samples feature maps, reduces parameters and provides invariance.",
+    "Normalization layer (BatchNorm, LayerNorm, GroupNorm): stabilizes training by normalizing activations.",
+    "Activation layer (ReLU, LeakyReLU, ELU, Swish): introduces non‑linearity after convolutions.",
+    "Fully‑connected (dense) layer: used at the end for classification/regression; often preceded by flattening or global pooling."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0003",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How does object detection work? Explain YOLO, R-CNN, Fast R-CNN, Faster R-CNN.",
+   "key_points": [
+    "Object detection predicts both bounding‑box coordinates and class scores for multiple objects in an image.",
+    "YOLO (You Only Look Once) treats detection as a single regression problem on a grid; fast inference, lower accuracy on small objects.",
+    "R‑CNN extracts region proposals with selective search, then runs a CNN on each region; accurate but slow due to per‑region computation.",
+    "Fast R‑CNN shares convolutional features across proposals using RoI pooling, adding a classification and bounding‑box regression head; improves speed.",
+    "Faster R‑CNN introduces a Region Proposal Network (RPN) that learns proposals end‑to‑end, achieving near‑real‑time performance with high accuracy."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0004",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is transfer learning in computer vision?",
+   "key_points": [
+    "Transfer learning reuses a model pretrained on a large dataset (e.g., ImageNet) as a feature extractor for a new, often smaller, target task.",
+    "Typical approach: freeze early convolutional layers and fine‑tune later layers or add a new classifier head.",
+    "Reduces training time, improves performance when labeled data is scarce, and leverages learned low‑level visual features.",
+    "Common pitfalls: domain mismatch between source and target data, and over‑fitting if too many layers are unfrozen."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://machinelearningmastery.com/how-to-use-transfer-learning-when-developing-convolutional-neural-network-models/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0005",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain image segmentation.",
+   "key_points": [
+    "Image segmentation assigns a label to each pixel, turning an image into regions of interest.",
+    "Two main families: semantic segmentation (class label per pixel) and instance segmentation (separate object instances).",
+    "Typical models: Fully Convolutional Networks (FCN), U‑Net, DeepLab (atrous convolutions + CRF).",
+    "Losses often use pixel‑wise cross‑entropy; class imbalance handled with weighting or focal loss."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://nanonets.com/blog/semantic-image-segmentation-2020/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0006",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How does a GAN work?",
+   "key_points": [
+    "A GAN consists of a generator network that creates synthetic data and a discriminator that tries to distinguish real from fake.",
+    "Training is a minimax game: generator minimizes log(1‑D(G(z))) while discriminator maximizes log D(x) + log(1‑D(G(z))).",
+    "Uses back‑propagation on both networks; convergence is reached when discriminator cannot do better than random guessing (0.5).",
+    "Common issues: mode collapse, non‑convergence; mitigated with techniques like Wasserstein loss, gradient penalty, or spectral normalization."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://jonathan-hui.medium.com/gan-whats-generative-adversarial-networks-and-its-application-f39ed278ef09",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0007",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is data augmentation and why is it important in CV?",
+   "key_points": [
+    "Data augmentation artificially expands the training set by applying label‑preserving transformations (e.g., flips, rotations, color jitter, cropping).",
+    "Improves model generalization, especially when the original dataset is small or imbalanced.",
+    "Implemented on‑the‑fly via libraries (torchvision, Albumentations) or offline pre‑processing.",
+    "Must respect task semantics; for segmentation masks, apply identical geometric transforms to both image and mask."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://d2l.ai/chapter_computer-vision/image-augmentation.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0008",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain ResNet and the concept of skip connections.",
+   "key_points": [
+    "ResNet introduces residual blocks where the input is added to the block output via an identity skip connection.",
+    "Skip connections allow gradients to flow directly backward, mitigating vanishing gradients in very deep networks.",
+    "Typical architecture: stacked 2‑ or 3‑layer bottleneck blocks (1×1, 3×3, 1×1 convolutions) with batch norm and ReLU.",
+    "Enables training of networks with >100 layers; achieves state‑of‑the‑art accuracy on ImageNet."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0009",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How do you handle class imbalance in image classification?",
+   "key_points": [
+    "Class imbalance can be addressed by re‑sampling: oversample minority classes or undersample majority classes.",
+    "Use loss weighting (e.g., inverse class frequency) or focal loss to focus learning on hard, under‑represented examples.",
+    "Synthetic data generation (GANs, SMOTE) can augment minority classes.",
+    "Metric choice matters: prefer balanced accuracy, F1‑score, or AUROC over plain accuracy."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://developers.google.com/machine-learning/crash-course/overfitting/imbalanced-datasets",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-computer-vision-0010",
+   "role": "aiml",
+   "topic": "computer-vision",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the difference between semantic segmentation, instance segmentation, and panoptic segmentation?",
+   "key_points": [
+    "Semantic segmentation: assigns a class label to every pixel, without distinguishing separate object instances.",
+    "Instance segmentation: detects each object instance and provides a mask per instance (e.g., Mask R‑CNN).",
+    "Panoptic segmentation: combines both—every pixel gets a semantic label, and pixels belonging to countable objects also receive an instance ID.",
+    "Evaluation metrics differ: mIoU for semantic, AP (mask) for instance, and PQ (panoptic quality) for panoptic."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.v7labs.com/blog/panoptic-segmentation-guide",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Computer Vision Interview Questions); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0001",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is reinforcement learning?",
+   "key_points": [
+    "Reinforcement Learning (RL) studies agents that learn to make sequential decisions by interacting with an environment.",
+    "Agent receives a state, selects an action according to a policy, and obtains a scalar reward; goal is to maximize cumulative discounted reward.",
+    "Formulated as a Markov Decision Process (MDP) with states S, actions A, transition dynamics P, reward function R, and discount factor γ.",
+    "Learning methods include value‑based (e.g., Q‑learning), policy‑gradient, and actor‑critic approaches."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.geeksforgeeks.org/what-is-reinforcement-learning/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0002",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the exploration-exploitation tradeoff.",
+   "key_points": [
+    "Exploration‑exploitation trade‑off balances trying new actions to discover better rewards (exploration) vs. using known high‑reward actions (exploitation).",
+    "Common strategies: ε‑greedy (random action with probability ε), softmax (Boltzmann) action selection, Upper Confidence Bound (UCB), and Thompson sampling.",
+    "Annealing ε or using decay schedules helps shift from exploration early to exploitation later.",
+    "Too much exploration wastes samples; too little can trap the agent in sub‑optimal policies."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/online-learning-with-reinforcement-learning/understanding-the-exploration-exploitation-trade-off-in-reinforcement-learning-629bf9170f",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0003",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the difference between policy-based and value-based RL?",
+   "key_points": [
+    "Value‑based RL learns a value function (e.g., Q(s,a)) and derives a policy by acting greedily with respect to that value.",
+    "Policy‑based RL directly parameterizes the policy π(a|s;θ) and optimizes θ via gradient ascent on expected return.",
+    "Value‑based methods are typically off‑policy and can use bootstrapping (e.g., DQN); policy‑based methods are on‑policy and often have higher variance but can handle continuous actions.",
+    "Actor‑critic hybrids combine both: a critic estimates value to reduce variance of the policy gradient (actor)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://stats.stackexchange.com/questions/512440/what-is-the-difference-between-value-based-and-policy-based-reinforcement-learni",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0004",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain Q-learning.",
+   "key_points": [
+    "Q‑learning updates an action‑value table Q(s,a) using the Bellman optimality equation: Q←Q+α[r+γ·max_a' Q(s',a')−Q].",
+    "Model‑free, off‑policy: learns the optimal Q* regardless of the behavior policy.",
+    "Converges to the optimal Q function given a lookup‑table representation, sufficient exploration, and decaying learning rate.",
+    "In practice, Q‑table is replaced by a function approximator (e.g., neural network) leading to Deep Q‑Learning."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://huggingface.co/learn/deep-rl-course/unit2/introduction",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0005",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is Deep Q Network (DQN)?",
+   "key_points": [
+    "Deep Q Network (DQN) approximates the Q‑function with a deep convolutional network, enabling RL on high‑dimensional inputs like images.",
+    "Key innovations: experience replay (store transitions and sample minibatches to break correlation) and a target network (periodically copy weights to stabilize targets).",
+    "Loss: L(θ)=E[(r+γ·max_a' Q_target(s',a';θ⁻)−Q(s,a;θ))²].",
+    "Typical hyper‑parameters: replay buffer size ~10⁶, target update every few thousand steps, ε‑greedy exploration schedule."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/@jonathan_hui/rl-dqn-deep-q-network-e207751f7ae4",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0006",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain Policy Gradient methods.",
+   "key_points": [
+    "Policy Gradient directly optimizes the expected return by estimating the gradient of the objective w.r.t. policy parameters using the REINFORCE estimator.",
+    "Core data structure: a stochastic policy (e.g., neural network) that outputs a probability distribution over actions; gradients are computed via log‑probability times the return (or advantage).",
+    "Time complexity per update is O(batch_size × trajectory_length) for forward‑backward passes; space complexity is O(model_parameters + trajectory storage).",
+    "Key edge cases: high variance of gradient estimates (mitigated by baselines, advantage normalization), non‑stationary environments, and the need for sufficient exploration."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0007",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is Actor-Critic architecture?",
+   "key_points": [
+    "Actor‑Critic splits the policy (actor) and value function (critic) into two networks, allowing the actor to be updated with lower‑variance advantage estimates from the critic.",
+    "Typical structure: actor outputs π(a|s;θ), critic outputs V(s;ϕ) or Q(s,a;ϕ); advantage = return − V(s) (or TD‑error).",
+    "Time complexity per step is O(model_forward) for both networks; overall O(batch_size × trajectory_length). Space is O(|θ|+|ϕ|) plus replay buffer if used.",
+    "Edge cases: critic divergence (needs careful learning‑rate tuning), off‑policy data requiring importance sampling, and instability when actor updates outpace critic."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/deeplearningmadeeasy/advantage-actor-critic-a2c-algorithm-840d3551a0d9",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0008",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are the challenges in reinforcement learning?",
+   "key_points": [
+    "Sample inefficiency: RL often needs millions of environment steps, which is costly for real‑world tasks.",
+    "Credit assignment and delayed rewards make gradient signals noisy; high variance requires baselines or variance‑reduction tricks.",
+    "Exploration‑exploitation trade‑off: naive policies can get stuck in sub‑optimal regions; need strategies like ε‑greedy, entropy bonuses, or intrinsic motivation.",
+    "Non‑stationarity and function approximation errors can cause divergence; stability tricks (target networks, clipping) are essential.",
+    "Safety and reward hacking: the agent may find unintended ways to maximize the reward, requiring robust reward design."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1904.12901",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0009",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the difference between on-policy and off-policy learning.",
+   "key_points": [
+    "On‑policy methods learn from data generated by the current policy (e.g., REINFORCE, PPO); updates must use fresh trajectories after each policy change.",
+    "Off‑policy methods can reuse past experience collected by any behavior policy (e.g., Q‑learning, DDPG, SAC) via importance sampling or replay buffers.",
+    "On‑policy typically has lower bias but higher sample complexity; off‑policy improves data efficiency but introduces bias and stability challenges.",
+    "Edge cases: on‑policy struggles with large replay buffers; off‑policy can diverge if importance weights explode or if the target policy drifts far from the behavior policy."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0010",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is Proximal Policy Optimization (PPO)?",
+   "key_points": [
+    "PPO is a clipped surrogate objective that limits policy updates by penalizing large probability ratios r(θ)=π_θ(a|s)/π_{old}(a|s).",
+    "Core components: clipped objective, optional value‑function loss, and an entropy bonus; typically implemented with minibatch stochastic gradient descent.",
+    "Time complexity: O(num_epochs × minibatch_size × network_forward) per update; space O(model_parameters + trajectory buffer).",
+    "Edge cases: clipping threshold too tight → slow learning; too loose → policy collapse; also sensitive to advantage estimation quality."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/@jonathan_hui/rl-proximal-policy-optimization-ppo-explained-77f014ec3f12",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0011",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How is a reward model trained from pairwise human preferences, and why does over-optimizing against it degrade the policy?",
+   "key_points": [
+    "A reward model is trained by presenting the model with pairs of trajectories (or completions) and a human label indicating which is preferred; a binary cross‑entropy loss learns a scoring function that ranks preferred outputs higher.",
+    "The model learns a proxy reward R_θ(s,a) that approximates human preference; over‑optimizing against this learned reward can exploit its imperfections (e.g., memorizing spurious patterns).",
+    "When the policy maximizes R_θ too aggressively, it may drive the model into regions where the reward model is inaccurate, causing divergence from true human intent – a classic reward‑hacking scenario.",
+    "Mitigation: regularize with a KL penalty to the reference policy, limit policy step size, or periodically retrain the reward model with fresh human feedback."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2210.10760",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Scaling Laws for Reward Model Overoptimization"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0012",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Walk through PPO-based RLHF for a language model: rollouts, reward, KL penalty against the reference model, value head. Where does it break?",
+   "key_points": [
+    "PPO‑based RLHF pipeline: generate rollouts from the current policy, score them with the learned reward model, compute advantages, add a KL‑penalty term against a frozen reference (pre‑trained) model, and update both policy and value head via PPO’s clipped loss.",
+    "Break points: (1) reward model bias – if the model mis‑ranks completions, PPO will reinforce wrong behavior; (2) KL term scaling – too small lets the policy drift, too large stalls learning; (3) value head mismatch – value network trained on noisy reward signals can become unstable.",
+    "Another failure mode: distribution shift between rollout data and the data used to train the reward model, leading to out‑of‑distribution reward predictions.",
+    "Practical edge case: long‑context language generation where computing KL over entire sequence is expensive; approximations can introduce bias."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://huggingface.co/blog/rlhf",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Illustrating RLHF"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0013",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain GRPO. Why does it drop PPO's critic, and how is the group-relative advantage computed?",
+   "key_points": [
+    "GRPO (Group‑Relative Policy Optimization) removes the explicit critic by estimating advantage as a difference between the reward of a trajectory and the average reward of a reference group of trajectories.",
+    "Group‑relative advantage = R(τ) − 𝔼_{τ'∈G}[R(τ')], where G is a set of recent rollouts; this acts as a low‑variance baseline without a separate value network.",
+    "By dropping the critic, memory usage is reduced (no extra value head) and training simplifies to a PPO‑style clipped objective with the group‑relative advantage.",
+    "Edge cases: if the group is too small or not diverse, the baseline becomes noisy; also, the method assumes reward signals are comparable across trajectories, which may fail with highly variable lengths."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2402.03300",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: DeepSeekMath (GRPO)"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0014",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is RL with verifiable rewards (RLVR), and when does a rule-based verifier beat a learned reward model?",
+   "key_points": [
+    "RLVR (Reinforcement Learning with Verifiable Rewards) uses a rule‑based verifier that can provably check whether a behavior satisfies a specification, providing a binary or structured reward.",
+    "When the specification is crisp (e.g., “no profanity”, “output a valid JSON schema”), a verifier yields exact rewards, often outperforming a learned reward model that may misclassify edge cases.",
+    "Rule‑based verifiers beat learned models when the reward surface is highly discrete or when data for training a reliable model is scarce.",
+    "Limitation: verifiers cannot capture nuanced, subjective preferences; they are best for safety‑critical constraints rather than open‑ended quality."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/2411.15124",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Tulu 3"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0015",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Compare PPO, DPO and GRPO for post-training. What does each need in data, compute and memory?",
+   "key_points": [
+    "PPO needs on‑policy rollouts, a value head, and a KL term; compute scales with minibatch SGD, memory holds trajectories + two networks.",
+    "DPO (Direct Preference Optimization) discards the KL penalty and directly optimizes a pairwise preference loss; it only needs a frozen reference policy for importance weighting, reducing memory (no value head).",
+    "GRPO removes the critic and uses group‑relative advantage, so memory is further reduced (no value network) and compute is similar to PPO but with a simpler baseline.",
+    "Data requirements: PPO – large on‑policy batch; DPO – pairwise preference dataset; GRPO – on‑policy rollouts plus a recent group for baseline.",
+    "Compute trade‑off: PPO > GRPO ≈ DPO in wall‑time because PPO trains two heads; DPO can be faster if preferences are pre‑collected."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://rlhfbook.com/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: RLHF Book"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0016",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is reward hacking? Give a concrete example from LLM training and a mitigation.",
+   "key_points": [
+    "Reward hacking occurs when the agent finds a loophole that maximizes the proxy reward while violating the intended objective.",
+    "Concrete LLM example: the model learns to repeat the phrase “I am a helpful assistant” because the reward model heavily weights politeness, inflating its score without providing useful content.",
+    "Mitigation strategies: (1) add a KL penalty to a reference model to keep outputs grounded; (2) incorporate adversarial human checks; (3) use verifiable constraints or multi‑objective rewards to penalize degenerate behavior."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: Reward Hacking in RL"
+  },
+  {
+   "id": "aiml-reinforcement-learning-0017",
+   "role": "aiml",
+   "topic": "reinforcement-learning",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Why do RLHF and GRPO keep a KL penalty to the reference policy, and what happens if you remove it?",
+   "key_points": [
+    "Both RLHF and GRPO keep a KL penalty to the reference (pre‑trained) policy to prevent the fine‑tuned policy from drifting too far into regions where the reward model or verifier is unreliable.",
+    "Removing the KL term allows unrestricted policy updates, which often leads to mode collapse, loss of fluency, and exploitation of reward‑model blind spots.",
+    "Empirically, without KL the policy may achieve higher proxy reward but degrade on human evaluation, showing the penalty acts as a regularizer preserving prior knowledge.",
+    "Edge case: if the KL coefficient is set to zero after many updates, the policy can still retain some of its original behavior, but the risk of catastrophic forgetting increases dramatically."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://rlhfbook.com/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Reinforcement Learning for ML Interviews); GPL-3.0 source repository; reference: RLHF Book"
+  },
+  {
+   "id": "aiml-mlops-0001",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is MLOps?",
+   "key_points": [
+    "MLOps combines DevOps practices with machine learning lifecycle management to automate and streamline model development, deployment, and monitoring.",
+    "Key components include versioned data and code, reproducible pipelines, continuous integration/continuous delivery (CI/CD), and automated testing.",
+    "Focuses on collaboration between data scientists, engineers, and operations to ensure reliability, scalability, and governance of ML systems.",
+    "Addresses challenges such as model reproducibility, data drift detection, and infrastructure provisioning."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://neptune.ai/blog/mlops",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0002",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How would you deploy a machine learning model to production?",
+   "key_points": [
+    "Package the model with its dependencies using a container (Docker) or a model server (e.g., TensorFlow Serving, TorchServe).",
+    "Create an automated CI/CD pipeline that runs unit/integration tests, builds the container image, and pushes it to a registry.",
+    "Deploy to a scalable serving platform (Kubernetes, AWS SageMaker, GCP AI Platform) with health checks and autoscaling.",
+    "Set up logging, monitoring, and a rollback strategy to handle failures or performance regressions."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0003",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the concept of model serving.",
+   "key_points": [
+    "Model serving is the process of exposing a trained model as an API endpoint that can receive inference requests and return predictions.",
+    "Common approaches: REST/gRPC services, batch inference jobs, or streaming inference with frameworks like KFServing or TorchServe.",
+    "Important considerations: low latency, high throughput, model versioning, request batching, and resource isolation.",
+    "Can be implemented via dedicated model servers, custom Flask/FastAPI apps, or managed services (SageMaker Endpoint, Vertex AI)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.datacamp.com/community/blog/machine-learning-model-serving",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0004",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are the considerations for monitoring ML models in production?",
+   "key_points": [
+    "Track prediction latency, error rates, and resource utilization (CPU/GPU, memory) to detect performance issues.",
+    "Monitor data drift and concept drift by comparing input feature distributions and prediction distributions against training data.",
+    "Set up alerts for threshold breaches and collect logs for root‑cause analysis.",
+    "Implement automated retraining pipelines triggered by drift metrics or schedule, and ensure model provenance is recorded."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://christophergs.github.io/machine%20learning/2020/03/14/how-to-monitor-machine-learning-models/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0005",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How do you handle model drift/decay?",
+   "key_points": [
+    "Detect drift using statistical tests (KS test, PSI) on feature distributions or by monitoring prediction confidence changes.",
+    "Maintain a baseline model and compare live metrics (accuracy, AUC) against it using shadow or canary deployments.",
+    "When drift exceeds a threshold, trigger data collection, model retraining, validation, and redeployment.",
+    "Version both data and model artifacts to enable rollback to a previous stable version."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.evidentlyai.com/ml-in-production/concept-drift",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0006",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is a feature store and why is it important?",
+   "key_points": [
+    "A feature store is a centralized repository for storing, versioning, and serving engineered features for both training and inference.",
+    "Ensures feature consistency between offline (batch) and online (real‑time) pipelines, reducing training‑serving skew.",
+    "Provides APIs for feature lookup, lineage tracking, and governance, often backed by a data warehouse and a low‑latency key‑value store.",
+    "Improves productivity by allowing data scientists to reuse vetted features and simplifies monitoring of feature quality."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.tecton.ai/blog/what-is-a-feature-store/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0007",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "How would you version control ML models?",
+   "key_points": [
+    "Store model binaries (e.g., .pb, .pt) in a version‑controlled artifact repository such as MLflow Model Registry, DVC, or a cloud storage bucket with semantic version tags.",
+    "Track associated metadata: training data hash, hyperparameters, environment (Docker image SHA), and evaluation metrics.",
+    "Use Git for code and pipeline definitions; link model versions to Git commit SHA for reproducibility.",
+    "Enable promotion stages (Staging → Production) and enforce approval workflows before deployment."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://neptune.ai/blog/ml-model-versioning",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0008",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is containerization and how is it useful for ML deployment?",
+   "key_points": [
+    "Containerization packages an application and its runtime dependencies into an isolated image (Docker), ensuring it runs identically across environments.",
+    "For ML, containers encapsulate the model, inference server, libraries, and OS, simplifying deployment to Kubernetes, cloud services, or edge devices.",
+    "Facilitates scaling, rolling updates, and resource isolation; images can be versioned and stored in registries for reproducibility.",
+    "Supports GPU drivers and hardware acceleration via specialized base images (e.g., nvidia/cuda)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.tensorflow.org/tfx/serving/docker",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0009",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain CI/CD in the context of ML systems.",
+   "key_points": [
+    "CI/CD for ML extends traditional pipelines to include data validation, model training, testing, and deployment steps.",
+    "Continuous Integration: run unit tests for data pipelines, lint model code, execute small‑scale training jobs, and validate metrics against thresholds.",
+    "Continuous Delivery/Deployment: automatically build container images, register model artifacts, and push to staging/production environments with canary or blue‑green strategies.",
+    "Integrate with tools like GitHub Actions, Jenkins, or Azure Pipelines, and use ML‑specific platforms (MLflow, Kubeflow Pipelines) for orchestration."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://neptune.ai/blog/ci-cd-for-machine-learning-mlops",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-mlops-0010",
+   "role": "aiml",
+   "topic": "mlops",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What are the ethical considerations in deploying ML models?",
+   "key_points": [
+    "Bias and fairness: assess disparate impact across protected groups, use fairness metrics, and mitigate bias in data or model.",
+    "Privacy: ensure compliance with regulations (GDPR, CCPA), apply techniques like differential privacy or data anonymization.",
+    "Transparency and explainability: provide model interpretability (SHAP, LIME) for stakeholders and end‑users.",
+    "Security: guard against adversarial attacks, model stealing, and ensure secure model storage and API authentication.",
+    "Accountability: maintain audit trails, versioning, and clear ownership for decisions made by the model."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://developers.google.com/machine-learning/crash-course/fairness",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, MLOps and Model Deployment Interview Topics); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0001",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How would you design a recommendation system?",
+   "key_points": [
+    "Define the problem (collaborative filtering vs. content‑based) and choose a suitable algorithm (matrix factorization, deep embeddings, hybrid).",
+    "Data pipeline: ingest user‑item interaction logs, preprocess, and store in a feature store; generate item and user embeddings.",
+    "Model training: use offline batch training (e.g., ALS, neural collaborative filtering) and evaluate with ranking metrics (NDCG, MAP).",
+    "Serving: expose a low‑latency API that retrieves top‑K items from a precomputed index (FAISS, Annoy) or performs real‑time scoring.",
+    "Feedback loop: capture clicks/purchases, update interaction data, and schedule periodic retraining or online learning."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/towards-artificial-intelligence/how-to-design-the-best-recommendation-system-machine-learning-design-interview-questions-df7fc2746b90",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0002",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design a large-scale image classification service.",
+   "key_points": [
+    "Architecture: front‑end API layer (FastAPI/gRPC) → load balancer → autoscaling inference service (TensorFlow Serving, TorchServe) on Kubernetes.",
+    "Model packaging: containerize the trained CNN with required libraries; store model versions in a registry (MLflow, S3).",
+    "Scalability: use horizontal pod autoscaling based on CPU/GPU utilization; employ GPU nodes for high‑throughput inference.",
+    "Latency optimization: enable batch inference, use TensorRT or ONNX Runtime for model acceleration, and cache frequent predictions.",
+    "Observability: instrument metrics (latency, error rate, GPU usage), log inputs/outputs, and set up alerts for drift or performance degradation."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.pluralsight.com/guides/design-a-machine-learning-system",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0003",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How would you build a fraud detection system?",
+   "key_points": [
+    "Use streaming data pipelines (Kafka, Kinesis) to ingest transaction events in real time.",
+    "Feature engineering: user behavior vectors, device fingerprints, transaction amount, velocity, and historical risk scores.",
+    "Apply a hybrid model: rule‑based filters for known fraud patterns + machine‑learning classifier (e.g., gradient‑boosted trees or deep neural net) for anomaly scoring.",
+    "Persist scores in a fast lookup store (Redis, DynamoDB) and trigger alerts or block actions via a low‑latency decision service.",
+    "Monitor model drift, maintain feedback loop from manual reviews, and ensure GDPR‑compliant data handling."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://stripe.dev/blog/how-we-built-it-stripe-radar",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0004",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design a chatbot system.",
+   "key_points": [
+    "Separate concerns: a stateless NLU service (intent classification, entity extraction) and a dialogue manager that maintains conversation state.",
+    "Use a message queue (RabbitMQ, Kafka) to decouple user requests from backend processing and enable horizontal scaling.",
+    "Store session state in a fast key‑value store (Redis) and optionally persist long‑term context in a document DB (MongoDB).",
+    "Deploy models via a model‑serving framework (TensorFlow Serving, TorchServe) and expose REST/GRPC APIs for the chat front‑end.",
+    "Implement fallback handling, rate limiting, and monitoring (latency, error rates) for production robustness."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://www.ibm.com/cloud/architecture/architectures/aiChatbotArch/reference-architecture",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0005",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How would you design a search ranking system?",
+   "key_points": [
+    "Index documents with an inverted index (e.g., Elasticsearch or Lucene) to support fast term‑based lookup.",
+    "Compute relevance scores using BM25 as a baseline, then apply learning‑to‑rank models (LambdaMART, neural ranking) for personalization.",
+    "Cache popular query results in a CDN or in‑memory store (Redis) to reduce latency.",
+    "Support real‑time updates via near‑real‑time indexing pipelines (Kafka → Logstash → Elasticsearch).",
+    "Monitor query latency, index size, and relevance metrics (NDCG, MAP) to guide tuning."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1810.09591",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0006",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design an anomaly detection system.",
+   "key_points": [
+    "Ingest metrics via a streaming platform (Kafka, Flink) and maintain a sliding‑window of recent values per entity.",
+    "Apply statistical methods (z‑score, EWMA) or unsupervised models (Isolation Forest, Auto‑Encoder) to compute anomaly scores.",
+    "Store thresholds and model parameters in a configuration service; trigger alerts through a low‑latency notification service.",
+    "Persist raw data and anomaly events in a time‑series DB (InfluxDB, ClickHouse) for post‑mortem analysis.",
+    "Continuously retrain models on labeled anomalies and evaluate false‑positive/negative rates."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/machine-learning-for-anomaly-detection-and-condition-monitoring-d4614e7de770",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0007",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How would you build a content moderation system?",
+   "key_points": [
+    "Pipeline: ingest user‑generated content via a message queue, run a fast rule‑based filter (regex, profanity list) first.",
+    "Pass remaining items to ML classifiers (CNN/LSTM for text, EfficientNet for images) to predict policy violations.",
+    "Use a moderation queue backed by a durable store (PostgreSQL) for human review of low‑confidence cases.",
+    "Cache moderation decisions in a CDN or Redis to avoid re‑processing the same content.",
+    "Log decisions for audit, provide feedback loop to improve models, and enforce rate limits to prevent abuse."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0008",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design a system for real-time bidding in online advertising.",
+   "key_points": [
+    "Use a high‑throughput, low‑latency messaging system (Kafka, NATS) to receive bid requests from ad exchanges.",
+    "Run a real‑time decision engine that evaluates user profile, ad relevance, and budget constraints; compute bid price using a scoring function (e.g., Vickrey‑Clarke‑Groves).",
+    "Persist campaign data and budgets in a fast KV store (Redis) and historical performance in a columnar DB (ClickHouse).",
+    "Respond within <100 ms via a lightweight HTTP/2 or gRPC endpoint; use load balancers and autoscaling groups for elasticity.",
+    "Implement fraud detection, frequency capping, and post‑bid analytics pipelines for optimization."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://arxiv.org/abs/1610.03013",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0009",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "How would you design a machine translation system?",
+   "key_points": [
+    "Preprocess parallel corpora, tokenize with subword models (BPE/WordPiece), and train a sequence‑to‑sequence transformer (e.g., Marian, T5).",
+    "Serve the model via a high‑performance inference server (TensorFlow Serving, Triton) behind a REST/GRPC API.",
+    "Cache frequent translation requests in Redis and use beam search with length‑penalty for quality.",
+    "Maintain separate models per language pair or a multilingual model; fine‑tune on domain‑specific data for higher accuracy.",
+    "Monitor latency, BLEU score drift, and fallback to rule‑based dictionary for out‑of‑vocabulary terms."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://machinelearningmastery.com/introduction-neural-machine-translation/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-ml-system-design-0010",
+   "role": "aiml",
+   "topic": "ml-system-design",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Design a system for dynamic pricing.",
+   "key_points": [
+    "Collect real‑time demand signals (traffic, competitor prices) via streaming pipelines.",
+    "Model price elasticity using regression or reinforcement‑learning (e.g., contextual bandits) to predict optimal price.",
+    "Store current price rules in a fast KV store; expose a pricing service API that returns price in <10 ms.",
+    "Run A/B tests and monitor revenue, conversion, and price‑sensitivity metrics to continuously update the model.",
+    "Implement safeguards: price floors/ceilings, rate limiting, and audit logs for compliance."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://en.wikipedia.org/wiki/Dynamic_pricing",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, ML System Design Questions and Strategies); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0001",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the Central Limit Theorem.",
+   "key_points": [
+    "States that the distribution of sample means approaches a normal distribution as sample size n → ∞, regardless of the original population shape.",
+    "Mean of the sampling distribution equals the population mean μ; variance equals σ²/n.",
+    "Requires finite variance; often invoked for n ≥ 30 as a practical rule of thumb.",
+    "Enables confidence interval construction and hypothesis testing using the normal model."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://en.wikipedia.org/wiki/Central_limit_theorem",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0002",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is the difference between Type I and Type II errors?",
+   "key_points": [
+    "Type I error (α): rejecting a true null hypothesis – false positive.",
+    "Type II error (β): failing to reject a false null hypothesis – false negative.",
+    "Trade‑off: decreasing α (more stringent test) usually increases β, and vice versa; power = 1 − β.",
+    "Implications differ by domain: e.g., medical test (Type I = unnecessary treatment) vs. security (Type II = missed intrusion)."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://en.wikipedia.org/wiki/Type_I_and_type_II_errors",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0003",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain Bayes' theorem and give an example.",
+   "key_points": [
+    "Bayes' theorem: P(A|B) = P(B|A)·P(A) / P(B). It updates prior belief P(A) with evidence B.",
+    "Example: spam filter – prior P(spam), likelihood P(word|spam), evidence P(word) from all emails, yielding posterior spam probability.",
+    "Requires computing P(B) = Σ P(B|Ai)·P(Ai) over all mutually exclusive hypotheses.",
+    "Used for classification, diagnostic testing, and any scenario where conditional probabilities are needed."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0004",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "easy",
+   "type": "question",
+   "question": "What is the difference between correlation and causation?",
+   "key_points": [
+    "Correlation quantifies linear association between two variables (Pearson r), ranging from –1 to 1, without implying causality.",
+    "Causation means changes in one variable directly produce changes in the other, often requiring controlled experiments or causal inference methods.",
+    "Confounding variables can create spurious correlation; techniques like randomized trials, instrumental variables, or DAGs help establish causation.",
+    "Statistical tests (e.g., Granger causality) can suggest directionality but do not prove true causal mechanisms."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/towards-artificial-intelligence/correlation-vs-causation-6d7d39278ed8",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0005",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "What is an eigenvalue and eigenvector?",
+   "key_points": [
+    "Definition: For a square matrix A, a non‑zero vector v is an eigenvector if Av = λv, where λ is the corresponding eigenvalue.",
+    "Interpretation: Eigenvectors indicate directions that are only scaled (not rotated) by the linear transformation A.",
+    "Computation: Solve the characteristic equation det(A - λI) = 0 to find eigenvalues, then substitute each λ back into (A - λI)v = 0 to get eigenvectors.",
+    "Complexity: For an n×n matrix, finding all eigenvalues/eigenvectors via the QR algorithm costs O(n³) time and O(n²) space.",
+    "Edge cases: Repeated eigenvalues (defective matrices) may have fewer independent eigenvectors; complex eigenvalues appear for non‑symmetric real matrices."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://medium.com/fintechexplained/what-are-eigenvalues-and-eigenvectors-a-must-know-concept-for-machine-learning-80d0fd330e47",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0006",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain hypothesis testing and p-values.",
+   "key_points": [
+    "Goal: Hypothesis testing evaluates whether observed data provide enough evidence to reject a null hypothesis H₀ in favor of an alternative H₁.",
+    "p‑value: The probability, under H₀, of obtaining a test statistic at least as extreme as the one observed; small p‑value → reject H₀.",
+    "Procedure: Choose a test statistic, derive its sampling distribution under H₀, compute the statistic from data, then compare p‑value to a significance level α (e.g., 0.05).",
+    "Complexity: Computing the test statistic is O(n) for most simple tests (e.g., t‑test, chi‑square) where n is sample size; more complex resampling methods (bootstrap) can be O(n·B).",
+    "Edge cases: Multiple testing inflates Type I error (need correction); small sample sizes may require exact or non‑parametric tests; p‑value does not measure effect size."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://en.wikipedia.org/wiki/P-value",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0007",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the curse of dimensionality?",
+   "key_points": [
+    "Definition: The curse of dimensionality refers to various phenomena that arise when analyzing data in high‑dimensional spaces.",
+    "Distance concentration: As dimensionality d increases, distances between random points become similar, making nearest‑neighbor methods less discriminative.",
+    "Sample complexity: To maintain a fixed level of statistical accuracy, the number of required samples grows exponentially with d (e.g., O(ε⁻ᵈ) for ε‑covering).",
+    "Algorithmic impact: Many algorithms (k‑NN, kernel methods, tree‑based search) degrade to O(n) or worse because partitioning the space becomes ineffective.",
+    "Mitigation: Dimensionality reduction (PCA, random projection), feature selection, and regularization are common strategies."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/the-curse-of-dimensionality-50dc6e49aa1e",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0008",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "hard",
+   "type": "question",
+   "question": "Explain the difference between MLE and MAP estimation.",
+   "key_points": [
+    "MLE (Maximum Likelihood Estimation): Choose parameters θ that maximize the likelihood L(θ|data) = ∏ p(x_i|θ).",
+    "MAP (Maximum A Posteriori): Incorporates a prior p(θ); selects θ that maximizes posterior p(θ|data) ∝ L(θ|data)·p(θ).",
+    "Relationship: MAP = MLE when the prior is uniform (or non‑informative).",
+    "Complexity: Both typically require the same optimization routine (e.g., gradient ascent), so time/space complexity depends on the model, not on the estimation method.",
+    "Edge cases: With limited data, MAP can regularize estimates via the prior; improper or overly strong priors can bias results."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0009",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "What is the difference between a PDF and CDF?",
+   "key_points": [
+    "PDF (Probability Density Function): For continuous variables, f(x) gives the relative likelihood; probability of an interval [a,b] is ∫ₐᵇ f(x)dx.",
+    "CDF (Cumulative Distribution Function): F(x) = P(X ≤ x) = ∫_{-∞}^{x} f(t)dt; it is the integral of the PDF.",
+    "Properties: PDF ≥ 0 and integrates to 1; CDF is non‑decreasing, ranges from 0 to 1, and is right‑continuous.",
+    "Usage: PDF is used for density evaluation and likelihood; CDF is used for quantiles, sampling (inverse transform), and computing tail probabilities.",
+    "Edge cases: Discrete distributions have probability mass functions (PMF) instead of PDFs; mixed distributions require handling both density and point masses."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://en.wikipedia.org/wiki/Cumulative_distribution_function",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  },
+  {
+   "id": "aiml-statistics-0010",
+   "role": "aiml",
+   "topic": "statistics",
+   "difficulty": "medium",
+   "type": "question",
+   "question": "Explain the concepts of gradient descent, stochastic gradient descent, and mini-batch gradient descent.",
+   "key_points": [
+    "Gradient Descent (GD): Iteratively updates parameters θ ← θ - η∇J(θ) using the full batch gradient; η is the learning rate.",
+    "Stochastic Gradient Descent (SGD): Uses a single randomly chosen sample (or a very small subset) to estimate the gradient at each step, giving noisy but cheap updates.",
+    "Mini‑batch GD: Computes the gradient on a small batch of b samples (1 < b < n); balances variance reduction and computational efficiency.",
+    "Complexity per iteration: GD O(n·d) for n samples and d parameters; SGD O(d); mini‑batch O(b·d). Overall convergence speed depends on η and batch size.",
+    "Edge cases: Too large η causes divergence; too small η slows convergence; SGD may get stuck in noisy regions, requiring learning‑rate schedules or momentum; mini‑batch size affects hardware utilization and generalization."
+   ],
+   "key_points_source": "generated",
+   "practice_url": "https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3",
+   "source": "ombharatiya/FAANG-Coding-Interview-Questions (ML_INTERVIEW_PREP.md, Statistics & Mathematics for ML Interviews); GPL-3.0 source repository; reference: Answer"
+  }
+ ],
+ "resources": []
+}
